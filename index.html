@@ -1,84 +1,556 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <link rel=stylesheet type="text/css" href="reset.css">
+    <link rel=stylesheet type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jquery.paroller.min.js"></script>
+    <title>Document</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #F1EFEF; /* 设置背景颜色为深蓝色 */
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            color: #191717; /* 设置文字颜色为浅灰色 */
-        }
-
         h1 {
-            background-color: #7D7C7C; /* 设置标题背景颜色为中蓝灰色 */
-            color: #F1EFEF;
-            padding: 20px;
-            margin: 0;
+            font-size: 80px;
+            color: black;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
-        h2 {
-            margin-top: 20px;
-            color: #191717; /* 设置标题颜色为中蓝灰色 */
+        .header {
+            height: 800px;
+            width: auto;
+            background-color: rgb(196, 196, 196);
+            background-image: url(img/jeremy-ricketts-d93dJ4kehUg-unsplash1.jpg);
+            position: relative;
+            overflow: hidden;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
         }
 
-        a {
+        .header p {
+            font-size: 100px;
+            color: black;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        red {
+            color: rgb(168, 32, 8);
+        }
+
+        #menu_control {
+            position: absolute;
+            z-index: -2;
+            opacity: 0;
+        }
+
+        .menu_btn {
+            z-index: 1;
+            width: 45px;
+            height: 45px;
+            background-color: black;
+            opacity: .6;
+            display: block;
+            position: fixed;
+            top: 20px;
+            right: 10px;
+            border-radius: 10px;
+            transition-duration: .2s;
+            cursor: pointer;
+        }
+
+        .menu_btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 20px;
+            background-color: aliceblue;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            box-shadow: 0 6px 0 aliceblue,
+                0 -6px 0 aliceblue;
+        }
+
+        .menu_btn:hover {
+            opacity: .9;
+        }
+
+        .menu {
+            box-sizing: border-box;
+            padding: 20px 0 10px 0;
+            width: 100vw;
+            height: 300px;
+
+            background-color: black;
+            opacity: .8;
+            position: fixed;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            z-index: 999;
+        }
+
+        .menu a {
+            font-size: 30px;
+            margin: auto;
             text-decoration: none;
-            color: #7D7C7C; /* 设置链接颜色为浅蓝灰色 */
-            font-weight: bold;
-            font-size: 18px;
-            margin: 10px;
-            display: inline-block;
-            padding: 10px 20px;
-            border: 2px solid #7D7C7C; /* 设置链接边框颜色为浅蓝灰色 */
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            color: rgb(240, 248, 255);
+
+            transition-duration: .3s;
         }
 
-        a:hover {
-            background-color: #191717; /* 设置链接背景颜色为浅灰色 */
-            color: #F1EFEF; /* 设置链接文本颜色为深蓝色 */
-            transform: scale(1.1);
+        .menu a:hover {
+            color: rgb(168, 32, 8);
+
         }
 
-        .project-container {
-            margin: 20px;
+        .menu div {
+            margin: 0 auto;
+            height: 1px;
+            width: 300px;
+
+            background-color: gray;
         }
 
-        img {
-            max-width: 1000px;
+        .menu_c {
+            display: none;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 160px;
+            left: 0;
+            right: 0;
+            display: flex;
+            cursor: default;
+        }
+
+        .pointer {
+            transform: rotate(-90deg);
+            height: 40px;
+            width: 40px;
+            margin: 0 auto;
+            -webkit-filter: drop-shadow(-20px 0px 0px rgb(168, 32, 8));
+            transition: .2s;
+            cursor: pointer;
+        }
+
+        .body0 {
+            background-color: white;
             height: auto;
+            width: auto;
+            padding: 70px 0;
+        }
+
+
+
+        .body0 div {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .body0 .img {
+            width: calc(100vw - 10px);
+            margin: 30px auto;
+            box-shadow: 0 0 20px black;
+            transition: .2s;
+
+            position: relative;
+            transition: .2s;
+            overflow: hidden;
+        }
+
+        .body0 .text {
+            margin: auto;
+            width: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transition: .4s;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .body0 .text p {
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 900;
+
+        }
+
+        .body0 .text .btn {
+            box-sizing: border-box;
+            margin: auto;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 15px;
+            border: 2px;
+            border-color: white;
+            border-style: solid;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+            transition: .2s;
+            cursor: pointer;
+            text-decoration: none;
+
+
+        }
+
+        .body0 .text .btn:hover {
+            background-color: rgba(0, 0, 0);
+            transform: scale(1.05);
+        }
+
+        .body0 img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            transition: .2s;
+
+        }
+
+        .body0 .img:hover {
+            box-shadow: 0 0 20px 5px #000000;
+        }
+
+
+        .body0 .img:hover img {
+            -webkit-filter: brightness(.3);
+
+            transform: scale(1.4);
+        }
+
+        .body0 .img:hover .text {
+            opacity: 1;
+        }
+
+        .body1 {
+            height: 400px;
+            width: auto;
+            background-color: aliceblue;
+            margin: auto;
+            overflow: hidden;
+            /* 隐藏超出 body1 的内容 */
+            position: relative;
+        }
+
+        #background1 {
+            background-image: url(img/10002s.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            width: auto;
+            height: 100%;
+            -webkit-filter: contrast(.8);
+        }
+
+        .body2 {
+            margin: auto;
+            background-color: white;
+            height: auto;
+            width: auto;
+            padding: 70px 0;
+        }
+
+        .body2 p {
+            text-align: center;
+            max-width: 500px;
+            line-height: 1.5;
+            margin: 50px auto;
+        }
+
+        #background2 {
+            background-image: url(img/10003s.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            width: auto;
+            height: 100%;
+            -webkit-filter: contrast(.8);
+        }
+
+        @media screen and (min-width:768px) {
+            h1 {
+                font-size: 70px;
+            }
+
+            .header {
+                height: 900px;
+            }
+
+            .header p {
+                display: none;
+            }
+
+            .menu_btn {
+                display: none;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .menu_c {
+                display: block;
+                width: 800px;
+                height: 100px;
+                margin: 80px auto;
+                display: flex;
+
+            }
+
+            .menu_c a {
+                font-size: 40px;
+                margin: auto;
+                text-decoration: none;
+                color: black;
+
+                transition-duration: .4s;
+
+            }
+
+            .menu_c a:hover {
+                color: rgb(168, 32, 8);
+
+            }
+
+            .link {
+                bottom: 100px;
+            }
+
+            .pointer {
+                height: 50px;
+                width: 50px;
+                -webkit-filter: drop-shadow(0px 0px 0px #ce300900);
+                transition: .3s;
+            }
+
+            .pointer:hover {
+                -webkit-filter: drop-shadow(-30px 0px 0px rgb(168, 32, 8));
+            }
+
+            .body1 {
+                height: 500px;
+            }
+
+            #background1 {
+                background-image: url(img/10002.jpg);
+            }
+
+            .body0 div {
+                flex-direction: row;
+            }
+
+            .body0 .img {
+                max-width: 600px;
+
+            }
+
+            .body0 .text p {
+                font-size: 25px;
+
+            }
+
+            #background2 {
+                background-image: url(img/10003.jpg);
+            }
+
+            .body0 .text {
+                margin: auto;
+                width: auto;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                color: white;
+                text-align: center;
+                opacity: 0;
+                transition: .4s;
+                display: flex;
+                flex-direction: column;
+                padding: 30px 40px;
+
+            }
         }
     </style>
 </head>
-<body>
-    <h1>模仿作品</h1>
-    <div class="project-container">
-        <h2>Netflix官網</h2>
-        <img src="螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix 作品截圖">
-        <br>
-        <a href="netflix/index.html" target="_blank">Netflix</a>
-        <a href="https://www.netflix.com/tw/" target="_blank">Netflix 原始網站</a>
-    </div>
-    <hr>
-    <div class="project-container">
-        <h2>Spotify Premium網頁</h2>
-        <img src="螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 作品截圖">
-        <br>
-        <a href="spotify/index.html" target="_blank">Spotify</a>
-        <a href="https://www.spotify.com/tw/premium/" target="_blank">Spotify 原始網站</a>
-    </div>
 
-    <h1>工作作品</h1>
-    <div class="project-container">
-        <h2>員工職業災害事故表單</h2>
-        <img src="螢幕擷取畫面 2023-09-23 175123.png" alt="工作作品截圖">
-        <br>
-        <a href="表單/index.html" target="_blank">員工職業災害事故表單</a>
+<body>
+    <input type="checkbox" id="menu_control">
+    <div class="header">
+        <p>Hello<red>.</red>
+        </p>
+        <label for="menu_control" class="menu_btn"></label>
+        <nav class="menu">
+            <a href="#" data-target="projects">projects.</a>
+            <div></div>
+            <a href="#" data-target="about">about.</a>
+            <div></div>
+            <a href="#" data-target="contact">contact.</a>
+        </nav>
+        <nav class="menu_c">
+            <a href="#" data-target="projects">projects.</a>
+            <a href="#" data-target="about">about.</a>
+            <a href="#" data-target="contact">contact.</a>
+        </nav>
+        <a href="#" class="link"><img src="img/pointer.svg" alt="" class="pointer"></a>
+    </div>
+    <div class="body0" id="projects">
+        <h1>projects<red>.</red>
+        </h1>
+        <div>
+            <div class="img">
+                <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix 作品截圖">
+                <div class="text">
+                    <p>模仿製作Netflix官方網站<br>(無RWD)</p>
+                    <a href="https://www.netflix.com/tw/" target="_blank" class="btn">原網址</a>
+                    <a href="netflix/index.html" target="_blank" class="btn">練習網址</a>
+                </div>
+            </div>
+
+            <div class="img">
+                <img src="img/螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 作品截圖">
+                <div class="text">
+                    <p>模仿製作Spotify的Premium網站<br>(無RWD)</p>
+                    <a href="https://www.spotify.com/tw/premium/" target="_blank" class="btn">原網址</a>
+                    <a href="spotify/index.html" target="_blank" class="btn">練習網址</a>
+                </div>
+
+            </div>
+            <div class="img">
+                <img src="img/螢幕擷取畫面 2023-09-23 175123.png" alt="工作作品截圖">
+                <div class="text">
+                    <p>工作製作的表單，此版本為復刻的樣品</p>
+                    <a href="表單/index.html" target="_blank" class="btn">網址</a>
+                </div>
+
+            </div>
+            <div class="img"><img src="img/white.png" alt=""></div>
+            <div class="img"><img src="img/white.png" alt=""></div>
+            <div class="img"><img src="img/white.png" alt=""></div>
+        </div>
+    </div>
+    <div class="body1">
+        <div id="background1"></div>
+    </div>
+    <div class="body2 " id="about">
+        <h1>about<red>.</red></h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium sapiente nobis illo laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium sapiente nobis illo laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium sapiente nobis illo laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?</p>
+
+
+    </div>
+    <div class=" body1">
+        <div id="background2"></div>
+    </div>
+    <div class="body2 " id="contact">
+        <h1>contact<red>.</red>
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium sapiente nobis illo
+            laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium sapiente nobis illo
+            laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium sapiente nobis illo
+            laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
+        </p>
+
+
     </div>
 </body>
+
 </html>
+
+<script>
+
+    var menu_check = $("#menu_control");    //check判斷
+    var menu_btn = $('.menu_btn');  //menu按鈕
+    var menu = $('.menu');
+
+    //初始函式
+    $(document).ready(function () {
+        menu.hide();
+
+    });
+
+    //按下menu按鈕
+    menu_btn.click(function (e) {
+        e.preventDefault(); // 阻止默认行为
+
+        console.log('click');
+        //open
+        if (!menu_check.prop('checked')) {
+            console.log('checked');
+            menu_btn.css('top', '320px');
+            menu.fadeIn(500);
+        }
+        //close
+        if (menu_check.prop('checked')) {
+            console.log('not checked');
+            menu_btn.css('top', '20px');
+            menu.fadeOut(500);
+        }
+
+        menu_check.prop('checked', !menu_check.prop('checked'));
+    });
+
+    //手機menu滾動
+    $('.menu a').click(function (e) {
+        e.preventDefault(); // 阻止默认行为
+
+        // 获取目标标识符（data-target）
+        var target = $(this).data('target');
+
+        // 滚动到目标区域
+        $('html, body').animate({
+            scrollTop: $('#' + target).offset().top
+        }, 1000); // 平滑滚动的时间，单位是毫秒
+    });
+
+    //電腦menu滾動
+    $('.menu_c a').click(function (e) {
+        e.preventDefault(); // 阻止默认行为
+
+        // 获取目标标识符（data-target）
+        var target = $(this).data('target');
+
+        // 滚动到目标区域
+        $('html, body').animate({
+            scrollTop: $('#' + target).offset().top
+        }, 1000); // 平滑滚动的时间，单位是毫秒
+    });
+    
+    //pointer滾動
+    $('.pointer').click(function (e) {
+        console.log('pointer click');
+        e.preventDefault(); // 阻止默认行为
+
+        // 滚动到目标区域
+        $('html, body').animate({
+            scrollTop: $('#projects').offset().top
+        }, 1000); // 平滑滚动的时间，单位是毫秒
+    });
+
+</script>
