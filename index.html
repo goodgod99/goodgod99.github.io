@@ -24,7 +24,6 @@
             background-image: url(img/jeremy-ricketts-d93dJ4kehUg-unsplash1.jpg);
             position: relative;
             overflow: hidden;
-            background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center top;
@@ -58,7 +57,6 @@
             top: 20px;
             right: 10px;
             border-radius: 10px;
-            transition-duration: .2s;
             cursor: pointer;
         }
 
@@ -178,7 +176,7 @@
             color: white;
             text-align: center;
             opacity: 0;
-            transition: .4s;
+            transition: .8s;
             display: flex;
             flex-direction: column;
 
@@ -209,8 +207,6 @@
             transition: .2s;
             cursor: pointer;
             text-decoration: none;
-
-
         }
 
         .body0 .text .btn:hover {
@@ -222,7 +218,7 @@
             width: 100%;
             height: auto;
             position: relative;
-            transition: .2s;
+            transition: .5s;
 
         }
 
@@ -254,7 +250,6 @@
         #background1 {
             background-image: url(img/10002s.jpg);
             background-repeat: no-repeat;
-            background-attachment: fixed;
             background-position: center;
             background-size: cover;
             width: auto;
@@ -280,7 +275,6 @@
         #background2 {
             background-image: url(img/10003s.jpg);
             background-repeat: no-repeat;
-            background-attachment: fixed;
             background-position: center;
             background-size: cover;
             width: auto;
@@ -295,6 +289,7 @@
 
             .header {
                 height: 900px;
+                background-attachment: fixed;
             }
 
             .header p {
@@ -310,7 +305,6 @@
             }
 
             .menu_c {
-                display: block;
                 width: 800px;
                 height: 100px;
                 margin: 80px auto;
@@ -354,6 +348,7 @@
 
             #background1 {
                 background-image: url(img/10002.jpg);
+                background-attachment: fixed;
             }
 
             .body0 div {
@@ -372,6 +367,7 @@
 
             #background2 {
                 background-image: url(img/10003.jpg);
+                background-attachment: fixed;
             }
 
             .body0 .text {
@@ -503,14 +499,18 @@
         //open
         if (!menu_check.prop('checked')) {
             console.log('checked');
+            menu_btn.hide();
             menu_btn.css('top', '320px');
-            menu.fadeIn(500);
+            menu_btn.fadeIn(600);
+            menu.fadeIn(600);
         }
         //close
         if (menu_check.prop('checked')) {
             console.log('not checked');
+            menu_btn.hide();
             menu_btn.css('top', '20px');
-            menu.fadeOut(500);
+            menu_btn.fadeIn(1000);
+            menu.fadeOut(600);
         }
 
         menu_check.prop('checked', !menu_check.prop('checked'));
