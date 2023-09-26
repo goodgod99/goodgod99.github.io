@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+
+        h1 {
+            font-size: 50px;
+            font-weight: 100;
+            text-align: center;
+            color: rgb(217, 235, 235);
+        }
+
+        h3 {
+            font-weight: 100;
+            text-align: center;
+            color: rgb(226, 226, 161);
+        }
+
+        .body1 img {
+            width: 600px;
+            height: auto;
+            position: absolute;
+            -webkit-user-drag: none;
+        }
+
+        .body1 {
+            width: 100%;
+            height: 200vh;
+            background-image: linear-gradient(to top, rgb(0, 255, 242) 0%, rgb(0, 255, 242) 10%, white 35%, white 65%, rgb(255, 115, 0) 90%, rgb(255, 115, 0) 100%);
+            background-attachment: fixed;
+        }
+
+        .header {
+            width: 100%;
+            height: 40px;
+            background-color: black;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            padding-right: 10px;
+            position: relative;
+        }
+
+        #clock {
+            margin-right: 10px;
+        }
+
+        /* 創建一個可拖曳的圖片的樣式 */
+        #draggable-image {
+            position: absolute;
+            cursor: move;
+            height: auto;
+            width: auto;
+        }
+
+        .container {
+            position: absolute;
+            right: 50vw;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="8ab61bb5-1bbc-4be8-9b70-8be6a2f0d52d.svg" alt="可旋轉的圖片" class="rotating-image">
+        </div>
+        <div id="clock"></div>
+    </div>
+    <div class="body1">
+        <div id="draggable-image">
+            <img src="Nike.png" alt="可拖曳的圖片"><br>
+        </div>
+        <h1>★Snappp Magazine</h1>
+        <h3>some cool paper doll on internet ★</h3>
+
+
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    $(document).ready(function () {
+        const $draggableImage = $('#draggable-image');
+        let offsetX, offsetY, isDragging = false;
+
+        // 當使用者按下滑鼠左鍵時開始拖曳
+        $draggableImage.on('mousedown', function (e) {
+            isDragging = true;
+            offsetX = e.clientX - $draggableImage.offset().left;
+            offsetY = e.clientY - $draggableImage.offset().top;
+
+            $draggableImage.css('cursor', 'move');
+        });
+
+        // 當使用者釋放滑鼠左鍵時停止拖曳
+        $draggableImage.on('mouseup', function () {
+            isDragging = false;
+            $draggableImage.css('cursor', 'move');
+        });
+
+        // 當使用者移動滑鼠時拖曳圖片
+        $(document).on('mousemove', function (e) {
+            if (!isDragging) return;
+
+            const x = e.clientX - offsetX;
+            const y = e.clientY - offsetY;
+
+            $draggableImage.css({
+                left: x + 'px',
+                top: y + 'px'
+            });
+        });
+    });
+
+    function updateClock() {
+        const clockElement = document.getElementById('clock');
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    // 初始更新
+    updateClock();
+
+    // 每秒更新一次時鐘
+    setInterval(updateClock, 1000);
+
+    const $rotatingImage = $('.rotating-image');
+
+    $(document).on('mousemove', function (e) {
+        const container = $('.container');
+        const containerWidth = container.width();
+        const containerHeight = container.height();
+        const mouseX = e.clientX - container.offset().left - containerWidth / 2; // 調整滑鼠相對於容器中心的位置
+        const mouseY = e.clientY - container.offset().top - containerHeight / 2; // 調整滑鼠相對於容器中心的位置
+        const rotateDeg = ((Math.atan2(mouseY, mouseX) * 180) / Math.PI) + 90;
+
+        $rotatingImage.css('transform', `rotate(${rotateDeg}deg)`);
+    });
+
+
+</script>

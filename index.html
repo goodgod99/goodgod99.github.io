@@ -167,7 +167,7 @@
 
         .body0 .img {
             width: calc(100vw - 10px);
-            margin: 30px auto;
+            margin: 50px auto 20px auto;
             box-shadow: 0 0 20px black;
             transition: .2s;
 
@@ -176,54 +176,7 @@
             overflow: hidden;
         }
 
-        .body0 .text {
-            margin: auto;
-            width: auto;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            position: absolute;
-            color: white;
-            text-align: center;
-            opacity: 0;
-            transition: .8s;
-            display: flex;
-            flex-direction: column;
 
-        }
-
-        .body0 .text p {
-            margin: auto;
-            font-size: 20px;
-            line-height: 1.5;
-            font-weight: 900;
-
-        }
-
-        .body0 .text .btn {
-            box-sizing: border-box;
-            margin: auto;
-            width: 100px;
-            height: 40px;
-            line-height: 40px;
-            font-size: 15px;
-            border: 2px;
-            border-color: white;
-            border-style: solid;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border-radius: 20px;
-            text-align: center;
-            transition: .2s;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .body0 .text .btn:hover {
-            background-color: rgba(0, 0, 0);
-            transform: scale(1.05);
-        }
 
         .body0 img {
             width: 100%;
@@ -233,19 +186,42 @@
 
         }
 
-        .body0 .img:hover {
-            box-shadow: 0 0 20px 5px #000000;
+        .body0 .text {
+            display: none;
+
         }
 
-
-        .body0 .img:hover img {
-            -webkit-filter: brightness(.3);
-
-            transform: scale(1.4);
+        .body0 .text_p {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .body0 .img:hover .text {
-            opacity: 1;
+        .body0 .text_p p {
+            margin: auto;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 600;
+
+        }
+
+        .body0 .text_p .btn {
+            box-sizing: border-box;
+            margin: 5px auto;
+            width: 100px;
+            height: 40px;
+            line-height: 35px;
+            font-size: 15px;
+            font-weight: 900;
+            border: 3px;
+            border-color: rgb(0, 0, 0);
+            border-style: solid;
+            background-color: rgba(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
         }
 
         .body1 {
@@ -282,7 +258,7 @@
             text-align: left;
             max-width: 700px;
             line-height: 1.5;
-            margin: 50px auto;
+            margin: 10px auto;
         }
 
         .body2 .box {
@@ -298,7 +274,7 @@
             margin: auto 50px;
         }
 
-        
+
 
         #background2 {
             background-image: url(img/10004s.jpg);
@@ -500,14 +476,80 @@
             }
 
             .body0 .img {
+                margin: 30px auto;
                 max-width: 600px;
 
             }
 
-            .body0 .text p {
-                font-size: 25px;
+            .body0 .text_p {
+                display: none;
 
             }
+
+            .body0 .text {
+                margin: auto;
+                width: auto;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                color: white;
+                text-align: center;
+                opacity: 0;
+                transition: .8s;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .body0 .text p {
+                margin: auto;
+                font-size: 25px;
+                line-height: 1.5;
+                font-weight: 900;
+
+            }
+
+            .body0 .text .btn {
+                box-sizing: border-box;
+                margin: auto;
+                width: 100px;
+                height: 40px;
+                line-height: 37px;
+                font-size: 15px;
+                border: 2px;
+                border-color: white;
+                border-style: solid;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border-radius: 20px;
+                text-align: center;
+                transition: .2s;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .body0 .text .btn:hover {
+                background-color: rgba(0, 0, 0);
+                transform: scale(1.05);
+            }
+
+            .body0 .img:hover {
+                box-shadow: 0 0 20px 5px #000000;
+            }
+
+
+            .body0 .img:hover img {
+                -webkit-filter: brightness(.3);
+
+                transform: scale(1.4);
+            }
+
+            .body0 .img:hover .text {
+                opacity: 1;
+            }
+
 
             #background2 {
                 background-image: url(img/10004.jpg);
@@ -575,7 +617,7 @@
         <h1 data-aos="fade">projects<red>.</red>
         </h1>
         <div>
-            <div class="img" data-aos="fade-up">
+            <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix 作品截圖">
                 <div class="text">
                     <p>模仿製作Netflix官方網站<br>(無RWD)</p>
@@ -583,23 +625,50 @@
                     <a href="netf1ix/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
             </div>
+            <div class="text_p" data-aos="fade-up">
+                <p>模仿製作Netflix官方網站<br>(無RWD)</p>
+                <a href="https://www.netf1ix.com/tw/" target="_blank" class="btn">原網址</a>
+                <a href="netf1ix/index.html" target="_blank" class="btn">練習網址</a>
+            </div>
 
-            <div class="img" data-aos="fade-up">
+            <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 作品截圖">
                 <div class="text">
                     <p>模仿製作Spotify的Premium網站<br>(無RWD)</p>
                     <a href="https://www.spotify.com/tw/premium/" target="_blank" class="btn">原網址</a>
                     <a href="spotify/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
-
             </div>
-            <div class="img" data-aos="fade-up">
+            <div class="text_p" data-aos="fade-up">
+                <p>模仿製作Spotify的Premium網站<br>(無RWD)</p>
+                <a href="https://www.spotify.com/tw/premium/" target="_blank" class="btn">原網址</a>
+                <a href="spotify/index.html" target="_blank" class="btn">練習網址</a>
+            </div>
+
+            <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175123.png" alt="工作作品截圖">
                 <div class="text">
                     <p>工作製作的表單，此版本為復刻的樣品</p>
                     <a href="表單/index.html" target="_blank" class="btn">網址</a>
                 </div>
+            </div>
+            <div class="text_p" data-aos="fade-up">
+                <p>工作製作的表單，此版本為復刻的樣品</p>
+                <a href="表單/index.html" target="_blank" class="btn">網址</a>
+            </div>
 
+            <div class="img" data-aos="fade">
+                <img src="img/螢幕擷取畫面 2023-09-27 022548.png" alt="工作作品截圖">
+                <div class="text">
+                    <p>模仿藝術家likuanzhen的網站所擁有的功能</p>
+                    <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn">原網址</a>
+                    <a href="likuanzhen/index.html" target="_blank" class="btn">練習網址</a>
+                </div>
+            </div>
+            <div class="text_p" data-aos="fade-up">
+                <p>模仿藝術家likuanzhen網站所擁有的功能</p>
+                <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn">原網址</a>
+                <a href="likuanzhen/index.html" target="_blank" class="btn">練習網址</a>
             </div>
             <!--div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
             <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
@@ -613,28 +682,23 @@
         <h1 data-aos="fade">about<red>.</red>
         </h1>
         <div class="box">
-            <div class="boxs"  data-aos="fade-up">
-                <p>您好，我是淡江資工系學生，熟悉HTML、CSS、Javascript、jQuery語法，及RWD響應式網頁技術。</p>
+            <div class="boxs" data-aos="fade-up">
+                <p>您好，我是淡江資工系學生，熟悉HTML、CSS、Javascript、jQuery語法，及RWD響應式網頁技術。</p><br>
 
-                <p>想要累積作品集，目前正在嘗試<b>接案</b>，當然價格也會比較優惠。</p>
+                <p>想要累積作品集，目前正在嘗試<b>接案</b>，當然價格也會比較優惠。</p><br>
 
                 <p>歡迎各位不趕時間，又想要以更<b>實惠的價格</b>來購買服務的需求者，前來詢問 !</p>
             </div>
-            <div class="boxs"  data-aos="fade-up">
+            <div class="boxs" data-aos="fade-up">
                 <p>可以提供的服務有<br><br>
                     1、HTML5 + CSS3 <b>網頁切版</b><br>
                     2、傳統網站改成RWD <b>響應式網站</b><br>
-                    3、<b>靜態網站</b> 製作</p>
+                    3、<b>靜態網站</b> 製作</p><br>
 
                 <p> 不僅限於以上所列出的選項，有其他需求可再<b>私訊</b>詳談，只要我能力所及，我會盡可能幫你實現！
                 </p>
             </div>
         </div>
-
-
-
-
-
     </div>
     <div class=" body1">
         <div id="background2"></div>
@@ -644,7 +708,7 @@
         <h1 data-aos="fade">contact<red>.</red>
         </h1>
         <div class="box">
-            <p data-aos="fade-left"> 有需求請聯絡我 <red>!</red>
+            <p data-aos="fade"> 有需求請聯絡我 <red>!</red>
             </p>
             <div class="line"></div>
             <p data-aos="fade-left"> Email <red>:</red> <span>ccffttggvv123@gmail.com </span></p>
@@ -656,9 +720,6 @@
             <p data-aos="fade-left"> Line ID <red>:</red> <span>7788_yaya </span></p>
             <div class="line"></div>
         </div>
-
-
-
     </div>
     <div class="foot">
         <a href="" class="link" data-aos="fade"><img src="img/down-arrow.png" alt="" class="pointer_l"></a>
