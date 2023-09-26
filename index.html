@@ -19,6 +19,16 @@
             margin-bottom: 30px;
         }
 
+        b {
+            font-weight: 900;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            max-width: 100%;
+            width: 100%;
+        }
 
 
         .header {
@@ -267,11 +277,28 @@
         }
 
         .body2 p {
-            text-align: center;
-            max-width: 500px;
+            font-size: 20px;
+            font-weight: 300;
+            text-align: left;
+            max-width: 700px;
             line-height: 1.5;
             margin: 50px auto;
         }
+
+        .body2 .box {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .body2 .boxs {
+            width: 500px;
+            margin: auto 50px;
+        }
+
+        
 
         #background2 {
             background-image: url(img/10004s.jpg);
@@ -322,8 +349,10 @@
         .body3 .line {
             width: 100%;
             margin: auto;
-            height: 3px;
-            background-color: black;
+            height: 10px;
+
+            border-color: rgb(168, 32, 8);
+            border-top: 3px dashed;
         }
 
         .foot {
@@ -583,18 +612,27 @@
     <div class="body2 " id="about">
         <h1 data-aos="fade">about<red>.</red>
         </h1>
-        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
-            sapiente nobis illo
-            laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
-        </p>
-        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
-            sapiente nobis illo
-            laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
-        </p>
-        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
-            sapiente nobis illo
-            laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
-        </p>
+        <div class="box">
+            <div class="boxs"  data-aos="fade-up">
+                <p>您好，我是淡江資工系學生，熟悉HTML、CSS、Javascript、jQuery語法，及RWD響應式網頁技術。</p>
+
+                <p>想要累積作品集，目前正在嘗試<b>接案</b>，當然價格也會比較優惠。</p>
+
+                <p>歡迎各位不趕時間，又想要以更<b>實惠的價格</b>來購買服務的需求者，前來詢問 !</p>
+            </div>
+            <div class="boxs"  data-aos="fade-up">
+                <p>可以提供的服務有<br><br>
+                    1、HTML5 + CSS3 <b>網頁切版</b><br>
+                    2、傳統網站改成RWD <b>響應式網站</b><br>
+                    3、<b>靜態網站</b> 製作</p>
+
+                <p> 不僅限於以上所列出的選項，有其他需求可再<b>私訊</b>詳談，只要我能力所及，我會盡可能幫你實現！
+                </p>
+            </div>
+        </div>
+
+
+
 
 
     </div>
@@ -606,15 +644,16 @@
         <h1 data-aos="fade">contact<red>.</red>
         </h1>
         <div class="box">
-            <p data-aos="fade-left"> 有需求請聯絡我!</p>
+            <p data-aos="fade-left"> 有需求請聯絡我 <red>!</red>
+            </p>
             <div class="line"></div>
-            <p data-aos="fade-left"> Email: <span>ccffttggvv123@gmail.com </span></p>
+            <p data-aos="fade-left"> Email <red>:</red> <span>ccffttggvv123@gmail.com </span></p>
             <div class="line"></div>
-            <p data-aos="fade-left"> IG: <span>zyoooo7 </span></p>
+            <p data-aos="fade-left"> IG <red>:</red> <span>zyoooo7 </span></p>
             <div class="line"></div>
-            <p data-aos="fade-left"> FB: <span>Yoo Chen </span></p>
+            <p data-aos="fade-left"> FB <red>:</red> <span>Yoo Chen </span></p>
             <div class="line"></div>
-            <p data-aos="fade-left"> Line ID: <span>7788_yaya </span></p>
+            <p data-aos="fade-left"> Line ID <red>:</red> <span>7788_yaya </span></p>
             <div class="line"></div>
         </div>
 
