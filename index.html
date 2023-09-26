@@ -19,7 +19,7 @@
             margin-bottom: 30px;
         }
 
-        
+
 
         .header {
             height: 800px;
@@ -259,10 +259,10 @@
         }
 
         .body2 {
+            position: relative;
             margin: auto;
             background-color: white;
             height: auto;
-            width: auto;
             padding: 70px 0;
         }
 
@@ -282,10 +282,55 @@
             height: 100%;
             -webkit-filter: contrast(.8);
         }
-        .foot{
-            width: auto;
-            height: 200px;
+
+        .body3 {
+            position: relative;
+            margin: auto;
+            background-color: white;
+            height: auto;
+            padding: 70px 20px;
         }
+
+        .body3 .box {
+            box-sizing: border-box;
+            max-width: 500px;
+            height: 300px;
+            border: 3px;
+            border-color: black;
+            border-style: solid;
+            margin: 80px auto 0 auto;
+            transition: .2s;
+            padding: 40px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .body3 .box:hover {
+            box-shadow: 8px 8px black;
+        }
+
+        .body3 p {
+            font-size: 18px;
+            font-weight: 900;
+        }
+
+        .body3 span {
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .body3 .line {
+            width: 100%;
+            margin: auto;
+            height: 3px;
+            background-color: black;
+        }
+
+        .foot {
+            width: auto;
+            height: 150px;
+        }
+
         .foot .link {
             display: flex;
             cursor: default;
@@ -297,23 +342,28 @@
             width: 60px;
             margin: auto;
             opacity: .7;
-            -webkit-filter: drop-shadow(0px -20px 0px rgb(168, 32, 8));
             transition: .2s;
             cursor: pointer;
             transform: rotate(180deg);
         }
+
+        .foot .pointer_l:hover {
+            transform: rotate(180deg) scale(1.2);
+        }
+
         .copyright {
 
             width: 100%;
-            height: 40px;
-            background-color: black;
-            padding: auto;
+            height: 50px;
+            background-color: rgb(158, 56, 38);
             display: flex;
         }
 
         .copyright p {
-            color: gray;
+            color: rgb(230, 230, 230);
             font-size: 15px;
+            font-weight: 100;
+            line-height: 50px;
             margin: auto;
 
         }
@@ -321,6 +371,8 @@
         .nav-dots {
             display: none;
         }
+
+
 
         @media screen and (min-width:768px) {
             h1 {
@@ -396,12 +448,12 @@
             .header .pointer {
                 height: 70px;
                 width: 70px;
-                -webkit-filter: drop-shadow(0px 0px 0px #ce300900) drop-shadow(0px -30px 0px rgb(105, 105, 105));
+                -webkit-filter: drop-shadow(0px 0px 0px #ce300900) drop-shadow(0px -20px 0px rgb(105, 105, 105));
                 transition: .4s;
             }
 
             .header .pointer:hover {
-                -webkit-filter: drop-shadow(0px 30px 0px rgb(168, 32, 8));
+                -webkit-filter: drop-shadow(0px 20px 0px rgb(168, 32, 8));
                 opacity: .8;
             }
 
@@ -450,6 +502,15 @@
                 padding: 30px 40px;
 
             }
+
+            .body3 .box {
+                padding: 30px 80px;
+            }
+
+            .foot {
+                width: auto;
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -460,8 +521,8 @@
     <div class="header">
         <p data-aos="fade">Hello<red>.</red>
         </p>
-        <label for="menu_control" class="menu_btn" ></label>
-        <nav class="menu" >
+        <label for="menu_control" class="menu_btn"></label>
+        <nav class="menu">
             <a href="#" data-target="projects">projects.</a>
             <div></div>
             <a href="#" data-target="about">about.</a>
@@ -473,10 +534,10 @@
             <a href="#" data-target="about">about.</a>
             <a href="#" data-target="contact">contact.</a>
         </nav>
-        <nav class="nav-dots" >
-            <a href="#" class="dot" data-target="projects" ></a>
-            <a href="#" class="dot" data-target="about" ></a>
-            <a href="#" class="dot" data-target="contact" ></a>
+        <nav class="nav-dots">
+            <a href="#" class="dot" data-target="projects"></a>
+            <a href="#" class="dot" data-target="about"></a>
+            <a href="#" class="dot" data-target="contact"></a>
         </nav>
 
         <a href="#" class="link" data-aos="fade-down"><img src="img/down-arrow.png" alt="" class="pointer"></a>
@@ -489,8 +550,8 @@
                 <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix 作品截圖">
                 <div class="text">
                     <p>模仿製作Netflix官方網站<br>(無RWD)</p>
-                    <a href="https://www.netflix.com/tw/" target="_blank" class="btn">原網址</a>
-                    <a href="netflix/index.html" target="_blank" class="btn">練習網址</a>
+                    <a href="https://www.netf1ix.com/tw/" target="_blank" class="btn">原網址</a>
+                    <a href="netf1ix/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
             </div>
 
@@ -511,9 +572,9 @@
                 </div>
 
             </div>
+            <!--div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
             <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
-            <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
-            <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
+            <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div-->
         </div>
     </div>
     <div class="body1">
@@ -540,25 +601,28 @@
     <div class=" body1">
         <div id="background2"></div>
     </div>
-    <div class="body2 " id="contact">
+    <div class="body3 " id="contact">
+
         <h1 data-aos="fade">contact<red>.</red>
         </h1>
-        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
-            sapiente nobis illo
-            laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
-        </p>
-        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
-            sapiente nobis illo
-            laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
-        </p>
-        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
-            sapiente nobis illo
-            laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
-        </p>
+        <div class="box">
+            <p data-aos="fade-left"> 有需求請聯絡我!</p>
+            <div class="line"></div>
+            <p data-aos="fade-left"> Email: <span>ccffttggvv123@gmail.com </span></p>
+            <div class="line"></div>
+            <p data-aos="fade-left"> IG: <span>zyoooo7 </span></p>
+            <div class="line"></div>
+            <p data-aos="fade-left"> FB: <span>Yoo Chen </span></p>
+            <div class="line"></div>
+            <p data-aos="fade-left"> Line ID: <span>7788_yaya </span></p>
+            <div class="line"></div>
+        </div>
+
+
 
     </div>
     <div class="foot">
-        <a href="" class="link" data-aos="fade-up"><img src="img/down-arrow.png" alt="" class="pointer_l"></a>
+        <a href="" class="link" data-aos="fade"><img src="img/down-arrow.png" alt="" class="pointer_l"></a>
     </div>
     <div class="copyright">
         <p>Copyright © 2023 goodgod99</p>
@@ -596,30 +660,23 @@
                 var target = $(this).data('target');
                 var targetElement = $('#' + target);
 
-                
-                    var targetPosition = targetElement.offset().top - 250;    //-1修正傳到位置圈沒亮bug
 
-                    // 检查是否在当前区域内
-                    if (scrollPosition >= targetPosition) {
+                var targetPosition = targetElement.offset().top - 250;    //-1修正傳到位置圈沒亮bug
 
-                        // 更新 .dot 的颜色
-                        $(this).css('background-color', 'black');
-                    }
-                    if (scrollPosition < targetPosition) {
+                // 检查是否在当前区域内
+                if (scrollPosition >= targetPosition) {
 
-                        // 更新 .dot 的颜色
-                        $(this).css('background-color', 'rgba(0, 0, 0, 0)');
-                    }
-                
+                    // 更新 .dot 的颜色
+                    $(this).css('background-color', 'black');
+                }
+                if (scrollPosition < targetPosition) {
+
+                    // 更新 .dot 的颜色
+                    $(this).css('background-color', 'rgba(0, 0, 0, 0)');
+                }
+
             });
         });
-
-
-
-
-
-
-
 
 
 
