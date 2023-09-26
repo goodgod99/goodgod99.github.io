@@ -19,6 +19,8 @@
             margin-bottom: 30px;
         }
 
+        
+
         .header {
             height: 800px;
             width: auto;
@@ -77,10 +79,6 @@
                 0 -6px 0 aliceblue;
         }
 
-        .menu_btn:hover {
-            opacity: .9;
-        }
-
         .menu {
             box-sizing: border-box;
             padding: 20px 0 10px 0;
@@ -122,24 +120,22 @@
             display: none;
         }
 
-        .link {
+        .header .link {
             position: absolute;
             bottom: 250px;
             left: 0;
             right: 0;
             display: flex;
             cursor: default;
-            
+
         }
 
-        .pointer {
-            transform: rotate(-90deg);
-            height: 40px;
-            width: 40px;
+        .header .pointer {
+            height: 60px;
+            width: 60px;
             margin: 0 auto;
             opacity: .7;
-            -webkit-filter: drop-shadow(-20px 0px 0px rgb(168, 32, 8)) ;
-
+            -webkit-filter: drop-shadow(0px -20px 0px rgb(168, 32, 8));
             transition: .2s;
             cursor: pointer;
         }
@@ -286,19 +282,44 @@
             height: 100%;
             -webkit-filter: contrast(.8);
         }
-        .copyright{
-            
+        .foot{
+            width: auto;
+            height: 200px;
+        }
+        .foot .link {
+            display: flex;
+            cursor: default;
+            margin: auto;
+        }
+
+        .foot .pointer_l {
+            height: 60px;
+            width: 60px;
+            margin: auto;
+            opacity: .7;
+            -webkit-filter: drop-shadow(0px -20px 0px rgb(168, 32, 8));
+            transition: .2s;
+            cursor: pointer;
+            transform: rotate(180deg);
+        }
+        .copyright {
+
             width: 100%;
             height: 40px;
             background-color: black;
             padding: auto;
             display: flex;
         }
-        .copyright p{
+
+        .copyright p {
             color: gray;
             font-size: 15px;
             margin: auto;
 
+        }
+
+        .nav-dots {
+            display: none;
         }
 
         @media screen and (min-width:768px) {
@@ -306,8 +327,32 @@
                 font-size: 70px;
             }
 
+            /* Navigation Dots */
+            .nav-dots {
+                display: inline-block;
+                position: fixed;
+                top: 50%;
+                right: 40px;
+                transform: translateY(-50%);
+                z-index: 999;
+                opacity: .7;
+
+            }
+
+            .dot {
+                display: block;
+                width: 10px;
+                height: 10px;
+                border: 2px solid rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0);
+                border-radius: 50%;
+                margin: 30px 0;
+                transition: .5s;
+            }
+
             .header {
                 height: 900px;
+                background-attachment: fixed;
             }
 
             .header p {
@@ -344,19 +389,19 @@
                 transform: scale(1.05);
             }
 
-            .link {
+            .header .link {
                 bottom: 200px;
             }
 
-            .pointer {
-                height: 50px;
-                width: 50px;
-                -webkit-filter: drop-shadow(0px 0px 0px #ce300900) drop-shadow(30px 0px 0px rgb(105, 105, 105));
+            .header .pointer {
+                height: 70px;
+                width: 70px;
+                -webkit-filter: drop-shadow(0px 0px 0px #ce300900) drop-shadow(0px -30px 0px rgb(105, 105, 105));
                 transition: .4s;
             }
 
-            .pointer:hover {
-                -webkit-filter: drop-shadow(-30px 0px 0px rgb(168, 32, 8));
+            .header .pointer:hover {
+                -webkit-filter: drop-shadow(0px 30px 0px rgb(168, 32, 8));
                 opacity: .8;
             }
 
@@ -410,30 +455,37 @@
 </head>
 
 <body>
+
     <input type="checkbox" id="menu_control">
     <div class="header">
-        <p>Hello<red>.</red>
+        <p data-aos="fade">Hello<red>.</red>
         </p>
-        <label for="menu_control" class="menu_btn"></label>
-        <nav class="menu">
+        <label for="menu_control" class="menu_btn" ></label>
+        <nav class="menu" >
             <a href="#" data-target="projects">projects.</a>
             <div></div>
             <a href="#" data-target="about">about.</a>
             <div></div>
             <a href="#" data-target="contact">contact.</a>
         </nav>
-        <nav class="menu_c" data-aos="fade-down">
-            <a href="#" data-target="projects" >projects.</a>
-            <a href="#" data-target="about" >about.</a>
-            <a href="#" data-target="contact" >contact.</a>
+        <nav class="menu_c" data-aos="fade">
+            <a href="#" data-target="projects">projects.</a>
+            <a href="#" data-target="about">about.</a>
+            <a href="#" data-target="contact">contact.</a>
         </nav>
-        <a href="#" class="link" data-aos="fade-down"><img src="img/pointer.svg" alt="" class="pointer"></a>
+        <nav class="nav-dots" >
+            <a href="#" class="dot" data-target="projects" ></a>
+            <a href="#" class="dot" data-target="about" ></a>
+            <a href="#" class="dot" data-target="contact" ></a>
+        </nav>
+
+        <a href="#" class="link" data-aos="fade-down"><img src="img/down-arrow.png" alt="" class="pointer"></a>
     </div>
     <div class="body0" id="projects">
-        <h1 data-aos="fade-down">projects<red>.</red>
+        <h1 data-aos="fade">projects<red>.</red>
         </h1>
         <div>
-            <div class="img" data-aos="fade-down">
+            <div class="img" data-aos="fade-up">
                 <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix 作品截圖">
                 <div class="text">
                     <p>模仿製作Netflix官方網站<br>(無RWD)</p>
@@ -442,7 +494,7 @@
                 </div>
             </div>
 
-            <div class="img" data-aos="fade-down">
+            <div class="img" data-aos="fade-up">
                 <img src="img/螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 作品截圖">
                 <div class="text">
                     <p>模仿製作Spotify的Premium網站<br>(無RWD)</p>
@@ -451,7 +503,7 @@
                 </div>
 
             </div>
-            <div class="img" data-aos="fade-down">
+            <div class="img" data-aos="fade-up">
                 <img src="img/螢幕擷取畫面 2023-09-23 175123.png" alt="工作作品截圖">
                 <div class="text">
                     <p>工作製作的表單，此版本為復刻的樣品</p>
@@ -459,26 +511,26 @@
                 </div>
 
             </div>
-            <div class="img" data-aos="fade-down"><img src="img/white.png" alt=""></div>
-            <div class="img" data-aos="fade-down"><img src="img/white.png" alt=""></div>
-            <div class="img" data-aos="fade-down"><img src="img/white.png" alt=""></div>
+            <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
+            <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
+            <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
         </div>
     </div>
     <div class="body1">
         <div id="background1"></div>
     </div>
     <div class="body2 " id="about">
-        <h1 data-aos="fade-down">about<red>.</red>
+        <h1 data-aos="fade">about<red>.</red>
         </h1>
-        <p data-aos="fade-down">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
+        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
             sapiente nobis illo
             laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
         </p>
-        <p data-aos="fade-down">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
+        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
             sapiente nobis illo
             laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
         </p>
-        <p data-aos="fade-down">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
+        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
             sapiente nobis illo
             laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
         </p>
@@ -489,22 +541,24 @@
         <div id="background2"></div>
     </div>
     <div class="body2 " id="contact">
-        <h1 data-aos="fade-down">contact<red>.</red>
+        <h1 data-aos="fade">contact<red>.</red>
         </h1>
-        <p data-aos="fade-down">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
+        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
             sapiente nobis illo
             laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
         </p>
-        <p data-aos="fade-down">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
+        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
             sapiente nobis illo
             laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
         </p>
-        <p data-aos="fade-down">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
+        <p data-aos="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, quidem praesentium
             sapiente nobis illo
             laudantium eos optio accusamus quia. Eligendi a vitae ullam dolores nulla quibusdam optio ipsa ea voluptas?
         </p>
 
-
+    </div>
+    <div class="foot">
+        <a href="" class="link" data-aos="fade-up"><img src="img/down-arrow.png" alt="" class="pointer_l"></a>
     </div>
     <div class="copyright">
         <p>Copyright © 2023 goodgod99</p>
@@ -523,13 +577,51 @@
     $(document).ready(function () {
         AOS.init({
             offset: 150,
-            duration: 800,
+            duration: 1200,
             mirror: true,
             once: false,
             easing: 'ease'
-            
+
         });
         menu.hide();
+
+        // 监听滚动事件
+
+        $(window).scroll(function () {
+            // 获取当前滚动位置
+            var scrollPosition = $(this).scrollTop();
+
+            // 遍历每个 .dot 元素
+            $('.dot').each(function () {
+                var target = $(this).data('target');
+                var targetElement = $('#' + target);
+
+                
+                    var targetPosition = targetElement.offset().top - 250;    //-1修正傳到位置圈沒亮bug
+
+                    // 检查是否在当前区域内
+                    if (scrollPosition >= targetPosition) {
+
+                        // 更新 .dot 的颜色
+                        $(this).css('background-color', 'black');
+                    }
+                    if (scrollPosition < targetPosition) {
+
+                        // 更新 .dot 的颜色
+                        $(this).css('background-color', 'rgba(0, 0, 0, 0)');
+                    }
+                
+            });
+        });
+
+
+
+
+
+
+
+
+
 
     });
 
@@ -583,10 +675,20 @@
             scrollTop: $('#' + target).offset().top
         }, 1000); // 平滑滚动的时间，单位是毫秒
     });
+    $('.dot').click(function (e) {
+        e.preventDefault(); // 阻止默认行为
+
+        // 获取目标标识符（data-target）
+        var target = $(this).data('target');
+
+        // 滚动到目标区域
+        $('html, body').animate({
+            scrollTop: $('#' + target).offset().top
+        }, 1000); // 平滑滚动的时间，单位是毫秒
+    });
 
     //pointer滾動
     $('.pointer').click(function (e) {
-        console.log('pointer click');
         e.preventDefault(); // 阻止默认行为
 
         // 滚动到目标区域
@@ -594,5 +696,16 @@
             scrollTop: $('#projects').offset().top
         }, 700); // 平滑滚动的时间，单位是毫秒
     });
+
+    $('.pointer_l').click(function (e) {
+        console.log('pointer click');
+        e.preventDefault(); // 阻止默认行为
+
+        // 滚动到目标区域
+        $('html, body').animate({
+            scrollTop: $('body').offset().top
+        }, 500); // 平滑滚动的时间，单位是毫秒
+    });
+
 
 </script>
