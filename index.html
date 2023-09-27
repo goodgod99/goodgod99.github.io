@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Document</title>
+    <title>goodgod99</title>
     <style>
         * {}
 
@@ -170,24 +170,38 @@
             width: auto;
             padding: 70px 0;
         }
+        .body0 .more{
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 900;
+            color: black;
+            text-align: center;
+            width: 100%;
+            margin-top: 70px;
+        }
 
 
-
-        .body0 div {
+        .body0 .scroll-container {
+            position: relative;
+            overflow-x: scroll;
+            white-space: nowrap;
+            /* 防止文本换行 */
+            width: 100%;
+            /* 根据需要调整宽度 */
             display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
+            
         }
 
         .body0 .img {
-            width: calc(100vw - 10px);
-            margin: 50px auto 20px auto;
-            box-shadow: 0 0 20px black;
-            transition: .2s;
+            width: 100vw;
+            margin: 0 ;
+            
 
             position: relative;
-            transition: .2s;
-            overflow: hidden;
+            white-space: nowrap; /* 防止文本换行 */
+            flex: 0 0 auto; /* 设置flex属性以保持宽度不变 */
+            
+            border: 1px rgba(211, 211, 211, 0.418) solid;
         }
 
 
@@ -197,7 +211,6 @@
             height: auto;
             position: relative;
             transition: .5s;
-
         }
 
         .body0 .text {
@@ -207,11 +220,17 @@
 
         .body0 .text_p {
             text-align: center;
-            margin-bottom: 20px;
+            margin-right: 60px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 0 50px 50px 0 ;
+            border: 2px black solid;
+            border-left: 0;
         }
 
         .body0 .text_p p {
-            margin: auto;
+            margin: auto 0 ;
             color: rgb(0, 0, 0);
             font-size: 18px;
             line-height: 1.5;
@@ -221,16 +240,15 @@
 
         .body0 .text_p .btn {
             box-sizing: border-box;
-            margin: 5px auto;
+            margin: 0 auto auto auto;
             width: 100px;
             height: 40px;
             line-height: 35px;
             font-size: 15px;
             font-weight: 900;
-            border: 3px;
+            border: 2px;
             border-color: rgb(0, 0, 0);
             border-style: solid;
-            background-color: rgba(255, 255, 255);
             color: rgb(0, 0, 0);
             border-radius: 20px;
             text-align: center;
@@ -501,14 +519,23 @@
                 background-attachment: fixed;
             }
 
-            .body0 div {
+            .body0 .more{
+                display: none;
+            }
+
+            .body0 .scroll-container {
                 flex-direction: row;
+                flex-wrap: wrap;
+                margin-top: 0px;
             }
 
             .body0 .img {
                 margin: 30px auto;
                 max-width: 600px;
-
+                overflow: hidden;
+                box-shadow: 0 0 20px black;
+            transition: .2s;
+            border: 0;
             }
 
             .body0 .text_p {
@@ -651,7 +678,8 @@
     <div class="body0" id="projects">
         <h1 data-aos="fade">projects<red>.</red>
         </h1>
-        <div>
+        <span class="more">more<red> >></red></span>
+        <div class="scroll-container">
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix 作品截圖">
                 <div class="text">
@@ -660,12 +688,11 @@
                     <a href="netf1ix/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
             </div>
-            <div class="text_p" data-aos="fade-up">
+            <div class="text_p" data-aos="fade-left">
                 <p>模仿製作Netflix官方網站<br>(無RWD)</p>
                 <a href="https://www.netf1ix.com/tw/" target="_blank" class="btn">原網址</a>
                 <a href="netf1ix/index.html" target="_blank" class="btn">練習網址</a>
             </div>
-
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 作品截圖">
                 <div class="text">
@@ -674,12 +701,11 @@
                     <a href="spotify/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
             </div>
-            <div class="text_p" data-aos="fade-up">
+            <div class="text_p" data-aos="fade-left">
                 <p>模仿製作Spotify的Premium網站<br>(無RWD)</p>
                 <a href="https://www.spotify.com/tw/premium/" target="_blank" class="btn">原網址</a>
                 <a href="spotify/index.html" target="_blank" class="btn">練習網址</a>
             </div>
-
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175123.png" alt="工作作品截圖">
                 <div class="text">
@@ -687,11 +713,11 @@
                     <a href="表單/index.html" target="_blank" class="btn">網址</a>
                 </div>
             </div>
-            <div class="text_p" data-aos="fade-up">
-                <p>工作製作的表單，此版本為復刻的樣品</p>
+            <div class="text_p" data-aos="fade-left">
+                <p>工作製作的表單<br>
+                    此版本為復刻的樣品</p>
                 <a href="表單/index.html" target="_blank" class="btn">網址</a>
             </div>
-
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-27 022548.png" alt="工作作品截圖">
                 <div class="text">
@@ -700,7 +726,8 @@
                     <a href="likuanzhen/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
             </div>
-            <div class="text_p" data-aos="fade-up">
+
+            <div class="text_p" data-aos="fade-left">
                 <p>模仿藝術家likuanzhen網站裡的功能</p>
                 <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn">原網址</a>
                 <a href="likuanzhen/index.html" target="_blank" class="btn">練習網址</a>
