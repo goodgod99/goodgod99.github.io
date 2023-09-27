@@ -169,15 +169,19 @@
             height: auto;
             width: auto;
             padding: 70px 0;
+            
         }
-        .body0 .more{
+
+        .body0 .more {
             display: inline-block;
-            font-size: 20px;
+            font-size: 25px;
             font-weight: 900;
             color: black;
             text-align: center;
             width: 100%;
             margin-top: 70px;
+            margin-bottom: 10px;
+            position: relative;
         }
 
 
@@ -189,18 +193,35 @@
             width: 100%;
             /* 根据需要调整宽度 */
             display: flex;
+        }
+
+        .body0 .more::before {
             
+            content: "";
+            position: absolute;
+            right: 35%;
+            /* 调整箭头距离图像的位置 */
+            width: 0;
+            top: calc(50% + 1px) ;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-left: 15px solid rgb(168, 32, 8);
+            /* 箭头的颜色和大小 */
+            transform: translateY(-50%);
+            z-index: 99;
         }
 
         .body0 .img {
             width: 100vw;
-            margin: 0 ;
-            
+            margin: 0;
+
 
             position: relative;
-            white-space: nowrap; /* 防止文本换行 */
-            flex: 0 0 auto; /* 设置flex属性以保持宽度不变 */
-            
+            white-space: nowrap;
+            /* 防止文本换行 */
+            flex: 0 0 auto;
+            /* 设置flex属性以保持宽度不变 */
+
             border: 1px rgba(211, 211, 211, 0.418) solid;
         }
 
@@ -224,13 +245,13 @@
             padding: 0 20px;
             display: flex;
             flex-direction: column;
-            border-radius: 0 50px 50px 0 ;
-            border: 2px black solid;
+            border-radius: 0 50px 50px 0;
+            border: 2px black dotted;
             border-left: 0;
         }
 
         .body0 .text_p p {
-            margin: auto 0 ;
+            margin: auto 0;
             color: rgb(0, 0, 0);
             font-size: 18px;
             line-height: 1.5;
@@ -246,9 +267,9 @@
             line-height: 35px;
             font-size: 15px;
             font-weight: 900;
-            border: 2px;
-            border-color: rgb(0, 0, 0);
-            border-style: solid;
+            border: 3px;
+            border-color: rgb(168, 32, 8);
+            border-style: outset;
             color: rgb(0, 0, 0);
             border-radius: 20px;
             text-align: center;
@@ -519,7 +540,7 @@
                 background-attachment: fixed;
             }
 
-            .body0 .more{
+            .body0 .more {
                 display: none;
             }
 
@@ -527,6 +548,7 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 margin-top: 0px;
+                overflow-x: auto;
             }
 
             .body0 .img {
@@ -534,8 +556,8 @@
                 max-width: 600px;
                 overflow: hidden;
                 box-shadow: 0 0 20px black;
-            transition: .2s;
-            border: 0;
+                transition: .2s;
+                border: 0;
             }
 
             .body0 .text_p {
@@ -678,7 +700,7 @@
     <div class="body0" id="projects">
         <h1 data-aos="fade">projects<red>.</red>
         </h1>
-        <span class="more">more<red> >></red></span>
+        <span class="more">more</span>
         <div class="scroll-container">
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix 作品截圖">
@@ -690,7 +712,7 @@
             </div>
             <div class="text_p" data-aos="fade-left">
                 <p>模仿製作Netflix官方網站<br>(無RWD)</p>
-                <a href="https://www.netf1ix.com/tw/" target="_blank" class="btn">原網址</a>
+                <a href="https://www.netflix.com/tw/" target="_blank" class="btn">原網址</a>
                 <a href="netf1ix/index.html" target="_blank" class="btn">練習網址</a>
             </div>
             <div class="img" data-aos="fade">
