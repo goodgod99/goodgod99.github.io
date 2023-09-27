@@ -12,6 +12,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
     <style>
+        * {}
+
         h1 {
             font-size: 80px;
             color: black;
@@ -21,7 +23,19 @@
 
         b {
             font-weight: 900;
+
+            box-shadow: 0 2px rgb(168, 32, 8);
+            padding-bottom: 1px;
+
         }
+
+        c {
+            font-weight: 700;
+            box-shadow: 0 1px rgb(0, 0, 0);
+            padding-bottom: 1px;
+        }
+
+        b::before {}
 
         html,
         body {
@@ -253,12 +267,27 @@
         }
 
         .body2 p {
-            font-size: 20px;
-            font-weight: 300;
+            font-size: 18px;
+            font-weight: 500;
             text-align: left;
             max-width: 700px;
             line-height: 1.5;
             margin: 10px auto;
+        }
+
+        .body2 p::before {
+            content: "\2023";
+            /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: rgb(168, 32, 8);
+            /* Change the color */
+            font-weight: bold;
+            /* If you want it to be bold */
+            display: inline-block;
+            /* Needed to add space between the bullet and the text */
+            width: 1em;
+            /* Also needed for space (tweak if needed) */
+            margin-left: -1em;
+            /* Also needed for space (tweak if needed) */
         }
 
         .body2 .box {
@@ -267,6 +296,7 @@
             flex-direction: row;
             flex-wrap: wrap;
             margin: auto;
+
         }
 
         .body2 .boxs {
@@ -666,7 +696,7 @@
                 </div>
             </div>
             <div class="text_p" data-aos="fade-up">
-                <p>模仿藝術家likuanzhen網站所擁有的功能</p>
+                <p>模仿藝術家likuanzhen網站裡的功能</p>
                 <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn">原網址</a>
                 <a href="likuanzhen/index.html" target="_blank" class="btn">練習網址</a>
             </div>
@@ -685,17 +715,17 @@
             <div class="boxs" data-aos="fade-up">
                 <p>您好，我是淡江資工系學生，熟悉HTML、CSS、Javascript、jQuery語法，及RWD響應式網頁技術。</p><br>
 
-                <p>想要累積作品集，目前正在嘗試<b>接案</b>，當然價格也會比較優惠。</p><br>
+                <p>想要累積作品集，目前正在嘗試<c>接案</c>，當然價格也會比較優惠。</p><br>
 
-                <p>歡迎各位不趕時間，又想要以更<b>實惠的價格</b>來購買服務的需求者，前來詢問 !</p>
+                <p>歡迎各位不趕時間，又想要以更<c>實惠的價格</c>來購買服務的需求者，前來詢問 !</p>
             </div>
             <div class="boxs" data-aos="fade-up">
-                <p>可以提供的服務有<br><br>
-                    1、HTML5 + CSS3 <b>網頁切版</b><br>
-                    2、傳統網站改成RWD <b>響應式網站</b><br>
-                    3、<b>靜態網站</b> 製作</p><br>
 
-                <p> 不僅限於以上所列出的選項，有其他需求可再<b>私訊</b>詳談，只要我能力所及，我會盡可能幫你實現！
+                <p>可以提供的服務有<br><br>
+                    1　HTML5 + CSS3 <b>網頁切版</b><br>
+                    2　傳統網站改成RWD <b>響應式網站</b><br>
+                    3　<b>靜態網站</b> 製作</p><br>
+                <p>不僅限於以上所列出的選項，有其他需求可再<c>私訊詳談</c>，只要我能力所及，我會盡可能幫你實現！
                 </p>
             </div>
         </div>
