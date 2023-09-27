@@ -169,7 +169,7 @@
             height: auto;
             width: auto;
             padding: 70px 0;
-            
+
         }
 
         .body0 .more {
@@ -179,13 +179,55 @@
             color: black;
             text-align: center;
             width: 100%;
-            margin-top: 70px;
-            margin-bottom: 5px;
+            margin-top: 5px;
             position: relative;
         }
 
+        .body0 .more::after {
+            content: "";
+            position: absolute;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-image: url(img/swipe-left-icon-431x512-sz8uwwqk.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            -webkit-filter: invert(.8);
+            z-index: 99;
+            animation-name: oxxo;
+            animation-duration: 3s;
+            animation-timing-function:ease;
+            animation-iteration-count:infinite ;
+        }
+
+        @keyframes oxxo {
+            0%{
+                transform: rotate(30deg) translateX(70%) translateY(-80%);
+                opacity: 1;
+            }
+
+            55% {
+                transform: rotate(-10deg) translateX(20%) translateY(-50%);
+                opacity: 1;
+            }
+            70%{
+                transform: rotate(-10deg) translateX(20%) translateY(-50%);
+                opacity: 0;
+            }
+            85%{
+                transform: rotate(30deg) translateX(70%) translateY(-80%);
+                opacity: 0;
+            }
+            100%{
+                transform: rotate(30deg) translateX(70%) translateY(-80%);
+                opacity: 1;
+            }
+        }
+
+
 
         .body0 .scroll-container {
+            margin-top: 70px;
             position: relative;
             overflow-x: scroll;
             white-space: nowrap;
@@ -233,7 +275,7 @@
             border-radius: 0 50px 50px 0;
             border: 2px black dotted;
             border-left: 0;
-            
+
         }
 
         .body0 .text_p p {
@@ -644,7 +686,7 @@
             .body2 .boxs {
                 width: 500px;
                 margin: auto 50px;
-                
+
             }
 
             .body3 .box {
@@ -689,7 +731,6 @@
     <div class="body0" id="projects">
         <h1 data-aos="fade">projects<red>.</red>
         </h1>
-        <span class="more">MORE<red> >></red></span>
         <div class="scroll-container">
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix 作品截圖">
@@ -743,10 +784,13 @@
                 <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn">原網址</a>
                 <a href="likuanzhen/index.html" target="_blank" class="btn">練習網址</a>
             </div>
+
             <!--div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
             <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
             <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div-->
         </div>
+        <span class="more">MORE</span>
+
     </div>
     <div class="body1">
         <div id="background1"></div>
@@ -850,7 +894,6 @@
 
             });
         });
-
 
 
     });
