@@ -12,8 +12,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>goodgod99</title>
     <style>
-        * {}
-
         h1 {
             font-size: 80px;
             color: black;
@@ -239,8 +237,7 @@
 
         .body0 .img {
             width: 100vw;
-            margin: 0;
-
+            margin: 0 20px 0 0;
 
             position: relative;
             white-space: nowrap;
@@ -261,52 +258,48 @@
             vertical-align: bottom;
         }
 
+/* *********************************/
+
         .body0 .text {
-            display: none;
+                margin: auto;
+                width: auto;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                padding: 0 30px;
+                position: absolute;
+                color: white;
+                text-align: center;
+                opacity: 0;
+                transition: .8s;
+                display: flex;
+                text-wrap: wrap;
 
-        }
+            }
 
-        .body0 .text_p {
-            text-align: center;
-            margin-right: 60px;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            border-radius: 0 50px 50px 0;
-            border: 2px black dotted;
-            border-left: 0;
+            .body0 .text p {
+                margin: auto;
+                font-size: 20px;
+                line-height: 1.5;
+                font-weight: 900;
 
-        }
+            }
 
-        .body0 .text_p p {
-            margin: auto 0;
-            color: rgb(0, 0, 0);
-            font-size: 18px;
-            line-height: 1.5;
-            font-weight: 600;
+            .body0 .text .btn {
+                display: none;
+            }
 
-        }
 
-        .body0 .text_p .btn {
-            box-sizing: border-box;
-            margin: 0 auto auto auto;
-            width: 100px;
-            height: 40px;
-            line-height: 35px;
-            font-size: 15px;
-            font-weight: 900;
-            border-bottom: 5px;
-            border-color: rgb(0, 0, 0);
-            border-style: solid;
-            color: rgb(255, 255, 255);
-            background: rgb(51, 51, 51) 50%;
-            border-radius: 10px;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
 
-        }
+            .body0 .img:hover img {
+                -webkit-filter: brightness(.3);
+            }
 
+            .body0 .img:hover .text {
+                opacity: 1;
+            }
+/* *********************************/
         .body1 {
             height: 400px;
             width: auto;
@@ -590,37 +583,20 @@
                 border: 0;
             }
 
-            .body0 .text_p {
-                display: none;
-
-            }
 
             .body0 .text {
-                margin: auto;
-                width: auto;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                position: absolute;
-                color: white;
-                text-align: center;
-                opacity: 0;
-                transition: .8s;
-                display: flex;
                 flex-direction: column;
+                padding: 0;
 
             }
 
             .body0 .text p {
-                margin: auto;
                 font-size: 25px;
-                line-height: 1.5;
-                font-weight: 900;
 
             }
 
             .body0 .text .btn {
+                display: block;
                 box-sizing: border-box;
                 margin: auto;
                 width: 100px;
@@ -650,13 +626,7 @@
 
 
             .body0 .img:hover img {
-                -webkit-filter: brightness(.3);
-
                 transform: scale(1.4);
-            }
-
-            .body0 .img:hover .text {
-                opacity: 1;
             }
 
 
@@ -740,11 +710,11 @@
                     <a href="netf1ix/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
             </div>
-            <div class="text_p" data-aos="fade-left">
+            <!--div class="text_p" data-aos="fade-left">
                 <p>模仿製作Netflix官方網站<br>(無RWD)</p>
                 <a href="https://www.netflix.com/tw/" target="_blank" class="btn">原網址</a>
                 <a href="netf1ix/index.html" target="_blank" class="btn">練習網址</a>
-            </div>
+            </div-->
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 作品截圖">
                 <div class="text">
@@ -753,11 +723,11 @@
                     <a href="spotify/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
             </div>
-            <div class="text_p" data-aos="fade-left">
+            <!--div class="text_p" data-aos="fade-left">
                 <p>模仿製作Spotify的Premium網站<br>(無RWD)</p>
                 <a href="https://www.spotify.com/tw/premium/" target="_blank" class="btn">原網址</a>
                 <a href="spotify/index.html" target="_blank" class="btn">練習網址</a>
-            </div>
+            </div-->
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175123.png" alt="工作作品截圖">
                 <div class="text">
@@ -765,11 +735,11 @@
                     <a href="表單/index.html" target="_blank" class="btn">網址</a>
                 </div>
             </div>
-            <div class="text_p" data-aos="fade-left">
+            <!--div class="text_p" data-aos="fade-left">
                 <p>工作製作的表單<br>
                     此版本為復刻的樣品</p>
                 <a href="表單/index.html" target="_blank" class="btn">網址</a>
-            </div>
+            </div-->
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-27 022548.png" alt="工作作品截圖">
                 <div class="text">
@@ -779,11 +749,11 @@
                 </div>
             </div>
 
-            <div class="text_p" data-aos="fade-left">
+            <!--div class="text_p" data-aos="fade-left">
                 <p>模仿藝術家likuanzhen網站裡的功能</p>
                 <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn">原網址</a>
                 <a href="likuanzhen/index.html" target="_blank" class="btn">練習網址</a>
-            </div>
+            </div-->
 
             <!--div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
             <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
