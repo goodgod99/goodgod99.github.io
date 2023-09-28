@@ -194,12 +194,12 @@
             z-index: 99;
             animation-name: oxxo;
             animation-duration: 2s;
-            animation-timing-function:ease;
-            animation-iteration-count:infinite ;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
         }
 
         @keyframes oxxo {
-            0%{
+            0% {
                 transform: rotate(30deg) translateX(70%) translateY(-80%);
                 opacity: 1;
             }
@@ -208,15 +208,18 @@
                 transform: rotate(-10deg) translateX(20%) translateY(-50%);
                 opacity: 1;
             }
-            70%{
+
+            70% {
                 transform: rotate(-10deg) translateX(20%) translateY(-50%);
                 opacity: 0;
             }
-            85%{
+
+            85% {
                 transform: rotate(30deg) translateX(70%) translateY(-80%);
                 opacity: 0;
             }
-            100%{
+
+            100% {
                 transform: rotate(30deg) translateX(70%) translateY(-80%);
                 opacity: 1;
             }
@@ -256,50 +259,46 @@
             position: relative;
             transition: .5s;
             vertical-align: bottom;
+            -webkit-filter: brightness(1);
         }
 
-/* *********************************/
+        /* *********************************/
 
         .body0 .text {
-                margin: auto;
-                width: auto;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                padding: 0 30px;
-                position: absolute;
-                color: white;
-                text-align: center;
-                opacity: 0;
-                transition: .8s;
-                display: flex;
-                text-wrap: wrap;
+            margin: auto;
+            width: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding: 0 30px;
+            position: absolute;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transition: .8s;
+            display: flex;
+            text-wrap: wrap;
+            opacity: 0;
+        }
 
-            }
+        .body0 .text p {
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 900;
 
-            .body0 .text p {
-                margin: auto;
-                font-size: 20px;
-                line-height: 1.5;
-                font-weight: 900;
+        }
 
-            }
-
-            .body0 .text .btn {
-                display: none;
-            }
+        .body0 .text .btn {
+            display: none;
+        }
 
 
 
-            .body0 .img:hover img {
-                -webkit-filter: brightness(.3);
-            }
 
-            .body0 .img:hover .text {
-                opacity: 1;
-            }
-/* *********************************/
+
+        /* *********************************/
         .body1 {
             height: 400px;
             width: auto;
@@ -626,9 +625,13 @@
 
 
             .body0 .img:hover img {
+                -webkit-filter: brightness(.3);
                 transform: scale(1.4);
             }
 
+            .body0 .img:hover .text {
+                opacity: 1;
+            }
 
             #background2 {
                 background-image: url(img/10004.jpg);
@@ -710,11 +713,7 @@
                     <a href="netf1ix/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
             </div>
-            <!--div class="text_p" data-aos="fade-left">
-                <p>模仿製作Netflix官方網站<br>(無RWD)</p>
-                <a href="https://www.netflix.com/tw/" target="_blank" class="btn">原網址</a>
-                <a href="netf1ix/index.html" target="_blank" class="btn">練習網址</a>
-            </div-->
+
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 作品截圖">
                 <div class="text">
@@ -723,11 +722,7 @@
                     <a href="spotify/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
             </div>
-            <!--div class="text_p" data-aos="fade-left">
-                <p>模仿製作Spotify的Premium網站<br>(無RWD)</p>
-                <a href="https://www.spotify.com/tw/premium/" target="_blank" class="btn">原網址</a>
-                <a href="spotify/index.html" target="_blank" class="btn">練習網址</a>
-            </div-->
+
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-23 175123.png" alt="工作作品截圖">
                 <div class="text">
@@ -735,11 +730,7 @@
                     <a href="表單/index.html" target="_blank" class="btn">網址</a>
                 </div>
             </div>
-            <!--div class="text_p" data-aos="fade-left">
-                <p>工作製作的表單<br>
-                    此版本為復刻的樣品</p>
-                <a href="表單/index.html" target="_blank" class="btn">網址</a>
-            </div-->
+
             <div class="img" data-aos="fade">
                 <img src="img/螢幕擷取畫面 2023-09-27 022548.png" alt="工作作品截圖">
                 <div class="text">
@@ -749,15 +740,6 @@
                 </div>
             </div>
 
-            <!--div class="text_p" data-aos="fade-left">
-                <p>模仿藝術家likuanzhen網站裡的功能</p>
-                <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn">原網址</a>
-                <a href="likuanzhen/index.html" target="_blank" class="btn">練習網址</a>
-            </div-->
-
-            <!--div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
-            <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div>
-            <div class="img" data-aos="fade-up"><img src="img/white.png" alt=""></div-->
         </div>
         <span class="more">MORE <red>>></red></span>
 
@@ -819,10 +801,10 @@
 </html>
 
 <script>
-
     var menu_check = $("#menu_control");    //check判斷
     var menu_btn = $('.menu_btn');  //menu按鈕
     var menu = $('.menu');
+
 
     //初始函式
     $(document).ready(function () {
@@ -950,5 +932,23 @@
         }, 500); // 平滑滚动的时间，单位是毫秒
     });
 
+    var mobileQuery = window.matchMedia("(max-width: 768px)"); //手機 TRUE
+    var i = 0;
+    if (mobileQuery.matches) {
+
+        $(".img").click(function () {
+            console.log('click')
+            if (i == 0) {
+                $(this).children("img").css('-webkit-filter', 'brightness(.3)');
+                $(this).children(".text").css('opacity', '1');
+                i = 1;
+            }
+            else {
+                $(this).children("img").css('-webkit-filter', 'brightness(1)');
+                $(this).children(".text").css('opacity', '0');
+                i = 0;
+            }
+        })
+    }
 
 </script>
