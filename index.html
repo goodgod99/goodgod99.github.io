@@ -705,7 +705,7 @@
         <h1 data-aos="fade">projects<red>.</red>
         </h1>
         <div class="scroll-container">
-            <div class="img" data-aos="fade">
+            <div class="img" data-aos="fade" data-show="0">
                 <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix 作品截圖">
                 <div class="text">
                     <p>模仿製作Netflix官方網站<br>(無RWD)</p>
@@ -714,7 +714,7 @@
                 </div>
             </div>
 
-            <div class="img" data-aos="fade">
+            <div class="img" data-aos="fade" data-show="0">
                 <img src="img/螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 作品截圖">
                 <div class="text">
                     <p>模仿製作Spotify的Premium網站<br>(無RWD)</p>
@@ -723,18 +723,18 @@
                 </div>
             </div>
 
-            <div class="img" data-aos="fade">
+            <div class="img" data-aos="fade" data-show="0">
                 <img src="img/螢幕擷取畫面 2023-09-23 175123.png" alt="工作作品截圖">
                 <div class="text">
-                    <p>工作製作的表單，此版本為復刻的樣品</p>
+                    <p>表單製作</p>
                     <a href="表單/index.html" target="_blank" class="btn">網址</a>
                 </div>
             </div>
 
-            <div class="img" data-aos="fade">
+            <div class="img" data-aos="fade" data-show="0">
                 <img src="img/螢幕擷取畫面 2023-09-27 022548.png" alt="工作作品截圖">
                 <div class="text">
-                    <p>模仿藝術家likuanzhen的網站所擁有的功能</p>
+                    <p>模仿藝術家likuanzhen的網站功能</p>
                     <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn">原網址</a>
                     <a href="likuanzhen/index.html" target="_blank" class="btn">練習網址</a>
                 </div>
@@ -933,20 +933,19 @@
     });
 
     var mobileQuery = window.matchMedia("(max-width: 768px)"); //手機 TRUE
-    var i = 0;
     if (mobileQuery.matches) {
 
         $(".img").click(function () {
             console.log('click')
-            if (i == 0) {
+            if ($(this).data('show') == 0) {
                 $(this).children("img").css('-webkit-filter', 'brightness(.3)');
                 $(this).children(".text").css('opacity', '1');
-                i = 1;
+                $(this).data('show','1');
             }
             else {
                 $(this).children("img").css('-webkit-filter', 'brightness(1)');
                 $(this).children(".text").css('opacity', '0');
-                i = 0;
+                $(this).data('show','0');
             }
         })
     }
