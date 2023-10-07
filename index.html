@@ -280,6 +280,7 @@
             display: flex;
             text-wrap: wrap;
             opacity: 0;
+            flex-direction: column;
         }
 
         .body0 .text p {
@@ -292,6 +293,25 @@
 
         .body0 .text .btn {
             display: none;
+        }
+        .body0 .text .btn_show{
+            display: block;
+                box-sizing: border-box;
+                margin: 0 auto auto auto;
+                width: 100px;
+                height: 40px;
+                line-height: 37px;
+                font-size: 15px;
+                border: 2px;
+                border-color: white;
+                border-style: solid;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border-radius: 20px;
+                text-align: center;
+                transition: .2s;
+                cursor: pointer;
+                text-decoration: none;
         }
 
 
@@ -706,7 +726,7 @@
         </h1>
         <div class="scroll-container">
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix 作品截圖">
+                <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix作品">
                 <div class="text">
                     <p>模仿製作Netflix官方網站<br>(無RWD)</p>
                     <a href="https://www.netflix.com/tw/" target="_blank" class="btn">原網址</a>
@@ -715,7 +735,7 @@
             </div>
 
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 作品截圖">
+                <img src="img/螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 品">
                 <div class="text">
                     <p>模仿製作Spotify的Premium網站<br>(無RWD)</p>
                     <a href="https://www.spotify.com/tw/premium/" target="_blank" class="btn">原網址</a>
@@ -724,7 +744,7 @@
             </div>
 
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/螢幕擷取畫面 2023-09-23 175123.png" alt="工作作品截圖">
+                <img src="img/螢幕擷取畫面 2023-09-23 175123.png" alt="表單作品">
                 <div class="text">
                     <p>表單製作</p>
                     <a href="表單/index.html" target="_blank" class="btn">網址</a>
@@ -732,11 +752,19 @@
             </div>
 
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/螢幕擷取畫面 2023-09-27 022548.png" alt="工作作品截圖">
+                <img src="img/螢幕擷取畫面 2023-09-27 022548.png" alt="likuanzhen網站">
                 <div class="text">
                     <p>模仿藝術家likuanzhen的網站功能</p>
                     <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn">原網址</a>
                     <a href="likuanzhen/index.html" target="_blank" class="btn">練習網址</a>
+                </div>
+            </div>
+
+            <div class="img" data-aos="fade" data-show="0">
+                <img src="img/keyboard.png" alt="鍵盤">
+                <div class="text">
+                    <p>製作一個注音鍵盤<br>(有RWD)</p>
+                    <a href="注音輸入/index.html" target="_blank" class="btn btn_show">網址</a>
                 </div>
             </div>
 
@@ -935,9 +963,11 @@
     var mobileQuery = window.matchMedia("(max-width: 768px)"); //手機 TRUE
     if (mobileQuery.matches) {
 
-        $(".img").click(function () {
+        $(".img").click(function (e) {
             console.log('click')
+            
             if ($(this).data('show') == 0) {
+                e.preventDefault();
                 $(this).children("img").css('-webkit-filter', 'brightness(.3)');
                 $(this).children(".text").css('opacity', '1');
                 $(this).data('show','1');
