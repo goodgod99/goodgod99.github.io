@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="screen-orientation" content="landscape">
-    <meta name="viewport" content="minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>注音輸入法</title>
     <link rel=stylesheet type="text/css" href="reset.css">
     <script src="jquery-3.7.1.min.js"></script>
@@ -57,7 +55,7 @@
             font-size: 40px;
             font-weight: 900;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: .3s ease;
         }
 
         .key.active {
@@ -78,7 +76,7 @@
             align-items: center;
             font-size: 20px;
             font-weight: 900;
-            transition: background-color 0.3s ease;
+            transition: .3s ease;
         }
 
         .space.active {
@@ -92,14 +90,15 @@
             width: 15%;
             margin-right: auto;
             background-color: #ffffff;
-            border: 1px solid #ccc;
+            border: 1px solid rgb(180, 11, 11);
+            color: rgb(180, 11, 11);
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 20px;
             font-weight: 900;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: .3s ease;
         }
 
         .space15 {
@@ -114,9 +113,72 @@
             width: 8vw;
         }
 
+        @media (orientation: Portrait) {
+            body {
+                height: 100vh;
+                width: 100vw;
+
+
+            }
+
+            .keyboard {
+                flex-direction: row;
 
 
 
+            }
+
+            .row {
+                flex-direction: column-reverse;
+                width: 8vh;
+                height: 95vh;
+
+            }
+
+            .key {
+                height: 8vh;
+                width: 8vh;
+                transform: rotate(-90deg);
+
+                
+
+            }
+
+            p {
+                transform: rotate(-90deg);
+
+            }
+
+            .space {
+                height: 50%;
+                width: 8vh;
+                margin-bottom: auto;
+
+            }
+
+
+            .clear {
+                height: 15%;
+                width: 8vh;
+                margin-top: auto;
+
+            }
+
+            .space15 {
+                height: 2vh;
+            }
+
+            .space30 {
+                height: 4vh;
+            }
+
+            .space50 {
+                height: 8vh;
+            }
+
+
+
+        }
     </style>
 </head>
 
@@ -178,8 +240,12 @@
             <div class="space50"></div>
         </div>
         <div class="row">
-            <div class="space">[Space]</div>
-            <div class="clear">[Clear]</div>
+            <div class="space">
+                <p>[Space]</p>
+            </div>
+            <div class="clear">
+                <p>[Clear]</p>
+            </div>
         </div>
     </div>
 </body>
