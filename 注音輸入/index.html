@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="screen-orientation" content="landscape">
+    <meta name="viewport" content="minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>注音輸入法</title>
     <link rel=stylesheet type="text/css" href="reset.css">
     <script src="jquery-3.7.1.min.js"></script>
@@ -111,6 +113,10 @@
         .space50 {
             width: 8vw;
         }
+
+
+
+
     </style>
 </head>
 
@@ -210,7 +216,9 @@
             element.onmousedown = function () { return false; };
         }
     }
-
     // 调用函数并传递body元素作为参数
     disableSelection(document.body);
+
+
+
 </script>
