@@ -151,7 +151,7 @@ button {
 #body2 {
     background-color: white;
     height: 550px;
-    padding: 0 20%;
+    padding: 0 10%;
     border: 0;
 }
 
@@ -173,9 +173,9 @@ button {
     display: flex;
     justify-content: space-between;
     /**水平平分**/
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     /**不換行**/
-    align-items: center;
+    align-items: top;
     /**垂直對齊**/
 }
 
@@ -187,6 +187,7 @@ button {
     align-items: center;
     /**垂直對齊**/
     width: 150px;
+    margin: 0 10px;
 }
 
 #body2 img {
@@ -198,8 +199,7 @@ button {
 /**id_body3**/
 #body3 {
     background-color: rgb(233, 233, 233);
-    height: 840px;
-    padding: 0 20%;
+    padding: 20px 10%;
     border: 0;
 }
 
@@ -280,11 +280,12 @@ button {
     /**水平對齊**/
     align-items: center;
     /**垂直對齊**/
+    flex-wrap: wrap;
 }
 
 #body3 button{
     position: absolute;
-    width: 230px;
+    width: 85%;
     height: 45px;
     font-size: 16px;
     border: 0;
@@ -312,7 +313,7 @@ button {
 }
 
 #foot th{
-    font-size: 5px;
+    font-size: 15px;
     color: gray;
 }
 #foot td{
@@ -375,7 +376,7 @@ button {
     
 }
 #foot2 p{
-    font-size: 5px;
+    font-size: 15px;
     color: gray;
     cursor: pointer;
     display: inline-block;
@@ -390,7 +391,7 @@ button {
 }
 
 #foot3 p{
-    font-size: 5px;
+    font-size: 15px;
     color: gray;
     cursor: pointer;
     margin: 0 12px;
