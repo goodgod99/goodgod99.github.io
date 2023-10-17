@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <title>To-Do List</title>
+    <style>
+        * {
+            transition: .3s;
+            margin: 0;
+            padding: 0;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: gainsboro;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .todo {
+            height: 600px;
+            width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 8px 8px 0 gray;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .todo .logo {
+            text-transform: uppercase;
+            text-align: center;
+            margin: 20px auto 10px auto;
+            justify-content: center;
+            color: black;
+
+        }
+
+        .todo .input {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: auto;
+            /*background-color: aquamarine;*/
+        }
+
+        .todo .input svg {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            color: gray;
+            left: 40px;
+        }
+
+        .todo .input input {
+            width: 300px;
+            box-sizing: border-box;
+            height: 40px;
+            margin-right: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            padding: 6px;
+            padding-left: 45px;
+            font-size: 15px;
+        }
+
+
+        .todo .input button {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            font-weight: 500;
+            border: 0;
+
+            line-height: 30px;
+            text-align: center;
+            vertical-align: middle;
+
+            border-radius: 5px;
+            background-color: rgb(45, 147, 255);
+            color: white;
+
+            cursor: pointer;
+        }
+
+        .todo .input button:hover {
+            background-color: rgb(29, 104, 184);
+        }
+
+        .todo .list {
+            height: 450px;
+            width: 100%;
+            margin-bottom: auto;
+            overflow-y: scroll;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-top: 1px solid gainsboro;
+
+            /*background-color: aqua;*/
+        }
+
+        .todo .list .box {
+            width: 80%;
+            background-color: rgba(0, 255, 255, 0);
+            border-bottom: 1px solid gainsboro;
+            border-radius: 1px;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .todo .list .box .checkbox {
+            width: 15px;
+            height: 15px;
+        }
+
+        .todo .list .box .text {
+            height: 30px;
+            width: 70%;
+            background-color: transparent;
+            border: 0;
+            border-radius: 5px;
+            margin: 0 10px;
+            padding: 0 6px;
+            font-size: 16px;
+
+        }
+        
+        .todo .list .box .text:focus {
+                background-color: rgba(45, 146, 255, 0.08);
+            }
+            .todo .list .box .text:hover {
+                background-color: rgba(45, 146, 255, 0.06);
+            }
+
+
+        .todo .list .box .btn {
+            width: 25px;
+            height: 25px;
+            border: 0;
+            background: transparent;
+            color: gray;
+            line-height: 25px;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 15px;
+
+            cursor: pointer;
+        }
+
+        .todo .list .box .btn:hover {
+            color: rgb(208, 0, 0);
+        }
+
+        .todo .list .box .text.completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .todo .choice {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 25px;
+
+        }
+
+        .todo .choice button {
+            border: 0;
+            padding: 15px 0;
+            background-color: transparent;
+            color: gray;
+            font-size: 15px;
+            margin: 0 auto;
+            cursor: pointer;
+box-sizing: border-box;
+border-bottom: 2px solid transparent;
+        }
+
+        .todo .choice button:hover {
+            color: rgb(0, 123, 255);
+
+        }
+
+        .todo .choice button.press {
+            color: rgb(0, 123, 255);
+            border-bottom: 2px solid rgb(0, 123, 255);
+            border-radius: 1px;
+        }
+
+        .todo .choice #clear {
+            margin-left: 50px;
+
+        }
+
+        .todo .choice #clear:hover {
+            color: rgb(208, 0, 0);
+
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background: white;
+            }
+
+            .todo {
+                height: 100vh;
+                width: 100vw;
+                background-color: white;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .todo .input {
+                width: 100%;
+                margin-top: auto;
+            }
+
+            .todo .input svg {
+
+                left: 8%;
+            }
+
+            .todo .input input {
+                width: 90%;
+                font-size: 17px;
+            }
+
+
+            .todo .input button {
+                display: none;
+            }
+
+            .todo .list {
+                height: 80vh;
+                /* background-color: aliceblue; */
+            }
+
+            .todo .choice {
+                display: flex;
+                justify-content: space-around;
+                padding: 0 15px;
+
+            }
+
+            .todo .choice button {
+                font-size: 17px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="todo">
+        <!--h1 class="logo">Things to Do:</h1-->
+        <div class="input">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-justify-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <input type="text" id="taskInput" placeholder="Add a new task"></input>
+            <button id="addTask">+</button>
+        </div>
+        <div class="choice">
+            <button class="press" id="all">All</button>
+            <button id="pending">Pending</button>
+            <button id="completed">Completed</button>
+            <button id="clear">Clear All</button>
+        </div>
+        <div class="list" id="taskList">
+            <!-- Tasks will be added here dynamically using jQuery -->
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        // 添加一個名為 addTask 的函數
+        function addTask() {
+            var taskText = $("#taskInput").val();
+            if (taskText !== "") {
+                var taskItem = $("<div class='box'></div>");
+                var checkbox = $("<input type='checkbox' class='checkbox'>");
+                var taskDescription = $("<input type='text' class='text'>").val(taskText);
+                var deleteButton = $("<button class='btn'>x</button>");
+
+                taskItem.append(checkbox, taskDescription, deleteButton);
+                $("#taskList").append(taskItem);
+                $("#taskInput").val(""); // 清空輸入框
+            }
+            else {
+                alert('請輸入值');
+            }
+        }
+
+        // 當按下 "+" 按鈕時調用 addTask 函數
+        $("#addTask").click(addTask);
+
+        $("#taskInput").keypress(function (e) {
+            if (e.which == 13) {
+                addTask();
+            }
+        });
+
+        // Mark a task as done with a checkbox
+        $("#taskList").on("change", ".checkbox", function () {
+            var taskDescription = $(this).siblings(".text");
+            if (this.checked) {
+                taskDescription.addClass("completed");
+            } else {
+                taskDescription.removeClass("completed");
+            }
+        });
+
+        // Delete a task when the "x" button is clicked
+        $("#taskList").on("click", ".btn", function () {
+            $(this).parent().remove();
+        });
+
+        // Mark a task as done with a checkbox
+        $("#taskList").on("change", ".checkbox", function () {
+            var taskDescription = $(this).siblings(".text");
+            if (this.checked) {
+                taskDescription.addClass("completed");
+            } else {
+                taskDescription.removeClass("completed");
+            }
+        });
+
+
+        // 点击 "All" 按钮，显示所有任务
+        $("#all").click(function () {
+            $(".box").show(); // 显示所有任务
+
+            //添加按鈕顏色
+            $(this).siblings().removeClass("press");
+            $(this).addClass("press");
+
+        });
+
+        // 点击 "Pending" 按钮，显示未完成的任务
+        $("#pending").click(function () {
+            $(".box").hide(); // 隱藏所有任务
+
+            $(".box .checkbox:not(:checked)").parent().show(); // 顯示未完成的任务 
+
+            //添加按鈕顏色
+            $(this).siblings().removeClass("press");
+            $(this).addClass("press");
+
+        });
+
+        // 点击 "Completed" 按钮，显示已完成的任务
+        $("#completed").click(function () {
+            $(".box").hide(); // 隱藏所有任务
+
+
+            $(".box .checkbox:checked").parent().show(); // 顯示已完成的任务
+
+
+
+            //添加按鈕顏色
+            $(this).siblings().removeClass("press");
+            $(this).addClass("press");
+        });
+
+        // 点击 "Clear All" 按钮，清除所有任务
+        $("#clear").click(function () {
+            
+            $("#taskList").empty(); // 清空任务列表
+        });
+
+
+    });
+</script>
