@@ -27,7 +27,7 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(-45deg, #fbc2eb, #a7c1ee);
-                        height: 100vh;
+            height: 100vh;
             overflow: hidden;
         }
 
@@ -143,13 +143,14 @@
             font-size: 16px;
 
         }
-        
+
         .todo .list .box .text:focus {
-                background-color: rgba(45, 146, 255, 0.08);
-            }
-            .todo .list .box .text:hover {
-                background-color: rgba(45, 146, 255, 0.06);
-            }
+            background-color: rgba(45, 146, 255, 0.08);
+        }
+
+        .todo .list .box .text:hover {
+            background-color: rgba(45, 146, 255, 0.06);
+        }
 
 
         .todo .list .box .btn {
@@ -190,8 +191,8 @@
             font-size: 15px;
             margin: 0 auto;
             cursor: pointer;
-box-sizing: border-box;
-border-bottom: 2px solid transparent;
+            box-sizing: border-box;
+            border-bottom: 2px solid transparent;
         }
 
         .todo .choice button:hover {
@@ -207,11 +208,11 @@ border-bottom: 2px solid transparent;
 
         .todo .choice #clear {
             margin-left: 50px;
-
         }
 
         .todo .choice #clear:hover {
             color: rgb(208, 0, 0);
+            
 
         }
 
@@ -389,7 +390,7 @@ border-bottom: 2px solid transparent;
 
         // 点击 "Clear All" 按钮，清除所有任务
         $("#clear").click(function () {
-            
+
             $("#taskList").empty(); // 清空任务列表
         });
 
