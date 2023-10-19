@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <title>Document</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
+
         .background {
             width: 100vw;
             height: 100vh;
@@ -115,21 +117,40 @@
         }
 
         .body1 img {
-            width: 400px;
+            width: 350px;
             height: auto;
             position: absolute;
             -webkit-user-drag: none;
+            cursor: move;
+
         }
-
-
 
         /* 創建一個可拖曳的圖片的樣式 */
-        #draggable-image {
-            position: absolute;
-            cursor: move;
-            height: auto;
-            width: auto;
+       
+        #big-image {
+            position: fixed;
+            width: 450px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 98;
+            margin: auto;
         }
+
+        .nbg {
+            background: transparent;
+            position: fixed;
+            z-index: 99;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            display: none;
+        }
+
+        
     </style>
 </head>
 
@@ -177,14 +198,18 @@
         <div id="clock"></div>
     </div>
     <div class="body1">
-        <div id="draggable-image">
-            <img src="Nike.png" alt="可拖曳的圖片"><br>
-        </div>
+        
+        <img src="Nike.png" alt="可拖曳的圖片" class="draggable-image"><br>
+        
         <h1>★Snappp Magazine</h1>
         <h3>some cool paper doll on internet ★</h3>
 
+    </div>
+    <div class="nbg">
+        <img src="" alt='' id="big-image">
 
     </div>
+
 </body>
 
 </html>
@@ -193,23 +218,46 @@
 
     $(document).ready(function () {
         ////圖片拖曳
-        const $draggableImage = $('#draggable-image');
+        const $draggableImage = $('.draggable-image');
+        var bigImage = $('#big-image');
+        var nbg = $('.nbg');
+
         let offsetX, offsetY, isDragging = false;
+        var x1;
+        var y1;
+        var show = false;
 
         // 當使用者按下滑鼠左鍵時開始拖曳
         $draggableImage.on('mousedown', function (e) {
             isDragging = true;
             offsetX = e.clientX - $draggableImage.offset().left;
             offsetY = e.clientY - $draggableImage.offset().top;
+            x1 = e.clientX;
+            y1 = e.clientY;
 
-            $draggableImage.css('cursor', 'move');
         });
+
+
 
         // 當使用者釋放滑鼠左鍵時停止拖曳
-        $draggableImage.on('mouseup', function () {
+        $draggableImage.on('mouseup', function (e) {
             isDragging = false;
-            $draggableImage.css('cursor', 'move');
+            // 如果滑鼠沒移動新增放大圖片
+            if ((x1 == e.clientX) && (y1 == e.clientY)) {
+                bigImage.attr('src',$draggableImage.attr('src'));
+                console.log($draggableImage.attr('src'));
+
+                nbg.show();
+
+            } else {
+                console.log('move');
+            }
         });
+
+        nbg.on('click',function(){
+            nbg.hide();
+        });
+
 
         // 當使用者移動滑鼠時拖曳圖片
         $(document).on('mousemove', function (e) {
@@ -224,7 +272,7 @@
             });
         });
 
-        
+
 
         ////時鐘
         function updateClock() {
