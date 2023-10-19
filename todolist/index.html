@@ -7,9 +7,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <!-- Popper -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+
     <title>To-Do List</title>
     <style>
         * {
@@ -60,6 +61,29 @@
             /*background-color: aquamarine;*/
         }
 
+        .input label {
+            position: absolute;
+            left: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: gray;
+            pointer-events: none;
+            font-size: 15px;
+            transition: .1s;
+            background-color: rgba(255, 255, 255, 0);
+            font-family: Arial;
+
+        }
+
+        .input input:focus~label,
+        .input input:valid~label {
+            left: 66px;
+            transform: translateY(-190%);
+            font-size: 10px;
+            background-color: white;
+            padding: 0 4px;
+        }
+
         .todo .input svg {
             height: 20px;
             width: 20px;
@@ -76,7 +100,7 @@
             border-radius: 5px;
             border: 1px solid gray;
             padding: 6px;
-            padding-left: 45px;
+            padding-left: 40px;
             font-size: 15px;
         }
 
@@ -212,7 +236,7 @@
 
         .todo .choice #clear:hover {
             color: rgb(208, 0, 0);
-            
+
 
         }
 
@@ -240,9 +264,19 @@
                 left: 8%;
             }
 
+            .input label {
+                left: calc(8% + 30px);
+            }
+
+            .input input:focus~label,
+            .input input:valid~label {
+                left: calc(8% + 26px);
+            }
+
             .todo .input input {
                 width: 90%;
                 font-size: 17px;
+                padding-left: 45px;
             }
 
 
@@ -279,8 +313,14 @@
                 <path fill-rule="evenodd"
                     d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
             </svg>
-            <input type="text" id="taskInput" placeholder="Add a new task"></input>
+            <!-- <input type="text" id="taskInput" placeholder="Add a new task"></input> -->
+            <input type="text" id="taskInput" required></input>
+            <label for="">Add a new task</label>
             <button id="addTask">+</button>
+
+            <!-- <div id="emptyTaskPopper" style="display: none;" aria-describedby="tooltip">
+                請輸入文字
+            </div> -->
         </div>
         <div class="choice">
             <button class="press" id="all">All</button>
@@ -299,7 +339,6 @@
 
 <script>
     $(document).ready(function () {
-        // 添加一個名為 addTask 的函數
         function addTask() {
             var taskText = $("#taskInput").val();
             if (taskText !== "") {
@@ -310,12 +349,13 @@
 
                 taskItem.append(checkbox, taskDescription, deleteButton);
                 $("#taskList").append(taskItem);
-                $("#taskInput").val(""); // 清空輸入框
-            }
-            else {
-                alert('請輸入值');
+                $("#taskInput").val(""); // 清空输入字段
+            } else {
+                alert('請輸入');
+
             }
         }
+
 
         // 當按下 "+" 按鈕時調用 addTask 函數
         $("#addTask").click(addTask);
@@ -394,6 +434,7 @@
             $("#taskList").empty(); // 清空任务列表
         });
 
+        //popper
 
     });
 </script>
