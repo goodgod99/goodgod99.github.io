@@ -117,7 +117,7 @@
         }
 
         .body1 img {
-            width: 350px;
+            width: 300px;
             height: auto;
             position: absolute;
             -webkit-user-drag: none;
@@ -126,14 +126,13 @@
         }
 
         /* 創建一個可拖曳的圖片的樣式 */
-       
         #big-image {
             position: fixed;
-            width: 450px;
+            /*width: 450px;
             left: 0;
             right: 0;
             top: 0;
-            bottom: 0;
+            bottom: 0; */
             z-index: 98;
             margin: auto;
         }
@@ -149,8 +148,6 @@
 
             display: none;
         }
-
-        
     </style>
 </head>
 
@@ -198,9 +195,9 @@
         <div id="clock"></div>
     </div>
     <div class="body1">
-        
+
         <img src="Nike.png" alt="可拖曳的圖片" class="draggable-image"><br>
-        
+
         <h1>★Snappp Magazine</h1>
         <h3>some cool paper doll on internet ★</h3>
 
@@ -244,18 +241,37 @@
             isDragging = false;
             // 如果滑鼠沒移動新增放大圖片
             if ((x1 == e.clientX) && (y1 == e.clientY)) {
-                bigImage.attr('src',$draggableImage.attr('src'));
-                console.log($draggableImage.attr('src'));
+                //大圖的寬(px)
+                // var newWidth = 450;
+                var newWidth = $draggableImage.width() * 1.5;
+
+
+                bigImage.attr('src', $draggableImage.attr('src'));
+                bigImage.css('width', $draggableImage.css('width'));
+                bigImage.css('left', $draggableImage.offset().left).css('top', $draggableImage.offset().top);
 
                 nbg.show();
 
-            } else {
-                console.log('move');
+                // 计算元素的左侧和顶部位置
+                var leftValue = ($(window).width() - newWidth) / 2;
+                var topValue = ($(window).height() - bigImage.height() * 1.5) / 2;
+
+                // 使用jQuery的animate方法将元素居中
+                bigImage.animate({ width: newWidth + 'px', left: leftValue + 'px', top: topValue + 'px' }, 200);
+
             }
         });
 
-        nbg.on('click',function(){
-            nbg.hide();
+        nbg.on('click', function () {
+            //再次點即時隱藏
+            bigImage.animate({
+                width: $draggableImage.css('width'),
+                left: $draggableImage.offset().left + 'px',
+                top: $draggableImage.offset().top + 'px'
+            }, 200, function () {
+                // 此函数会在animate完成后被调用
+                nbg.hide();
+            });
         });
 
 
