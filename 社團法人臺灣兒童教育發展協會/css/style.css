@@ -121,7 +121,6 @@ orange{
     width: 70%;
     display: flex;
     flex-direction: row;
-
 }
 .footer p, .footer h2{
     color: #C9C9C9;
@@ -146,6 +145,7 @@ orange{
     height: 30px;
     color: #C9C9C9;
     transition: 0s;
+    margin: 5px;
 }
 .footer .boxs .box-right svg:hover{
     color: #4A90E2;
@@ -170,4 +170,57 @@ orange{
     align-items: center;
     flex-direction: column;
 
+}
+@media screen and (max-width: 768px) {
+    .title{
+        font-size: 30px;
+        letter-spacing: 0px;
+        text-align: center;
+        color: #005c99;
+        margin: 30px 0;
+    }
+    .header {
+        width: 100vw;
+
+        height: 80px;
+        position: fixed;
+        z-index: 99;
+    }
+    .header .header-ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+    
+    }
+    
+    .header .header-ul .header-li {
+        margin: auto ;
+    
+    }
+.header .logo{
+    display: none;
+}
+hr{
+    width: 85%;
+    border: .5px  solid #bababa;
+    border-radius: 4px;
+    margin: 50px 0;
+}
+.footer{
+    padding: 40px 0;
+}
+.footer .boxs{
+    width: 85%;
+    flex-direction: column;
+}
+.footer .boxs .box-left{
+    width: 100%;
+}
+.footer .boxs .box-right{
+    width: 100%;
+    display: flex;
+    justify-content:left;
+}
 }

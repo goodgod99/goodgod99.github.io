@@ -6,8 +6,6 @@
 .body .text p {
     text-align: center;
     letter-spacing: 1px;
-
-
 }
 
 .body .text h1 {
@@ -16,9 +14,6 @@
     line-height: 80px;
     color: #005c99;
     font-size: 35px;
-
-
-
 }
 
 .body .scoll-img {
@@ -118,4 +113,86 @@
 .body .unit iframe{
     width: 70%;
     height: 500px;
+}
+@media screen and (max-width: 1024px) {
+
+.body .scoll-img .item img {
+    height: 250px;
+
+}
+    .body .news{
+        flex-direction: column;
+    }
+    .body .news .news-box{
+        width: 100%;
+    }
+    .body .news .news-img img{
+        width: 100%;
+    }
+    /* row-reverse */
+    .body .news.row-reverse{
+        flex-direction: column;
+    }
+    
+    .body .news.row-reverse .news-img{
+        align-items: center;
+    }
+    
+    .body .news.row-reverse .news-img .tap{
+        left: -5px;
+    }
+    .body .news .news-text a{
+        margin-right: 0;
+        margin-left: auto;
+
+    }
+    /*  */
+    .body .unit{
+        flex-direction: column;
+    }
+    
+    .body .unit .unit-text{
+        height: auto;
+    }
+    .body .unit .unit-text li{
+        margin-left: 0px ;
+    }
+    
+    .body .unit iframe{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+.body .text {
+    width: 95%;
+}
+.body .text h1 {
+    line-height: 50px;
+    margin: 20px 0;
+    
+}
+.body .text p {
+    text-align: center;
+    letter-spacing: -1px;
+}
+.body .scoll-img {
+    width: 95%;
+}
+.body .scoll-img .item img {
+    height: 200px;
+
+}
+.body .news{
+    width: 95%;
+}
+.body .news.row-reverse{
+    width: 95%;
+}
+.body .unit{
+    width: 95%;
+}
+.body .unit iframe{
+    height: 400px;
+}
 }
