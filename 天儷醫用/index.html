@@ -9,6 +9,7 @@
         * {
             margin: 0;
             padding: 0;
+
         }
 
         h1 {
@@ -109,13 +110,13 @@
         /* body5 */
         .body5 {
             width: 100%;
-            padding:25px;
+            padding: 25px;
             box-sizing: border-box;
             background-color: #E1F0F1;
             display: flex;
         }
 
-        .body5 .text{
+        .body5 .text {
             width: 70%;
             padding: 25px;
             box-sizing: border-box;
@@ -123,44 +124,96 @@
             border-radius: 30px;
         }
 
-        .body5 .text p{
+        .body5 .text p {
             color: #746B58;
         }
 
-        .body5 .text p span{
+        .body5 .text p span {
             color: #CA5C30;
         }
 
-        .body5 .img{
+        .body5 .img {
             width: 30%;
             display: flex;
             justify-content: center;
             align-items: center;
 
         }
-        .body5 .img img{
+
+        .body5 .img img {
             height: auto;
             width: 20vw;
         }
 
         /* body6 */
-        .body6{
+        .body6 {
             width: 100%;
             background-color: #E1F0F1;
 
         }
-        .body6 img{
+
+        .body6 img {
             width: 100%;
             padding: 30px;
             box-sizing: border-box;
         }
 
+        /* 平板ＲＷＤ */
+        @media screen and (max-width: 1024px) {
+            /* body3 */
 
+            .body3 {
+                flex-direction: column;
+
+            }
+
+            .body3 .box-left {
+                width: 100%;
+            }
+
+            .body3 .box-right {
+                width: 100%;
+            }
+
+            /* body5 */
+            .body5 {
+                flex-direction: column;
+            }
+
+            .body5 .text {
+                width: 100%;
+            }
+
+            .body5 .img {
+                width: 100%;
+                background-color: #CA5C30;
+                margin-top: 25px;
+
+            }
+
+            .body5 .img img {
+                width: 35vw;
+            }
+
+            /* body6 */
+            .body6 img {
+                padding: 10px;
+            }
+        }
+
+        /* 手機ＲＷＤ */
+        @media screen and (max-width: 768px) {
+
+            /* body5 */
+            .body5 .img img {
+                width: 50vw;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <!-- 七種功能，一瓶通用 -->
+    <!-- 主標題 -->
     <div class="body1">
         <h1>七種功能，一瓶通用</h1>
         <div class="boxs">
@@ -197,7 +250,7 @@
     <div class="body2">
 
     </div>
-    <!-- 說明圖 -->
+    <!-- 使用說明圖 -->
     <div class="body3">
         <div class="box-left">
             <img src="https://fakeimg.pl/2500x1000/6f000f/">
@@ -226,10 +279,14 @@
             <h1>orem ipsum, quibusdam</h1>
             <p>Lorem ipsum, quibusdam voluptatum reprehenderit qui numquam</p>
             <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae quisquam aliquam temporibus dolore quaerat voluptates. Magnam, sunt rerum natus expedita dolore atque eligendi adipisci quod ipsa dolores iste tenetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae quisquam aliquam temporibus
+                dolore quaerat voluptates. Magnam, sunt rerum natus expedita dolore atque eligendi adipisci quod ipsa
+                dolores iste tenetur.</p>
             <br>
             <h1>Lorem ipsum, quibusdam voluptatum</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aperiam voluptas, laboriosam quis dolor in quisquam beatae aliquid, nulla molestiae sequi necessitatibus tempora ratione at nam nihil! Error, ex hic!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aperiam voluptas, laboriosam quis dolor in
+                quisquam beatae aliquid, nulla molestiae sequi necessitatibus tempora ratione at nam nihil! Error, ex
+                hic!</p>
             <br>
             <h1>Lorem ipsum, quibusdam voluptatum</h1>
             <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></p>
@@ -242,7 +299,7 @@
         </div>
     </div>
 
-    <!-- page2 -->
+    <!-- 組圖 -->
     <div class="body6">
         <img src="https://fakeimg.pl/2500x1000/600000/">
         <img src="https://fakeimg.pl/2500x2000/ff0000/">
