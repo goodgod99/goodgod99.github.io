@@ -1,0 +1,261 @@
+
+
+*{
+    transition: .3s;
+    scroll-behavior: smooth;
+    
+}
+h1,h2,h3,p{
+    font-family: 'Noto Serif TC', serif;
+    color: white;
+}
+/* header */
+#menu_control {
+    position: absolute;
+    z-index: -2;
+    opacity: 0;
+}
+
+.header {
+    height: 130px;
+    width: 100%;
+    padding: 100px 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    z-index: 99;
+}
+
+.header .logo {
+    height: 100px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.header .header-ul {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+.header .header-ul .header-li {
+    margin: 0 30px;
+
+}
+
+.header .header-ul .header-li .link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Noto Serif TC', serif;
+}
+
+.header .header-ul .header-li .link:hover {
+    color: #1DAAE2;
+
+}
+
+.menu_btn {
+    z-index: 1;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    display: block;
+    position:relative;
+    cursor: pointer;
+}
+.menu_btn::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 40px;
+    background-color: #1DAAE2;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    box-shadow: 0 4px 0 #1DAAE2,
+        0 -4px 0 #1DAAE2;
+        transition: .3s;
+}
+
+.menu_btn:hover::before{
+    box-shadow: 0 6px 0 #1DAAE2,
+        0 -6px 0 #1DAAE2;
+}
+
+
+
+/* Swiper  */
+
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    position: relative;
+}
+
+.swiper-slide {
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(.7);
+}
+
+.swiper-img1{
+    background-image:url(https://picsum.photos/1000/500?grayscale&random=1);
+}
+.swiper-img2{
+    background-image:url(https://picsum.photos/1000/500?grayscale&random=2);
+}
+.swiper-img3{
+    background-image:url(https://picsum.photos/1000/500?grayscale&random=3);
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 80px;
+    display: inline-flex;
+    opacity: 1;
+    background-color: transparent;
+
+}
+.swiper-pagination-bullet:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.swiper-pagination-bullet-active:after {
+    background-color: #1DAAE2!important;
+}
+
+.news{
+    position: absolute;
+    bottom: 150px;
+    left: 100px;
+    color: white;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: row;
+
+}
+.news p{
+    font-size: 25px;
+    
+}
+
+.bi-chevron-double-down{
+    position: absolute;
+    bottom: 150px;
+    right: 100px;
+    color: #1DAAE2;
+    font-size: 50px;
+    line-height: 50px;
+    z-index: 11;
+}
+.bi-chevron-double-down:hover{
+    color: white;
+
+}
+
+
+
+/* body1 */
+.body1{
+    width: 100%;
+    height: 50vh;
+    background-image:url(https://picsum.photos/2000/500?grayscale&random=3);
+    background-position: center;
+    background-size: cover;
+    filter: brightness(.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* body2 */
+.body2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 130px;
+        width: 100%;
+        padding: 0px 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        position: fixed;
+        top:0;
+        left: 0;
+        right:0;
+        z-index: 99;
+    }
+    
+    .header .logo {
+        height: 100px;
+        margin-left: 0px;
+        cursor: pointer;
+    }
+    
+    .header .header-ul {
+        display: flex;
+        align-items: center;
+        margin-right: 0px;
+    
+    }
+    .swiper-img1{
+        background-image:url(https://picsum.photos/500/1000?grayscale&random=1);
+    }
+    .swiper-img2{
+        background-image:url(https://picsum.photos/500/1000?grayscale&random=2);
+    }
+    .swiper-img3{
+        background-image:url(https://picsum.photos/500/1000?grayscale&random=3);
+    }
+    .header-li {
+        display: none;
+    }
+    .news{
+        flex-direction: column;
+        left: 20px;
+    }
+    .news p{
+        font-size: 20px;
+        
+    line-height: 30px;
+    }
+    
+    .bi-chevron-double-down{
+        right: 20px;
+        bottom: 60px;
+    }
+}
