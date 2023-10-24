@@ -1,0 +1,304 @@
+ul .getfree a { color:#ee2a5f; } 
+
+.elementor-counter .elementor-counter-number-suffix {
+    font-size: 55%;
+}
+/** 首頁 **/
+/* 滿版提示 */
+.paoc-credit-wrp{
+	display:none;
+}
+
+.paoc-cus-close-txt{
+		display:none;
+}
+
+.paoc-popup-snote {
+		display:none;
+}
+
+/* header */
+a.logo {
+    width: 100px;
+}
+
+/* body */
+
+@media (max-width: 1024px){
+	.elementor-8754 .elementor-element.elementor-element-252d340e {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+}
+@media (max-width: 767px){
+.elementor-8754 .elementor-element.elementor-element-393b6d84 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+}
+/* 左上 */
+@media (max-width: 767px){
+.elementor-8754 .elementor-element.elementor-element-3f709dc8 > .elementor-element-populated {
+    margin: 0px;
+	padding: 5% 2.5% 2.5% 5%;
+
+	}}
+
+/* 右上 */
+@media (max-width: 767px){
+.elementor-8754 .elementor-element.elementor-element-682fbdec > .elementor-element-populated {
+    margin: 0px;
+	padding: 5% 5% 2.5% 2.5%;
+	}}
+
+/* 左下 */
+@media (max-width: 767px){
+.elementor-8754 .elementor-element.elementor-element-be8c9d1 > .elementor-element-populated {
+    margin: 0px;
+    padding: 2.5% 2.5% 5% 5%;
+	}}
+
+/* 右下 */
+@media (max-width: 767px){
+.elementor-8754 .elementor-element.elementor-element-25d57a6 > .elementor-element-populated {
+    margin: 0px;
+    padding: 2.5% 5% 5% 2.5%;
+}
+}
+
+.elementor-element-5045391{
+	height:0;
+}
+.elementor-widget:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+/* star */
+.woocommerce ul.products.products_subvariant_center li.product .star-rating {
+	display:none;
+}
+/* 購物車 */
+.woocommerce ul.products.products_variant_under.button_over li.product .button {
+    bottom: 85px;
+    top: auto;
+	opacity: 1;
+}
+
+.products_variant_under .product-details {
+    padding: 10px 0 0 0;
+}
+.woocommerce ul.products li.product .price {
+    margin-top: 0px;
+}
+.product-details .woocommerce-loop-product__title{
+	text-wrap:nowrap;
+}
+
+@media (max-width: 768px){
+.woocommerce > ul.products[class*="columns-"] li.product {
+    margin-bottom: 3%;
+}
+}
+
+
+
+.elementor-8754 .elementor-element.elementor-element-734f76e {
+    padding: 0px;
+}
+
+.elementor-spacer{
+	height:0;
+}
+@media (max-width: 1024px){
+.elementor-8754 .elementor-element.elementor-element-4c6c682 {
+    padding: 0px ;
+    padding-bottom: 0px;
+	}}
+
+body {
+    padding-bottom:100px!important ;
+}
+
+/* 下工具列 */
+.bnav_main_menu_container ul.bnav_main_menu {
+	padding:5px 0 5px 0 !important; 
+}
+
+.bnav_bottom_nav_wrapper ul li a .icon_wrapper {
+    margin-bottom: 5px !important;
+}
+@media (max-width: 1024px){
+.bnav_bottom_nav_wrapper ul li a .icon_wrapper i {
+    font-size: 12px !important; 
+}
+.bnav_bottom_nav_wrapper ul li a .text_wrapper, .bnav_main_menu_container .bnav_main_menu .bnav_menu_items .cart_total {
+    font-size: 12px !important; 
+    line-height: 10px !important;
+    letter-spacing: 0px !important;
+}
+}
+
+/* line fixed */
+.mystickyelements-fixed{
+	display:none;
+}
+
+.mystickyelement-lists-wrap{
+	display:none;
+	
+}
+
+/** 商品列 **/
+/* 置中 */
+td.wpt-replace-td-in-tr {
+		justify-content:center ;
+		align-items:center !important;
+}
+@media (max-width: 767px){
+.wpt_product_table *, .wpt_product_table tr>td, .wpt_product_table td {
+    text-align: center !important;
+}
+}
+
+/* 數量 */
+.tag_or_div{
+		display:none;
+}
+/* 外部提示 */
+.product_description{
+		display:none;
+	
+}
+
+
+.cart{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+} 
+
+.quantity{
+		display:flex;
+			width: 100%;
+}
+.woocommerce div.product form.cart div.quantity {
+    margin: 0 4px 10px 0;
+}
+.woocommerce .quantity .qty {
+    padding: 0px;
+		width: 100%;
+    font-size: 15px;
+}
+.woocommerce div.product form.cart .button {
+     width: 100% ; 
+}
+
+
+
+
+/** 購物車 **/
+/* 大留白 */
+.woocommerce-no-major-page .title-bar.outside .overlay-color {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+@media (max-width: 768px){
+	.formatter{
+		padding: 0px !important;
+	}
+	
+	
+.woocommerce table.shop_table_responsive.woocommerce-cart-form__contents tr, .woocommerce-page table.shop_table_responsive.woocommerce-cart-form__contents tr {
+    display: flex;
+	justify-content:center;
+	flex-wrap:wrap;
+	
+}
+
+.product-name::before{
+	display:none;
+}
+.product-price::before{
+	display:none;
+}
+.product-quantity::before{
+	display:none;
+}
+.product-name::before{
+	display:none;
+}
+.product-subtotal::before{
+	position:absolute;
+	transform:translateX(-150%);
+}
+
+.product-remove{
+	width:5%;
+	box-sizing:border-box;
+	border-left:0;
+	border-right:0;
+}
+.product-name{ 
+	width:40%;
+	box-sizing:border-box;
+}
+.product-price{
+	width:50%;
+	box-sizing:border-box;
+	
+}
+.product-quantity{
+	width:50%;
+	box-sizing:border-box;
+	
+}
+.product-subtotal{
+		width:45%;
+	box-sizing:border-box;
+}
+
+.actions{
+	width:95%;
+		box-sizing:border-box;
+}
+}
+/** 結帳 **/
+#billing_company_field{
+		display:none;
+}
+
+	#billing_country_field{
+		display:none;
+}
+
+#billing_address_1_field {
+		display:none;
+}
+#billing_address_2_field {
+	display:none;
+}
+
+#billing_city_field {
+	display:none;
+}
+
+#billing_state_field {
+	display:none;
+}
+
+#billing_postcode_field {
+	display:none;
+}
+
+#billing_city_field {
+	display:none;
+}
+
+#ship-to-different-address {
+	display:none;
+}
+	
