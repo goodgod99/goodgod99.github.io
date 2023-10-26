@@ -1,0 +1,395 @@
+* {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-family: 'Noto Serif TC', serif !important;
+    color: black;
+}
+
+.feather {
+    height: auto;
+    position: absolute;
+    width: 150px;
+}
+
+.red-rectangle {
+    width: 25px;
+    height: 6px;
+    background-color: red;
+    margin: 20px auto;
+}
+
+.more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration:none;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    transition: .5s;
+margin: auto;
+margin-top: 50px;
+}
+.more:hover{
+    background-color: white;
+    color: red;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.477);
+}
+
+/* header */
+#menu_control {
+    position: absolute;
+    z-index: -2;
+    opacity: 0;
+}
+
+.header {
+    height: 150px;
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+}
+
+.header .logo {
+    height: 100px;
+    margin-left: 40px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.header .header-ul {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+.header .header-ul .header-li {
+    margin: 0 30px;
+
+}
+
+.header .header-ul .header-li .link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Noto Serif TC', serif;
+    transition: .3s;
+
+}
+
+.header .header-ul .header-li .link:hover {
+    color: red;
+
+}
+
+.header .header-ul .menu_btn {
+    z-index: 1;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.header .header-ul .menu_btn::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 40px;
+    background-color: red;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    box-shadow: 0 4px 0 red,
+        0 -4px 0 red;
+    transition: .3s;
+}
+
+.header .header-ul .menu_btn:hover::before {
+    box-shadow: 0 6px 0 red,
+        0 -6px 0 red;
+}
+
+
+
+
+
+/* body1 */
+.body1 {
+    width: 100%;
+    height: 50vh;
+    background: url(img/background4.jpeg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+}
+
+
+.body1 h2 {
+    color: white;
+    font-size: 30px;
+    text-shadow: 0 0 10px black;
+
+}
+
+.body1 p {
+    color: rgb(177, 177, 177);
+    font-size: 20px;
+}
+
+
+
+/* body2 */
+
+.body2 {
+    width: 100%;
+    padding: 200px 0;
+    align-items: center;
+    background-color: white;
+
+    position: relative;
+
+}
+
+
+.body2 h1 {
+    font-size: 220px;
+    text-align: center;
+    font-weight: 400;
+    color: #EAEAEA;
+    letter-spacing: -10px;
+    
+}
+
+.body2 h2 {
+    transform: translateY(-35px);
+    font-size: 60px;
+    text-align: center;
+    font-weight: 600;
+
+    color: black;
+
+}
+
+.body2 p {
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+
+
+
+.body2 .red-rectangle {
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.body2 .mySwiper2 {
+    width: 100%;
+    height: 650px;
+    margin-top: 50px;
+    background-color: aqua;
+}
+
+
+/* body3 */
+.body3 {
+    width: 100%;
+    padding: 200px 0;
+    background-color: transparent;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.body3 .background {
+    background-image: url(img/swiper1-6.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    z-index: -99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: brightness(.9);
+}
+
+.body3 h1 {
+    font-size: 220px;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: -10px;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.body3 h2 {
+    transform: translateY(-35px);
+    font-size: 60px;
+    text-align: center;
+    font-weight: 600;
+
+    color: black;
+
+}
+
+.body3 p {
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.body3 .red-rectangle {
+    margin-top: 0;
+}
+
+.body3 .mySwiper3 {
+    width: 100%;
+    height: 650px;
+    margin-top: 50px;
+
+    background-color: aquamarine;
+}
+
+.footer {
+    width: 100%;
+    height: 400px;
+    /* background-image: url(img/background6.jpeg); */
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.footer .bi-chevron-double-up {
+    position: absolute;
+    bottom: 150px;
+    right: 100px;
+    color: white;
+    font-size: 50px;
+    line-height: 50px;
+    z-index: 11;
+    transition: .3s;
+    cursor: pointer;
+
+
+}
+
+.footer .bi-chevron-double-up:hover {
+    color: red;
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {
+
+.more{
+    transform: translateY(-150%);
+}
+    .feather {
+        width: 100px !important;
+    }
+
+    .header {
+        height: 130px;
+        padding: 0px 20px;
+    }
+
+    .header .logo {
+        height: 100px;
+        margin-left: 0px;
+        cursor: pointer;
+    }
+
+    .header .header-ul {
+        display: flex;
+        align-items: center;
+        margin-right: 0px;
+
+    }
+
+    .header .header-ul .header-li {
+        display: none;
+    }
+
+
+    .body1 h2 {
+        font-size: 25px;
+
+    }
+
+    .body1 p {
+        font-size: 15px;
+    }
+
+    .body2,
+    .body3 {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    .body2 h1,
+    .body3 h1 {
+        font-size: 120px;
+    }
+
+    .body2 h2,
+    .body3 h2 {
+        transform: translateY(-30px);
+        font-size: 40px;
+
+    }
+
+    .body2 p,
+    .body3 p {
+        color: gray;
+        font-size: 15px;
+        text-align: center;
+
+    }
+    .footer .bi-chevron-double-up {
+        right: 20px;
+        bottom: 60px;
+    }
+    
+}
+
+
+
