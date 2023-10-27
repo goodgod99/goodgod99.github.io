@@ -160,11 +160,11 @@
 @media screen and (max-width: 1024px) {
 
 
-    .swiper-button-next {
+    .swiper2 .swiper-button-next {
         display: none;
     }
 
-    .swiper-button-prev {
+    .swiper2 .swiper-button-prev {
         display: none;
     }
 
@@ -183,7 +183,7 @@
 
 @media screen and (max-width: 768px) {
 
-    .swiper-pagination {
+    .swiper2 .swiper-pagination {
         display: none;
     }
 
