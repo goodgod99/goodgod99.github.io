@@ -56,7 +56,7 @@
             height: 800px;
             width: auto;
             background-color: rgb(196, 196, 196);
-            background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.5) 100%), url(img/jeremy-ricketts-d93dJ4kehUg-unsplash1.jpg);
+            background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.5) 100%), url(img/bg-1s.jpg);
             position: relative;
             overflow: hidden;
             background-repeat: no-repeat;
@@ -199,7 +199,7 @@
             transform: translateY(-50%);
             width: 50px;
             height: 50px;
-            background-image: url(img/swipe-left-icon-431x512-sz8uwwqk.png);
+            background-image: url(img/swipe.png);
             background-size: contain;
             background-repeat: no-repeat;
             -webkit-filter: invert(.8);
@@ -252,6 +252,8 @@
 
         .body0 .img {
             width: 100vw;
+            height: calc(100vw * 2 / 3);
+            overflow: hidden;
             margin: 0 20px 0 0;
 
             position: relative;
@@ -287,6 +289,7 @@
             position: absolute;
             color: white;
             text-align: center;
+            justify-content: center;
             opacity: 0;
             transition: .8s;
             display: flex;
@@ -297,6 +300,7 @@
 
         .body0 .text p {
             margin: auto;
+            margin-bottom: 0px;
             font-size: 20px;
             line-height: 1.5;
             font-weight: 900;
@@ -304,13 +308,14 @@
         }
 
         .body0 .text .btn {
+            margin: auto;
+            margin-top: 20px;
             display: none;
         }
 
         .body0 .text .btn_show {
             display: block;
             box-sizing: border-box;
-            margin: 0 auto auto auto;
             width: 100px;
             height: 40px;
             line-height: 37px;
@@ -343,7 +348,7 @@
         }
 
         #background1 {
-            background-image: url(img/10002s.jpg);
+            background-image: url(img/bg-2s.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -401,7 +406,7 @@
 
 
         #background2 {
-            background-image: url(img/10004s.jpg);
+            background-image: url(img/bg-3s.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -591,7 +596,7 @@
             }
 
             #background1 {
-                background-image: url(img/10002.jpg);
+                background-image: url(img/bg-2m.jpg);
                 background-attachment: fixed;
             }
 
@@ -609,6 +614,7 @@
             .body0 .img {
                 margin: 30px auto;
                 max-width: 600px;
+                max-height: 400px;
                 overflow: hidden;
                 box-shadow: 0 0 20px black;
                 transition: .2s;
@@ -623,6 +629,7 @@
             }
 
             .body0 .text p {
+                margin-bottom: 20px;
                 font-size: 25px;
 
             }
@@ -630,7 +637,6 @@
             .body0 .text .btn {
                 display: block;
                 box-sizing: border-box;
-                margin: auto;
                 width: 100px;
                 height: 40px;
                 line-height: 37px;
@@ -659,7 +665,7 @@
 
             .body0 .img:hover img {
                 -webkit-filter: brightness(.3);
-                transform: scale(1.4);
+                /* transform: scale(1.4); */
             }
 
             .body0 .img:hover .text {
@@ -667,7 +673,7 @@
             }
 
             #background2 {
-                background-image: url(img/10004.jpg);
+                background-image: url(img/bg-3m.jpg);
                 background-attachment: fixed;
             }
 
@@ -739,90 +745,86 @@
         </h1>
         <div class="scroll-container">
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/截圖 2023-10-21 下午11.16.53.png" alt="兒童教育">
+                <img src="img/screen shot/臺灣兒童教育發展協會.png" alt="兒童教育">
                 <div class="text">
                     <p>為"臺灣兒童教育發展協會"重新製作官網<br>(RWD)</p>
-                    <a href="http://www.kid.org.tw/" target="_blank" class="btn btn_show">原網站</a>
-                    <a href="社團法人臺灣兒童教育發展協會/index.html" target="_blank" class="btn btn_show">作品網址</a>
+                    <!-- <a href="http://www.kid.org.tw/" target="_blank" class="btn btn_show">原網站</a> -->
+                    <a href="專案開發/臺灣兒童教育發展協會/index.html" target="_blank" class="btn btn_show">網址</a>
                 </div>
             </div>
 
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/截圖 2023-10-15 下午9.03.38.png" alt="Gate N Fences">
+                <img src="img/screen shot/Gate N Fences.png" alt="Gate N Fences">
                 <div class="text">
                     <p>為"Gate N Fences"重新製作官網<br>(RWD)</p>
-                    <a href="http://gatesnfences.com/" target="_blank" class="btn btn_show">原網站</a>
-                    <a href="gate n fences/index.html" target="_blank" class="btn btn_show">作品網址</a>
+                    <!-- <a href="http://gatesnfences.com/" target="_blank" class="btn btn_show">原網站</a> -->
+                    <a href="專案開發/Gate N Fences/index.html" target="_blank" class="btn btn_show">網址</a>
                 </div>
             </div>
 
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/截圖 2023-10-17 下午4.10.26.png" alt="todo list">
+                <img src="img/screen shot/網頁模版製作.png" alt="網頁模版製作">
+                <div class="text">
+                    <p>被委託以“白色”和“簡潔”為發想<br>
+                        所設計出的模板網站<br>(RWD)</p>
+                    <!-- <a href="http://www.kid.org.tw/" target="_blank" class="btn btn_show">原網站</a> -->
+                    <a href="專案開發/網頁模版製作/index.html" target="_blank" class="btn btn_show">網址</a>
+                </div>
+            </div>
+
+            <div class="img" data-aos="fade" data-show="0">
+                <img src="img/screen shot/天儷醫用.png" alt="天儷醫用">
+                <div class="text">
+                    <p>為"天儷醫用"製作產品宣傳網站<br>(RWD)</p>
+                    <!-- <a href="http://www.kid.org.tw/" target="_blank" class="btn btn_show">原網站</a> -->
+                    <a href="專案開發/天儷醫用/index.html" target="_blank" class="btn btn_show">網址</a>
+                </div>
+            </div>
+
+            <div class="img" data-aos="fade" data-show="0">
+                <img src="img/screen shot/Todo list.png" alt="todo list">
                 <div class="text">
                     <p>自製ToDoList<br>(RWD)</p>
-                    <a href="todolist/index.html" target="_blank" class="btn btn_show">網址</a>
+                    <a href="專案開發/Todo list/index.html" target="_blank" class="btn btn_show">網址</a>
                 </div>
             </div>
 
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/截圖 2023-10-15 下午9.04.32.png" alt="double click">
+                <img src="img/screen shot/Mouse test.png" alt="double click">
                 <div class="text">
                     <p>自製測試滑鼠連點工具</p>
-                    <a href="double click/index.html" target="_blank" class="btn btn_show">網址</a>
+                    <a href="專案開發/Mouse test/index.html" target="_blank" class="btn btn_show">網址</a>
                 </div>
             </div>
 
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/螢幕擷取畫面 2023-09-27 022548.png" alt="likuanzhen網站">
+                <img src="img/screen shot/likuanzhen.png" alt="likuanzhen網站">
                 <div class="text">
                     <p>jQuery練習<br>模仿藝術家likuanzhen的網站功能</p>
-                    <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn btn_show">原網站</a>
-                    <a href="likuanzhen/index.html" target="_blank" class="btn btn_show">作品網址</a>
+                    <!-- <a href="https://likuanzhen.com/SNAP-illust-MAGAZING" target="_blank" class="btn btn_show">原網站</a> -->
+                    <a href="專案開發/likuanzhen/index.html" target="_blank" class="btn btn_show">網址</a>
                 </div>
             </div>
 
 
-
-            <!-- <div class="img" data-aos="fade" data-show="0">
-                <img src="img/螢幕擷取畫面 2023-09-23 175123.png" alt="表單作品">
-                <div class="text">
-                    <p>表單製作</p>
-                    <a href="表單/index.html" target="_blank" class="btn btn_show">網址</a>
-                </div>
-            </div> -->
-
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/螢幕擷取畫面 2023-09-23 175226.png" alt="Spotify 品">
+                <img src="img/screen shot/Spotify premium.png" alt="Spotify 品">
                 <div class="text">
                     <p>排版練習<br>Spotify的Premium網站</p>
-                    <a href="https://www.spotify.com/tw/premium/" target="_blank" class="btn">原網站</a>
-                    <a href="spotify/index.html" target="_blank" class="btn btn_show">作品網址</a>
+                    <!-- <a href="https://www.spotify.com/tw/premium/" target="_blank" class="btn">原網站</a> -->
+                    <a href="專案開發/Spotify premium/index.html" target="_blank" class="btn btn_show">網址</a>
                 </div>
             </div>
 
 
             <div class="img" data-aos="fade" data-show="0">
-                <img src="img/螢幕擷取畫面 2023-09-23 175210.png" alt="Netflix作品">
+                <img src="img/screen shot/Netflix.png" alt="Netflix作品">
                 <div class="text">
                     <p>排版練習<br>Netflix官方網站</p>
-                    <a href="https://www.netflix.com/tw/" target="_blank" class="btn">原網站</a>
-                    <a href="netf1ix/index.html" target="_blank" class="btn btn_show">作品網址</a>
+                    <!-- <a href="https://www.netflix.com/tw/" target="_blank" class="btn">原網站</a> -->
+                    <a href="專案開發/Netf1ix/index.html" target="_blank" class="btn btn_show">網址</a>
                 </div>
             </div>
-
-            <div class="img" data-aos="fade" data-show="0">
-                <img src="img/keyboard.png" alt="鍵盤">
-                <div class="text">
-                    <p>排版練習<br>自製簡易注音鍵盤<br>(RWD)</p>
-                    <a href="注音輸入/index.html" target="_blank" class="btn btn_show">網址</a>
-                </div>
-            </div>
-
-            
-
-
-
-
 
         </div>
         <span class="more">MORE <red>>></red></span>
@@ -835,14 +837,14 @@
         <h1 data-aos="fade">about<red>.</red>
         </h1>
         <div class="box">
-            <div class="boxs" data-aos="fade-up">
+            <div class="boxs" >
                 <p>您好，我是淡江資工系學生，熟悉HTML、CSS、Javascript、jQuery語法，及RWD響應式網頁技術。</p><br>
 
                 <p>想要累積作品集，目前正在嘗試<c>接案</c>，當然價格也會比較優惠。</p><br>
 
                 <p>歡迎各位想要以更<c>實惠的價格</c>來購買服務的需求者，前來詢問 !</p>
             </div>
-            <div class="boxs" data-aos="fade-up">
+            <div class="boxs" >
 
                 <p>可以提供的服務有<br><br>
                     1　HTML5 + CSS3 <b>網頁切版</b><br>
@@ -864,13 +866,13 @@
             <p data-aos="fade"> 有需求請聯絡我 <red>!</red>
             </p>
             <div class="line"></div>
-            <p data-aos="fade-left"> Email <red>:</red> <span>ccffttggvv123@gmail.com </span></p>
+            <p > Email <red>:</red> <span>ccffttggvv123@gmail.com </span></p>
             <div class="line"></div>
-            <p data-aos="fade-left"> IG <red>:</red> <span>zyoooo7 </span></p>
+            <p > IG <red>:</red> <span>zyoooo7 </span></p>
             <div class="line"></div>
-            <p data-aos="fade-left"> FB <red>:</red> <span>Yoo Chen </span></p>
+            <p > FB <red>:</red> <span>Yoo Chen </span></p>
             <div class="line"></div>
-            <p data-aos="fade-left"> Line ID <red>:</red> <span>7788_yaya </span></p>
+            <p > Line ID <red>:</red> <span>7788_yaya </span></p>
             <div class="line"></div>
         </div>
     </div>
@@ -893,10 +895,10 @@
     //初始函式
     $(document).ready(function () {
         AOS.init({
-            offset: 150,
+            offset: 0,
             duration: 1200,
             mirror: true,
-            once: false,
+            once: true,
             easing: 'ease'
 
         });

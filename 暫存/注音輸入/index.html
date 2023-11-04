@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="screen-orientation" content="landscape">
+    <title>注音輸入法</title>
+    <link rel=stylesheet type="text/css" href="reset.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 垂直居中 */
+            justify-content: center;
+            /* 水平居中 */
+            overflow: hidden;
+            /* 防止内容溢出 */
+
+            /* 禁用複製 */
+            user-select: none;
+            -webkit-user-select: none;
+            /* 兼容Webkit浏览器 */
+            -moz-user-select: none;
+            /* 兼容Firefox浏览器 */
+        }
+
+        .keyboard {
+            gap: 2px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            height: 7vw;
+            display: flex;
+            justify-content: space-between;
+            gap: 2px;
+        }
+
+        .key {
+            width: 7vw;
+
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+        .key:hover {
+            background-color: black;
+            color: white;
+        }
+        .key.active {
+            background-color: black;
+            /* 指定被点击时的背景颜色 */
+            color: white;
+            /* 指定被点击时的文字颜色 */
+        }
+
+        .space {
+            width: 50%;
+            margin-left: auto;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 900;
+            transition: .3s ease;
+        }
+
+        .space.active {
+            background-color: black;
+            /* 指定被点击时的背景颜色 */
+            color: white;
+            /* 指定被点击时的文字颜色 */
+        }
+        .space:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .clear {
+            width: 15%;
+            margin-right: auto;
+            background-color: #ffffff;
+            border: 1px solid rgb(180, 11, 11);
+            color: rgb(180, 11, 11);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .space15 {
+            width: 2vw;
+        }
+
+        .space30 {
+            width: 4vw;
+        }
+
+        .space50 {
+            width: 8vw;
+        }
+
+        @media (orientation: Portrait) {
+            body {
+                height: 100vh;
+                width: 100vw;
+
+
+            }
+
+            .keyboard {
+                flex-direction: row;
+                gap: 5px;
+
+
+            }
+
+            .row {
+                flex-direction: column-reverse;
+                width: 7vh;
+                height: 85vh;
+
+            }
+
+            .key {
+                height: 7vh;
+                width: 7vh;
+                transform: rotate(-90deg);
+
+                
+
+            }
+
+            p {
+                transform: rotate(-90deg);
+
+            }
+
+            .space {
+                height: 50%;
+                width: 8vh;
+                margin-bottom: auto;
+
+            }
+
+
+            .clear {
+                height: 15%;
+                width: 8vh;
+                margin-top: auto;
+
+            }
+
+            .space15 {
+                height: 2vh;
+            }
+
+            .space30 {
+                height: 4vh;
+            }
+
+            .space50 {
+                height: 8vh;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="keyboard">
+        <div class="row">
+            <div class="key">ㄅ</div>
+            <div class="key">ㄉ</div>
+            <div class="key">ˇ</div>
+            <div class="key">ˋ</div>
+            <div class="key">ㄓ</div>
+            <div class="key">ˊ</div>
+            <div class="key">˙</div>
+            <div class="key">ㄚ</div>
+            <div class="key">ㄞ</div>
+            <div class="key">ㄢ</div>
+            <div class="key">ㄦ</div>
+
+        </div>
+        <div class="row">
+            <div class="space15"></div>
+            <div class="key">ㄆ</div>
+            <div class="key">ㄊ</div>
+            <div class="key">ㄍ</div>
+            <div class="key">ㄐ</div>
+            <div class="key">ㄔ</div>
+            <div class="key">ㄗ</div>
+            <div class="key">一</div>
+            <div class="key">ㄛ</div>
+            <div class="key">ㄟ</div>
+            <div class="key">ㄣ</div>
+            <div class="space30"></div>
+        </div>
+        <div class="row">
+            <div class="space30"></div>
+            <div class="key">ㄇ</div>
+            <div class="key">ㄋ</div>
+            <div class="key">ㄎ</div>
+            <div class="key">ㄑ</div>
+            <div class="key">ㄕ</div>
+            <div class="key">ㄘ</div>
+            <div class="key">ㄨ</div>
+            <div class="key">ㄜ</div>
+            <div class="key">ㄠ</div>
+            <div class="key">ㄤ</div>
+            <div class="space15"></div>
+        </div>
+        <div class="row">
+            <div class="key">ㄈ</div>
+            <div class="key">ㄌ</div>
+            <div class="key">ㄏ</div>
+            <div class="key">ㄒ</div>
+            <div class="key">ㄖ</div>
+            <div class="key">ㄙ</div>
+            <div class="key">ㄩ</div>
+            <div class="key">ㄝ</div>
+            <div class="key">ㄡ</div>
+            <div class="key">ㄥ</div>
+            <div class="space50"></div>
+        </div>
+        <div class="row">
+            <div class="space">
+                <p>[Space]</p>
+            </div>
+            <div class="clear">
+                <p>[Clear]</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        // 为键位元素添加点击事件处理程序
+        $(".key").click(function () {
+            // 使用toggleClass()切换 "active" 类
+            $(this).toggleClass("active");
+        });
+        $(".space").click(function () {
+            // 使用toggleClass()切换 "active" 类
+            $(this).toggleClass("active");
+        });
+        $(".clear").click(function () {
+            // 使用toggleClass()切换 "active" 类
+            $(".key, .space, .clear").removeClass("active");
+        });
+    });
+
+
+    /* 禁用複製 */
+    function disableSelection(element) {
+        if (typeof element.onselectstart != 'undefined') {
+            // IE浏览器
+            element.onselectstart = function () { return false; };
+        } else if (typeof element.style.MozUserSelect != 'undefined') {
+            // Firefox浏览器
+            element.style.MozUserSelect = 'none';
+        } else {
+            // 其他浏览器
+            element.onmousedown = function () { return false; };
+        }
+    }
+    // 调用函数并传递body元素作为参数
+    disableSelection(document.body);
+
+
+
+</script>
