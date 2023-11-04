@@ -1,8 +1,0 @@
-.body .text{
-    width: 60%;
-}
-@media screen and (max-width: 768px) {
-    .body .text{
-        width: 90%;
-    }
-}
