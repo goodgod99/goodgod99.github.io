@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate N Fences</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            transition: .3s;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        color {
+            color: rgb(232, 142, 53);
+        }
+
+        gray {
+            color: gray;
+        }
+
+        .menu a {
+            text-decoration: none;
+        }
+
+        /* menu */
+        .menu {
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 99;
+        }
+
+        .menu .logo {
+            left: 20px;
+            font-size: 50px;
+            font-style: italic;
+            color: white;
+            letter-spacing: -6px;
+            position: absolute;
+
+        }
+
+        .menu ul {
+            width: 50%;
+
+            height: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .menu li {
+            width: 20%;
+            height: 100%;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        .menu a {
+            color: #fff;
+        }
+
+        .menu li:hover {
+            box-sizing: border-box;
+            background-color: rgb(232, 142, 53, .9);
+
+        }
+
+        .menu .search {
+            flex-basis: end;
+            position: absolute;
+            right: 20px;
+        }
+
+        .menu .search input {
+            box-sizing: border-box;
+            padding: 5px;
+            border-style: none;
+            height: 25px;
+            width: 150px;
+            cursor: text;
+        }
+
+        .menu .search button {
+            border: 1px solid white;
+            background-color: black;
+            color: white;
+            height: 25px;
+            width: 50px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .menu .search button:hover {
+            background-color: white;
+            color: black;
+
+        }
+
+        .menu-toggle {
+            display: none;
+            /* 起始隱藏按鈕 */
+        }
+
+        /* body1 */
+        .body1 {
+            position: relative;
+            height: 700px;
+            width: 100%;
+            display: flex;
+        }
+
+        .body1 .background {
+            width: 100%;
+            height: 100%;
+            background: url(img/welding.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-position: bottom;
+            filter: brightness(.4);
+            position: absolute;
+            z-index: -98;
+        }
+
+        .body1 .text {
+            margin: auto;
+            text-align: center;
+            letter-spacing: 2.5px;
+            line-height: 80px;
+            color: aliceblue;
+            padding: 40px 50px 10px 50px;
+            border: 7px solid rgb(255, 255, 255);
+
+        }
+
+        .body1 .text:hover {
+            background-color: rgba(0, 0, 0, 0.458);
+        }
+
+        .body1 .text h2 {
+            line-height: 20px;
+            font-size: 25px;
+        }
+
+        .body1 .text .learn {
+            font-size: 20px;
+            font-style: italic;
+            cursor: pointer;
+            text-shadow: 3px 3px 2px rgb(0, 0, 0);
+
+        }
+        .body1 .text .learn:hover .pointer {
+            text-shadow: 15px 0 0 rgb(232, 142, 53);
+        }
+
+        .body1 a{
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            bottom: 30px;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        .body1 svg{
+            height: 50px;
+            width: 50px;
+            color:white;
+            margin: 0;
+            opacity: .5;
+        }
+
+        /* body2 */
+        .body2 {
+            background-color: rgb(33, 46, 58);
+            width: 100%;
+            padding: 50px 0;
+            box-sizing: border-box;
+
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .body2 .text {
+            width: 60%;
+            color: white;
+        }
+
+        .body2 .text .center {
+            text-align: center;
+        }
+
+        .body2 p,
+        .body2 h1 {
+            margin: 20px;
+            line-height: 25px;
+        }
+
+        .body2 h1 {
+            font-weight: 900;
+
+            text-shadow: 2px 2px 5px rgb(0, 0, 0);
+        }
+
+        /* body3 */
+        .body3 {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 60px;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        .body3 .background {
+            width: 100%;
+            height: 100%;
+            background: url(img/welding-default.jpeg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(.4);
+            position: absolute;
+            z-index: -99;
+        }
+
+        /*
+        .body3 .text {
+            color: white;
+            text-align: center;
+            width: 100%;
+            padding-top: 60px;
+            text-shadow: 2px 2px 5px rgb(0, 0, 0);
+            width: 60%;
+            margin: auto;
+        }
+*/
+        .body3 .text {
+            color: white;
+            text-shadow: 2px 2px 5px rgb(0, 0, 0);
+            width: 600px
+                /* 根据需要调整宽度 */
+            ;
+            margin: 20px;
+        }
+
+        .body3 .slide {
+            width: 400px;
+            /* 根据需要调整宽度 */
+            box-sizing: border-box;
+
+            border: 3px solid rgb(187, 187, 187);
+            margin: 20px;
+        }
+
+        .body3 h3 {
+            text-shadow: 4px 4px 3px black;
+            color: white;
+            text-align: center;
+            font-weight: 500;
+            font-size: calc(1.375rem + 1.5vw);
+            margin: 40px 0;
+        }
+
+        .body3 .text h1 {
+            font-style: italic;
+        }
+
+        .body3 img {
+            height: 400px;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        /*
+        .slide {
+            width: 500px;
+            border: 5px solid white;
+            margin: 0 auto 30px auto;
+        }
+*/
+        .carousel-caption {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .7);
+            color: #fff;
+            text-align: left;
+            padding: 20px 40px;
+        }
+
+        .carousel-caption p {
+            margin: 0;
+        }
+
+        .body3 .buy {
+            border: 0;
+            background-color: rgb(232, 142, 53, .7);
+            color: white;
+            height: 30px;
+            padding: 0 10px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 20px;
+            right: 60px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        .body3 .buy:hover {
+            background-color: white;
+            color: black;
+
+        }
+
+        /* body4 */
+        .body4 {
+            background-color: rgb(33, 46, 58);
+            width: 100%;
+            padding: 50px 0;
+
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            letter-spacing: 1px;
+        }
+
+        .body4 .boxs {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-around;
+            margin: 0 auto;
+        }
+
+        .body4 .box {
+            width: 15%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .body4 h1,
+        .body4 h2 {
+            color: white;
+        }
+
+        .body4 h1 {
+            text-shadow: 4px 4px 3px black;
+        }
+
+        .body4 h2 {
+            font-size: 18px;
+        }
+
+        .body4 h3 {
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .body4 p {
+            font-size: 10px;
+        }
+
+        svg {
+            width: 45px;
+            height: 45px;
+            color: rgb(232, 142, 53);
+            margin: 30px 0;
+        }
+
+        /* last */
+        .last .background {
+            width: 100%;
+            height: 100%;
+            background: url(img/welding.jpeg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(.4);
+            position: absolute;
+            z-index: -98;
+        }
+
+        .last {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .last p {
+            font-size: 16px;
+            color: #fff;
+            width: 50%;
+            letter-spacing: 2px;
+            line-height: 25px;
+            text-shadow: 2px 2px 2px black;
+            padding: 50px 0;
+        }
+
+        /* footer */
+        footer {
+            padding-top: 1px;
+        }
+
+        footer p {
+            color: gray;
+        }
+
+        footer h6 {
+            font-style: italic;
+        }
+
+        @media screen and (max-width: 1024px) {
+
+            /* menu */
+            .menu .search input {
+                width: 100px;
+            }
+
+            /* body1 */
+            .body1 .text {
+                padding: 40px 20px 10px 20px;
+                letter-spacing: 3px;
+            }
+
+            .body1 .text h1 {
+                font-size: 30px;
+            }
+
+            .body1 .text h2 {
+                font-size: 20px;
+            }
+
+            /* body2 */
+            .body2 .text {
+                width: 80%;
+            }
+
+            /* body3 */
+            .body3 .background {
+                background: none;
+
+
+            }
+
+            .body3:before {
+                content: ' ';
+                position: fixed;
+                z-index: -99;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: url(img/welding-default.jpeg) center 0 no-repeat;
+                background-size: cover;
+                background-color: transparent;
+                filter: brightness(.4);
+            }
+
+            .product {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .reverse {
+                flex-direction: column;
+            }
+
+            /* body4 */
+            /* last */
+            .last p {
+                width: 80%;
+                letter-spacing: 2px;
+            }
+
+            .last .background {
+                background-attachment: scroll;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu {
+                height: auto;
+                flex-direction: column;
+                align-items: flex-start;
+                display: none;
+            }
+
+            .menu.open {
+                display: block;
+                /* 當有 "open" 類別時，顯示菜單 */
+            }
+
+            .menu .logo {
+                position: static;
+                font-size: 40px;
+                text-align: left;
+            }
+
+            .menu ul {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .menu li {
+                width: 100%;
+                height: auto;
+                padding: 10px 0px;
+                border: 0;
+            }
+
+            .menu .search {
+                position: static;
+                margin: 20px 0;
+                text-align: left;
+            }
+
+            .menu .search input {
+                width: 100%;
+            }
+
+            .menu .search button {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 100;
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 10px;
+                width: 50px;
+                height: 50px;
+                font-size: 10px;
+                color: #fff;
+                border: 0;
+
+            }
+
+            .body1 {
+                height: 90vh;
+            }
+
+            .body1 .text {
+                border: 0;
+            }
+
+            .body2 .text {
+                width: 100%;
+                text-align: center;
+            }
+
+
+            .body3 h3 {
+                margin-bottom: 0;
+            }
+
+            .body3 .text {
+                width: 95%;
+                margin-bottom: 0;
+                margin-top: 40px;
+            }
+
+            .body3 .slide {
+                width: 100vw;
+                margin-top: 0;
+
+            }
+
+            .body3 img {
+                height: 100vw;
+            }
+
+            .body4 .boxs {
+                flex-direction: column;
+            }
+
+            .body4 .box {
+                width: 90vw;
+            }
+
+            .body4 svg {
+                margin-bottom: 5px;
+                margin-top: 50px;
+            }
+
+            .last {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="menu">
+        <span class="logo">GATE <color>N</color> F</span>
+        <ul class="links">
+            <li class="link"><a href="#">Home</a></li>
+            <li class="link"><a href="#Driveway_Gates">Driveway Gates</a></li>
+            <li class="link"><a href="#Garden_Gates">Garden Gates</a></li>
+            <li class="link"><a href="#Fencing">Fencing</a></li>
+            <li class="link"><a href="#Railings">Railings</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" class="search_area">
+            <button>search</button>
+        </div>
+    </nav>
+    <button id="menuToggle" class="menu-toggle">MENU</button>
+
+    <!-- body1 -->
+    <div class="body1">
+        <div class="background"></div>
+        <div class="text" data-aos="fade">
+            <h1>Designed to Enhance the Entry of your home </h1>
+            <h2>with Custom Ornamental Decorative Driveway Gates </h2>
+            <h2>while bringing Safety, Security and convenience.</h2>
+            <span class="learn">
+                <color>learn more <span class="pointer">></span></color>
+            </span>
+        </div>
+        <a href="#Welcome"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg></a>
+    </div>
+
+    <!-- body2 -->
+    <div class="body2 " id="Welcome">
+        <div class="text" data-aos="fade">
+            <h1 class="center">Welcome to <color>Gate N Fences</color></h1>
+                
+                <p>All of our Aluminum or Wrought Iron Gates, or Fences are designed and manufactured to withstand a
+                    range
+                    of
+                    outdoor conditions.
+                    <u>commitment to our customers and dedication to produce quality gates has earned us thousands of
+                        satisfied
+                        customers.</u><br>
+                    Although we offer a wide selection or Ornamental Designs or Decorative Designs, we can design and
+                    manufacture any style in aluminum or
+                    wrought iron metals. L. A. Ornamental & Rack Corp also offers Fences, Garden or Walk Thru Gates to
+                    match
+                    your driveway gates. With over
+                    thirty five years of experience in manufacturing and designing elegant, custom, or exotic Aluminum
+                    Driveway
+                    Gates and Fences, our past and
+                    future customers can have peace of mind that they are receiving quality workmanship. We are a Fence
+                    Company
+                    that gives our customers
+                    110% of dedication to manufacture quality driveway gates and fences. <br>
+                </p>
+                <p class="center">
+                    <gray>For a quote please send an e-mail to</gray>
+                    <color>LAOrnamental@aol.com</color>
+                </p>
+
+        </div>
+
+
+    </div>
+
+    <!-- body3 -->
+    <div class="body3">
+        <div class="background"></div>
+        <h3>Our products</h3>
+        <!---- Driveway Gates ---->
+        <div id="Driveway_Gates" class="product reverse">
+
+            <div class="text">
+                <color>
+                    <h1 >Driveway Gates</h1>
+                </color>
+                <p data-aos="fade">In this page you will find one of the largest Wrought Iron Fence and Gate Result selection in the
+                    net. A
+                    great selection of Security Gates, Safety Gates,
+                    specializing in Front Gates, Driveway Gates, known as the Gate World at your finger tips. We have
+                    most
+                    brands of Automatic Electric Driveway Gate
+                    Openers, brand name like Elite, Power Master, Eagle, and others, with many Door Gate Operating
+                    Devices.
+                </p>
+            </div>
+            <!--輪播-->
+            <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+
+                <!--圖文-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="img/Driveway Gates/e53a5992-3d34-4836-aa79-bcdfc2c9f9f9.jpeg" class="d-block w-100"
+                            alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Pacific Tide</h5>
+                            <p>price: $3,360.00 up</p>
+                            <p>
+                                <color>Custom Sizes Available</color>
+                            </p>
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/Driveway Gates/Aluminum_Wrought_Iron_Driveway_Gate_Golden_Orchid.jpeg"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>PGolden Orchid</h5>
+                            <p>price: $3,300.00 up</p>
+                            <p>
+                                <color>Custom Sizes Available</color>
+                            </p>
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/Driveway Gates/Custom_Gate_Driveway_Automatic_Electronic_Sea_Shell.jpeg"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Sea Shell </h5>
+                            <p>price: $3,000.00 up</p>
+                            <p>
+                                <color>Custom Sizes Available</color>
+                            </p>
+
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!--前後按鈕-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+
+        <!---- Garden Gates ---->
+        <div id="Garden_Gates" class="product ">
+            <div class="text">
+                <color>
+                    <h1 >Garden Gates</h1>
+                </color>
+                <p data-aos="fade">If your seeking high quality garden gates or walk thru gates you have come to the right place! L. A.
+                    Ornamental Corp offers a unlimited selection of Aluminum
+                    or Wrought Iron Garden Gates. Please feel free to browse through our wide selection of garden gates
+                    or
+                    walk thru gates. We offer designs you will not find
+                    anywhere else!</p>
+            </div>
+            <!--輪播-->
+            <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+
+                <!--圖文-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="img/Garden Gates/1192.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>TOUCH OF CLASS </h5>
+                            <p>price: $1,080.00 up</p>
+                            <p>
+                                <color>Custom Sizes Available</color>
+                            </p>
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/Garden Gates/Pedestrian_Gate_22.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>MEDITERRANEAN</h5>
+                            <p>price: $1,620.00 up</p>
+                            <p>
+                                <color>Privacy Cover below</color>
+                            </p>
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/Garden Gates/Royal_Seal_Garden_Gate_Walk_Thru_Gate3.jpg" class="d-block w-100"
+                            alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>ROYAL SEAL</h5>
+                            <p>price: $1,500.00 up</p>
+                            <p>
+                                <color>Privacy Panel available see below</color>
+                            </p>
+
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!--前後按鈕-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+
+
+
+        <!---- Fencing ---->
+        <div id="Fencing" class="product reverse">
+            <div class="text">
+                <color>
+                    <h1>Fencing</h1>
+                </color>
+                <p data-aos="fade">L. A. Ornamental Corp offers a wide selection of Fence Designs to choose from. Here you will find one
+                    of
+                    the largest selections of Aluminum or
+                    Wrought Iron Fences. We offer great selection fence ideas such as Garden Fences, Privacy Fences,
+                    Ornamental Fences, Decorative Fences, Custom
+                    Fences, Iron or Steel Fences made of Aluminum or Wrought Iron Metals. We recommend Aluminum for your
+                    Iron Fences for several of reasons but we
+                    can also manufacture any Wrought Iron Fence to may like.</p>
+            </div>
+            <!--輪播-->
+            <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+
+                <!--圖文-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="img/Fencing/30b42406-be3a-4321-89f9-6981680d101c.jpeg" class="d-block w-100"
+                            alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Polling Calm</h5>
+                            <p>price: $60.00 up</p>
+                            <p>
+                                <color>Custom Sizes Available</color>
+                            </p>
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/Fencing/9d2b74df-a91f-4388-bcf1-2b79ba51b228.jpeg" class="d-block w-100"
+                            alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Sea Shells</h5>
+                            <p>price: $108.00 up</p>
+                            <p>
+                                <color>Custom Sizes Available</color>
+                            </p>
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/Fencing/d31adca4-6d03-4db2-964b-837e234bc60b.jpeg" class="d-block w-100"
+                            alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Golden Leaves of Triumph</h5>
+                            <p>price: $102.00 up</p>
+                            <p>
+                                <color>Custom Sizes Available</color>
+                            </p>
+
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!--前後按鈕-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+
+        <!---- Railings ---->
+        <div id="Railings" class="product">
+            <div class="text">
+                <color>
+                    <h1>Railings</h1>
+                </color>
+                <p data-aos="fade">Wrought Iron or Aluminum Railings are an elegant solution for interior or exterior handrails,
+                    handicap
+                    rails, walkways,
+                    balconies, patios, decks and any other indoor or outdoor location that needs a handrail. We can even
+                    design and
+                    fabricate elegant custom railings replacements for your existing handrail.</p>
+            </div>
+            <!--輪播-->
+            <div id="carousel4" class="carousel slide" data-bs-ride="carousel">
+
+                <!--圖文-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="img/Railings/Classic_Hand_Rail_-_Custom_Made_Railings-450x240.jpg"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Classic</h5>
+                            <p>price: $210.00 up</p>
+                            <p>
+                                <color>price per Linear Foot</color>
+                            </p>
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/Railings/Elegant_Serenity_Balcony_Grille-450x255.jpg" class="d-block w-100"
+                            alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Elegant Serenity</h5>
+                            <p>price: $228.00 up</p>
+                            <p>
+                                <color>price per Linear Foot</color>
+                            </p>
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/Railings/Sunshine_Decorative_Balcony_HandRails_or_Railings-450x270.jpg"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>PSunshine</h5>
+                            <p>price: $174.00 up</p>
+                            <p>
+                                <color>price per Linear Foot</color>
+                            </p>
+
+                            <button class="buy">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!--前後按鈕-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- body4 -->
+    <div class="body4">
+        <h1>About Products</h1>
+        <div class="boxs">
+            <div class="box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-coin"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z" />
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+                </svg>
+                <h2 data-aos="fade">Cost</h2>
+                <gray>
+                    <p data-aos="fade">Aluminum gates are less costly than steel gates at least nowadays as 10 years ago
+                        they were
+                        allot more expensive than Steel gates. If you like an
+                        elaborate and very decorative gate, the cost of wrought steel would be more, but with
+                        aluminum, the same design can be within your allotted budget.</p>
+                </gray>
+                <color>
+                    <h3>learn more...</h3>
+                </color>
+            </div>
+            <div class="box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-feather"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M15.807.531c-.174-.177-.41-.289-.64-.363a3.765 3.765 0 0 0-.833-.15c-.62-.049-1.394 0-2.252.175C10.365.545 8.264 1.415 6.315 3.1c-1.95 1.686-3.168 3.724-3.758 5.423-.294.847-.44 1.634-.429 2.268.005.316.05.62.154.88.017.04.035.082.056.122A68.362 68.362 0 0 0 .08 15.198a.528.528 0 0 0 .157.72.504.504 0 0 0 .705-.16 67.606 67.606 0 0 1 2.158-3.26c.285.141.616.195.958.182.513-.02 1.098-.188 1.723-.49 1.25-.605 2.744-1.787 4.303-3.642l1.518-1.55a.528.528 0 0 0 0-.739l-.729-.744 1.311.209a.504.504 0 0 0 .443-.15c.222-.23.444-.46.663-.684.663-.68 1.292-1.325 1.763-1.892.314-.378.585-.752.754-1.107.163-.345.278-.773.112-1.188a.524.524 0 0 0-.112-.172ZM3.733 11.62C5.385 9.374 7.24 7.215 9.309 5.394l1.21 1.234-1.171 1.196a.526.526 0 0 0-.027.03c-1.5 1.789-2.891 2.867-3.977 3.393-.544.263-.99.378-1.324.39a1.282 1.282 0 0 1-.287-.018Zm6.769-7.22c1.31-1.028 2.7-1.914 4.172-2.6a6.85 6.85 0 0 1-.4.523c-.442.533-1.028 1.134-1.681 1.804l-.51.524-1.581-.25Zm3.346-3.357C9.594 3.147 6.045 6.8 3.149 10.678c.007-.464.121-1.086.37-1.806.533-1.535 1.65-3.415 3.455-4.976 1.807-1.561 3.746-2.36 5.31-2.68a7.97 7.97 0 0 1 1.564-.173Z" />
+                </svg>
+                <h2 data-aos="fade">Weight</h2>
+                <gray>
+                    <p data-aos="fade">Aluminum custom made gates are very light compare to Steel gates, making them a
+                        lot easier to
+                        open compared to those made of iron. This may be
+                        just as important point when it comes to automatic gates, aluminum only lets minimal tear and
+                        ware on the rollers and hinges sliding gates.</p>
+                </gray>
+                <color>
+                    <h3>learn more...</h3>
+                </color>
+            </div>
+            <div class="box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bandaid"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M14.121 1.879a3 3 0 0 0-4.242 0L8.733 3.026l4.261 4.26 1.127-1.165a3 3 0 0 0 0-4.242ZM12.293 8 8.027 3.734 3.738 8.031 8 12.293 12.293 8Zm-5.006 4.994L3.03 8.737 1.879 9.88a3 3 0 0 0 4.241 4.24l.006-.006 1.16-1.121ZM2.679 7.676l6.492-6.504a4 4 0 0 1 5.66 5.653l-1.477 1.529-5.006 5.006-1.523 1.472a4 4 0 0 1-5.653-5.66l.001-.002 1.505-1.492.001-.002Z" />
+                    <path
+                        d="M5.56 7.646a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708Zm1.415-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707ZM8.39 4.818a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707Zm0 5.657a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707ZM9.803 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707Zm1.414-1.414a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708ZM6.975 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707ZM8.39 7.646a.5.5 0 1 1-.708.708.5.5 0 0 1 .707-.708Zm1.413-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707Z" />
+                </svg>
+                <h2 data-aos="fade">Durability</h2>
+                <gray>
+                    <p data-aos="fade">Since aluminum is not damaged by rust or corrosion, your gate can serve you well
+                        for many years.
+                        All our gates designs are made from solid plate
+                        aluminum that is ½ to 1" inch thick. A gate made of solid aluminum rods are a bit heavier but
+                        way lighter and so we are able to use thick material which makes
+                        our work stand out.</p>
+                </gray>
+                <color>
+                    <h3>learn more...</h3>
+                </color>
+            </div>
+            <div class="box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                </svg>
+                <h2 data-aos="fade">Appearance</h2>
+                <gray>
+                    <p data-aos="fade">When talking about sheer beauty, Our aluminum gate are so elegant as the
+                        materials that we use in
+                        most cases are TWICE thick than
+                        a metal gate . You also have a wide choice in terms of colors as we offer one of the largest
+                        select of Powder Coat Oven Baked in the net, larger selection
+                        styles, and custom sizes.</p>
+                </gray>
+                <color>
+                    <h3>learn more...</h3>
+                </color>
+            </div>
+            <div class="box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-house-heart-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707L7.293 1.5Z" />
+                    <path
+                        d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9.293Zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z" />
+                </svg>
+                <h2 data-aos="fade">Maintenance</h2>
+                <gray>
+                    <p data-aos="fade">Maintenance is out of the question Aluminum is the way to go, since it does not
+                        corrode, unlike
+                        with wrought Iron ( steel ), you are not required
+                        the Maintenance to up keep your gate no sanding,priming,re-painting for many ,many,many years to
+                        come. </p>
+                </gray>
+                <color>
+                    <h3>learn more...</h3>
+                </color>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- last -->
+    <div class="last">
+        <div class="background"></div>
+        <p data-aos="fade">
+            <color>*</color> The names of companies, brands or publications pictured or mentioned and their respective
+            logos are
+            trademarks or registered trademarks of their respective owners. Their use neither
+            constitutes a claim or sponsorship of the trademarks by our company nor affiliation of the trademark owners
+            with L.A. Ornamental & Rack Corp. Any mention of Trademark names, brands or
+            reference to any commercial organizations are for information only. It does not imply any affiliation of
+            this listing with the Trademark owner. The use of a trademark name is to describe the products
+            being offered for sale by our company and should not in any way infers directly or indirectly any
+            affiliation with the owner of these Trademarks.
+        </p>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-white text-muted">
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Gate N Fences
+                        </h6>
+                        <p>
+                            All rights reserved. No part of this site can be reproduced in any form or by any means,
+                            electronic, mechanical, photocopying, or otherwise without prior written consent of L. A.
+                            Ornamental & Rack Corp.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Driveway Gates</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Garden Gates</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Fencing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Railings</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">About Us</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Contact Us</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Our Policies</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">FAQ</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p>3708 NW 82nd Street Miami Florida 33147</p>
+                        <p>Office: 305-696-0419</p>
+                        <p>Fax: 305-696-0461</p>
+                        <p>E-Mail: LAOrnamental@Aol.com</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgb(232, 142, 53); color:white;">
+            © 2023 Copyright: goodgod99
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $(function () {
+            AOS.init({
+                offset: 120,
+                once: true,
+                duration: 600,
+                easing: 'ease-in-sine'
+            });
+        })
+
+        var menu = $('.menu');
+        var menuToggle = $('#menuToggle');
+
+        menuToggle.on('click', function () {
+            menu.toggleClass('open'); // 切換菜單的可見性
+            if (menu.hasClass('open')) {
+                menuToggle.html('X');
+                menuToggle.css('background', 'transparent')
+            } else {
+                menuToggle.html('MENU');
+                menuToggle.css('background', 'rgba(0, 0, 0, 0.7)')
+            }
+        });
+    });
+</script>

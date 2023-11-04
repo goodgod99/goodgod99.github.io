@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>天儷醫用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="描述或摘要">
+    <meta name="keywords" content="keyword, keyword, keyword">
+    <meta name="language" content="tw">
+    <!-- <meta property="og:title" content="網頁標題" />
+    <meta property="og:image" content="預覽圖 URL" />
+    <meta property="og:description" content="描述或摘要" /> -->
+    <meta charset="UTF-8">
+
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+
+        .fake p,
+        .fake h1,
+        .fake h2,
+        .fake h3 {
+            font-size: 0 !important;
+            line-height: 0 !important;
+            margin: 0 !important;
+
+        }
+
+        h4 {
+            color: #348E9B;
+            line-height: 25px;
+            font-size: 25px;
+            font-weight: 700;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        h5 {
+            font-size: 25px;
+            line-height: 25px;
+            font-weight: 500;
+
+            color: #746B58;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 25px;
+            color: black;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        /* body1 */
+        .body1 {
+            width: 100%;
+            background-color: #E1F0F1;
+            padding: 25px 50px;
+            box-sizing: border-box;
+        }
+
+        .body1 h1 {
+            padding: 20px 10px;
+        }
+
+        .body1 .boxs {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .body1 .boxs .box {
+            padding: 8px 10px;
+            border: 2px solid white;
+            border-radius: 50px;
+            margin: 5px 0;
+        }
+
+        .body1 .boxs span {
+            font-size: 25px;
+            line-height: 25px;
+
+            color: #746B58;
+        }
+
+        /* body2 */
+
+        .body2 {
+            width: 100%;
+            background-color: white;
+        }
+
+        .body2  .swiper {
+            width: 100vw;
+            margin: 50px 0;
+        }
+        .body2  .swiper-slide *{
+            margin: 10px 0;
+        }
+        .body2  .swiper-slide{
+            width: 100%;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+
+        }
+        .body2  img{
+            width: 400px;
+            height: auto;
+
+        }
+
+        .body2 h4{
+            font-size: 23px;
+        }
+
+        .body2 h5{
+            position: absolute;
+            bottom: 80px;
+        }
+
+        .body2 a{
+            position: absolute;
+            bottom: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #348E9B;
+            border: 1px solid #348E9B;
+            border-radius: 10px;
+
+            padding: 10px 20px;
+            transition: .3s;
+        }
+        .body2 a:hover{
+            
+            background-color: transparent;
+            color: #348E9B;
+        }
+        .body2 del{
+            color: gray;
+            font-size: 20px;
+        }
+
+        /* body3 */
+        .body3 {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .body3 .box-left {
+            width: 50%;
+        }
+
+        .body3 .box-right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .body3 img {
+            width: 100%;
+            height: auto;
+            vertical-align: bottom;
+        }
+
+        /* body4 */
+        .body4 {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #FFF092;
+            padding: 25px 50px;
+        }
+
+        /* body5 */
+        .body5 {
+            width: 100%;
+            padding: 25px;
+            box-sizing: border-box;
+            background-color: #E1F0F1;
+            display: flex;
+
+        }
+
+        .body5 .text {
+            width: 70%;
+            padding: 25px;
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 30px;
+        }
+
+        .body5 .text p {
+            color: #746B58;
+        }
+
+        .body5 .text p span {
+            color: #CA5C30;
+        }
+
+        .body5 .img {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .body5 .img img {
+            height: auto;
+            width: 20vw;
+            transform: scale(1.6);
+
+        }
+
+        /* body6 */
+        .body6 {
+            width: 100%;
+            background-color: #E1F0F1;
+
+        }
+
+        .body6 img {
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        /* 平板ＲＷＤ */
+        @media screen and (max-width: 1024px) {
+            /* body3 */
+
+            .body3 {
+                flex-direction: column;
+
+            }
+
+            .body3 .box-left {
+                width: 100%;
+            }
+
+            .body3 .box-right {
+                width: 100%;
+            }
+
+            /* body5 */
+            .body5 {
+                flex-direction: column;
+            }
+
+            .body5 .text {
+                width: 100%;
+            }
+
+            .body5 .img {
+                width: 100%;
+                margin-top: 25px;
+
+            }
+
+            .body5 .img img {
+                width: 35vw;
+                transform: scale(1.6) translateY(-15%);
+
+
+            }
+
+            /* body6 */
+            .body6 img {
+                padding: 10px;
+            }
+        }
+
+        /* 手機ＲＷＤ */
+        @media screen and (max-width: 768px) {
+            h4 {
+                color: #348E9B;
+                line-height: 20px;
+                font-size: 20px;
+            }
+
+            h5 {
+                font-size: 20px;
+                line-height: 20px;
+                color: #746B58;
+            }
+
+            /* body1 */
+            .body1 {
+                padding: 15px 10px;
+                box-sizing: border-box;
+            }
+
+            .body1 h4 {
+                padding: 20px 10px;
+            }
+
+            .body2  img{
+            width: 100vw;
+            height: auto;
+
+        }
+
+        .body2 .swiper-slide{
+            height: 650px;
+        }
+
+            /* body4 */
+            .body4 {
+                padding: 25px 25px;
+            }
+
+            /* body5 */
+            .body5 {
+                padding: 25px 10px;
+            }
+
+            .body5 .img img {
+                width: 50vw;
+                transform: scale(1.6) translateY(-5%);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- fake -->
+    <main>
+        <div class="fake">
+            <H1>抗菌液</H1>
+            <section>
+                <H2>居家消毒液</H2>
+                <article>
+                    <H3>SGS滅菌認證</H3>
+                    <H3>除菌劑</H3>
+                    <p>比酒精便宜、划算，對毛小孩與人體皆安全無害，由食品原料製作，具衛福部認證。天儷醫用®具高水溶性，可以很容易被沖洗，不易殘留。SGS證實不刺激、不腐蝕皮膚。美國健康與人類服務部門中證實對人體不致畸、不致突、不致癌。
+                    </p>
+                </article>
+            </section>
+            <section>
+                <H2>除臭</H2>
+                <article>
+                    <H3>抑菌</H3>
+                    <H3>抗菌</H3>
+                    <p>大容量室內除臭劑，不只價格比酒精便宜，功能與效果均比酒精強大。食品原料提取後，高度純化萃取二氧化氯後，再溶入水中。
+                    </p>
+                </article>
+            </section>
+            <section>
+                <H2>二氧化氯次氯酸鈉</H2>
+                <article>
+                    <H3>殺菌</H3>
+                    <H3>十分穩定</H3>
+                    <p>安全有效又便宜，30秒有效瓦解99.99%冠狀病毒、細菌、病毒、超級細菌、腸病毒、芽孢菌、流感病毒與黴菌等多種病菌。
+                    </p>
+                </article>
+            </section>
+            <section>
+                <H2>氧化二氯</H2>
+                <article>
+                    <H3>次氯酸副作用</H3>
+                    <H3>漂白水的禁忌</H3>
+                    <p>漂白水中毒
+                    </p>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <!-- 主標題 -->
+    <div class="body1">
+        <h4>七種功能，一瓶通用</h4>
+        <div class="boxs">
+            <div class="box">
+                <h5>手部清潔</h5>
+            </div>
+            <span>/</span>
+            <div class="box">
+                <h5>去除異味</h5>
+            </div>
+            <span>/</span>
+            <div class="box">
+                <h5>物體表面消毒</h5>
+            </div>
+            <span>/</span>
+            <div class="box">
+                <h5>塑膠器械泡消</h5>
+            </div>
+            <span>/</span>
+            <div class="box">
+                <h5>布巾衣物消毒</h5>
+            </div>
+            <span>/</span>
+            <div class="box">
+                <h5>空氣消毒（需搭配霧化機）</h5>
+            </div>
+            <span>/</span>
+            <div class="box">
+                <h5>環境消毒（地面、桌面、把手）</h5>
+            </div>
+        </div>
+    </div>
+    <!-- 商品組 -->
+    <div class="body2">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="img/swiper1.jpg" alt="">
+                    <h4>天儷醫用濃縮防護抗菌液150ML</h4>
+                    <h5><del>NT$ 499</del> NT$299</h5>
+                    <a href="">購買</a>
+                    
+
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/swiper2.jpg" alt="">
+                    <h4>天儷醫用濃縮防護抗菌噴霧組成分:二氧化氯</h4>
+                    <p>一瓶濃縮液可以稀釋成十五瓶隨身噴霧</p>
+                    <h5><del>NT$ 999</del> NT$599</h5>
+                    <a href="">購買</a>
+                    
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/swiper3.jpg" alt="">
+                    <h4>天儷醫用濃縮抗菌除臭防護隨身霧化組</h4>
+                    <p>一瓶濃縮液可以稀釋成十五瓶隨身霧化瓶</p>
+                    <h5><del>NT$ 1099</del> NT$899</h5>
+
+                    <a href="">購買</a>
+                    
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/swiper1.jpg" alt="">
+                    <h4>天儷醫用濃縮防護抗菌液150ML</h4>
+                    <h5><del>NT$ 499</del> NT$299</h5>
+                    <a href="">購買</a>
+                    
+
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/swiper2.jpg" alt="">
+                    <h4>天儷醫用濃縮防護抗菌噴霧組成分:二氧化氯</h4>
+                    <p>一瓶濃縮液可以稀釋成十五瓶隨身噴霧</p>
+                    <h5><del>NT$ 999</del> NT$599</h5>
+                    <a href="">購買</a>
+                    
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/swiper3.jpg" alt="">
+                    <h4>天儷醫用濃縮抗菌除臭防護隨身霧化組</h4>
+                    <p>一瓶濃縮液可以稀釋成十五瓶隨身霧化瓶</p>
+                    <h5><del>NT$ 1099</del> NT$899</h5>
+
+                    <a href="">購買</a>
+                    
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+    </div>
+    <!-- 使用說明圖 -->
+    <div class="body3">
+        <div class="box-left">
+            <img src="img/小圖塊-03.png" alt="漂白水">
+        </div>
+        <div class="box-right">
+            <img src="img/小圖塊-04.png" alt="滅菌">
+            <img src="img/小圖塊-05.png" alt="次氯酸">
+        </div>
+    </div>
+
+    <!-- 黃色說明文 -->
+    <div class="body4">
+        <p>二氧化氯是一種人工製造出的氣體,對細菌、病毒、黴菌的細胞壁有較強的吸附和穿透能力,能抑制
+            蛋白質合成,到抑菌、殺菌效果,而且是一種對環境、人體和動物比較友善的綠色消毒劑,通常用在
+            自來水消毒,也是合法的食品洗潔劑。
+        </p>
+    </div>
+
+    <!-- 超人圖文 -->
+    <div class="body5">
+        <div class="text">
+            <h4>1公升可以稀釋至100公升
+            </h4>
+            <h4>溫和不傷人體</h4>
+            <p>經SGS證實不刺激、不腐蝕皮膚,溫和如同生理食鹽水</p>
+            <p>2002年美國健康與人類服務部門(HHS)所作的『二氧化氯與氯酸鹽毒物學
+                頗析報告』中提出對人體不致畸、不致突、不致癌</p>
+            <h4>完善防護力</h4>
+            <p>經SGS證實可解99.99%所有種類病毒與單細胞生物(細菌、黴菌、真菌、芽菌)</p>
+            <h4>衛福部許可字號</h4>
+            <p><span>衛部醫器製壹第009045號</span></p>
+            <h4>成分</h4>
+            <p>二氧化氯</p>
+        </div>
+        <div class="img">
+            <img src="img/超人.png" alt="醫用消毒">
+        </div>
+    </div>
+
+    <!-- 組圖 -->
+    <div class="body6">
+        <img src="img/小圖塊-08.png" alt="臭氧">
+        <img src="img/小圖塊-09.png" alt="消毒">
+        <img src="img/小圖塊-10.png" alt="滅菌">
+        <a href="https://www.beclass.com/rid=284b3bd6541f1405ac81" target="_blank"><img src="img/未命名設計.png"
+                alt="免費媽媽禮"></a>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: getSlidesPerView(),
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        autoplay: {
+                delay: 3000,
+            },
+
+    });
+
+    function getSlidesPerView() {
+            if (window.innerWidth >= 1024) {
+                return 3;
+            } else {
+                return 1;
+            }
+        }
+
+        function updateSlidesPerView() {
+            var newSlidesPerView = getSlidesPerView();
+            if (newSlidesPerView !== mySwiper.params.slidesPerView) {
+                mySwiper.params.slidesPerView = newSlidesPerView;
+                mySwiper.update();
+            }
+        }
+
+        window.addEventListener('resize', updateSlidesPerView);
+</script>
