@@ -57,9 +57,10 @@
 .swiper2 .swiper-slide .img .text {
     position: absolute;
     z-index: 10;
-    left: 0;
-    bottom: 0;
-    margin: 50px;
+    right: 0;
+    top: 0;
+    margin: 50px 20px;
+    writing-mode: vertical-rl;
 }
 
 
@@ -191,6 +192,11 @@
         opacity: 0;
         transition: 0s;
         margin: 20px;
+        writing-mode: horizontal-tb;
+        top: auto;
+        bottom: 0;
+        right: auto;
+        left: 0;
 
     }
 
