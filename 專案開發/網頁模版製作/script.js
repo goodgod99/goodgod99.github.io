@@ -151,24 +151,5 @@ $(document).ready(function () {
     });
 
 
-    
-    // 檢測方向並應用橫向樣式
-    function checkOrientation() {
-        if (window.matchMedia("(orientation: portrait)").matches) {
-            // 目前是直向，應用橫向樣式
-            document.body.style.transform = "rotate(90deg)";
-        } else {
-            // 目前是橫向，清除樣式
-            document.body.style.transform = "none";
-        }
-    }
-
-    // 初始檢測方向
-    checkOrientation();
-
-    // 監聽方向變化事件
-    window.addEventListener("orientationchange", checkOrientation);
-
-
 
 });
