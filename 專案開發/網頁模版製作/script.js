@@ -1,19 +1,20 @@
 $(document).ready(function () {
 
-    $('#fullscreen-animation').fadeIn(1500,function(){
-// 在1秒后执行动画完成后的操作
-$('.content').fadeIn(2000,function(){
-    $('#fullscreen-animation').fadeOut(1000);
-});
+    $('#fullscreen-animation').fadeIn(1500, function () {
+        // 在1秒后执行动画完成后的操作
+        $('.content').fadeIn(1500, function () {
+            $('#fullscreen-animation').fadeOut(1000);
+            $('.header').css('opacity','1');
+        });
     });
-        
-    
-        
+
+
+
     // Initialize Swiper
     var swiper1 = new Swiper(".swiper1", {
         effect: "fade",
         autoplay: {
-            delay: 5000, 
+            delay: 5000,
         },
         pagination: {
             el: ".swiper-pagination",
@@ -25,12 +26,15 @@ $('.content').fadeIn(2000,function(){
 
     const swiper2 = new Swiper('.swiper2', {
         // Optional parameters
-        effect: "fade",
+        effect: "flip",
+        flipEffect: {
+            slideShadows: false
+        },
         loop: true,
         slidesPerView: 1,
         speed: 800,
         autoplay: {
-            delay: 5000,
+            delay: 14000,
         },
 
         // If we need pagination
@@ -51,11 +55,19 @@ $('.content').fadeIn(2000,function(){
 
     const swiper3 = new Swiper('.swiper3', {
         // Optional parameters
+        effect: "coverflow",
+        coverflowEffect: {
+            rotate: 60,
+            stretch: getstretch(),
+            depth:300,
+            
+            slideShadows: false
+        },
         loop: true,
         slidesPerView: 1,
         speed: 800,
         autoplay: {
-            delay: 5000,
+            delay: 14000,
         },
 
         // If we need pagination
@@ -71,8 +83,34 @@ $('.content').fadeIn(2000,function(){
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
     });
+
+
+    /////////////////
+    function getstretch() {
+        if (window.innerWidth >= 1024) {
+            return 300;
+        } 
+        else if (window.innerWidth < 1024 && window.innerWidth >= 768){
+            return 200;
+        }
+        else {
+            return 0;
+        }
+    }
+
+
+    function updateStretch() {
+        var newStretch = getstretch();
+        if (newStretch !== swiper3.params.coverflowEffect.stretch) {
+            swiper3.params.coverflowEffect.stretch = newStretch;
+            swiper3.update();
+        }
+    }
+    
+    window.addEventListener('resize', updateStretch);
+
+    /////////////////
 
 
     // Initialize AOS
@@ -87,7 +125,7 @@ $('.content').fadeIn(2000,function(){
     })
 
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var header = $(".header");
         var body1 = $("#body1");
         var up = $(".bi-chevron-double-up");
@@ -106,6 +144,30 @@ $('.content').fadeIn(2000,function(){
             up.hide();
         }
     });
+
+    $('.link').on('click', function() {
+        // 取消#menu_control的checked状态
+        $('#menu_control').prop('checked', false);
+    });
+
+
+    
+    // 檢測方向並應用橫向樣式
+    function checkOrientation() {
+        if (window.matchMedia("(orientation: portrait)").matches) {
+            // 目前是直向，應用橫向樣式
+            document.body.style.transform = "rotate(90deg)";
+        } else {
+            // 目前是橫向，清除樣式
+            document.body.style.transform = "none";
+        }
+    }
+
+    // 初始檢測方向
+    checkOrientation();
+
+    // 監聽方向變化事件
+    window.addEventListener("orientationchange", checkOrientation);
 
 
 
