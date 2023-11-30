@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>HomeWork_2</title>
+    <style>
+        body {
+            background-color: #121212;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        span {
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+
+        h2 {
+            font-weight: 700;
+            line-height: 4;
+        }
+
+        h3{
+            font-size: 1.5rem;
+
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .black {
+            color: #121212;
+            font-weight: 700;
+        }
+
+        .small{
+            font-size: .8rem;
+        }
+
+        .free{
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .text-align-center {
+            text-align: center;
+        }
+
+        .text-align-right {
+            text-align: right;
+        }
+
+        .inline-block{
+            display: inline-block;
+        }
+
+        .block{
+            display: block;
+        }
+
+
+        .top {
+            line-height: 1.5;
+            margin: 20px;
+        }
+
+        .midden {
+            width: 1100px;
+            height: 250px;
+            border: 4px solid;
+            border-image-source: linear-gradient(to right, #AE0E6E, #074791);
+            border-image-slice: 1;
+            border-radius: 16px;
+
+            margin: 20px auto;
+        }
+
+        .midden div {
+            margin: auto;
+            width: 250px;
+        }
+
+        .midden div p {
+            width: 100%;
+
+        }
+
+        .bottom {
+            margin: 0 auto;
+            width: 1100px;
+        }
+
+        .bottom .box {
+            border-radius: 10px;
+            width: 350px;
+            margin: 30px 0;
+            box-sizing: border-box;
+            padding: 15px;
+
+        }
+
+        .bottom .tag {
+            padding: 7px;
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+
+        .bottom .plan {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .bottom .plan .plan-left{
+            width: 156px;
+        }
+
+        .bottom .plan .plan-right{
+            width: 156px;
+
+        }
+
+        .bottom .list{
+            height: 100px;
+        }
+
+        .bottom .list ul{
+            list-style: none ;
+            margin: 20px 0;
+        }
+
+        .bottom .list ul li{
+            color: #fff;
+            line-height: 2;
+        }
+
+        .bottom .list ul li::before{
+            content: "• "; 
+            color: #fff;
+        }
+
+        .bottom .btn{
+            width: 100%;
+            height: 50px;
+            border-radius: 50px;
+            /* background-color: #FFD2D6; */
+            margin: 20px 0;
+            text-decoration: none;
+
+            position: relative;
+        }
+
+        .bottom .btn span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <section class="top">
+            <h1 class="text-align-center">方案價格實惠，滿足各種需求</h1>
+            <p class="text-align-center">任選一種 Premium 方案，在手機、喇叭和其他裝置上盡情收聽無廣告音樂，完全不受限。提供多種付款方式，可隨時取消。</p>
+        </section>
+
+        <section class="midden">
+            <h2 class="text-align-center">所有 Premium 方案皆包含以下功能</h2>
+            <div>
+                <p>✓無廣告暢聽音樂</p>
+                <p>✓下載並離線收聽</p>
+                <p>✓由你決定歌曲播放順序</p>
+                <p>✓高音質</p>
+                <p>✓與好友一起即時聆聽</p>
+                <p>✓整理聆聽佇列</p>
+            </div>
+        </section>
+
+        <section class="bottom">
+            <div class="box inline-block" style="border: 4px solid #FFD2D6;">
+                <div class="tag inline-block" style="background-color: #FFD2D6;">
+                    <span class="black">免費使用 3 個月</span>
+                </div>
+                <div class="plan">
+                    <div class="plan-left inline-block">
+                        <h3>Premium </h3>
+                        <h3>Individual</h3>
+                    </div><div class="plan-right inline-block">
+                        <span class="free text-align-right block">免費</span>
+                        <span class="small text-align-right block">可享 3 個月服務</span>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>1 個 Premium 帳戶</li>
+                        <li>可隨時取消</li>
+                    </ul>
+                </div>
+                <a href="" class="btn block" style="background-color: #FFD2D6;"><span class="black">試試 免費使用3個月</span></a>
+                <div>
+                    <span class="small text-align-center">僅適用於 Individual 方案。之後每月 NT$149.00。須遵守相關條款及細則。僅限尚未試用過 Premium 的使用者。優惠將於
+                        2023/12/31截止。</span>
+                </div>
+            </div><div class="box inline-block" style="margin: 0 25px; border: 4px solid #C4B1D3;" >
+                <div class="tag inline-block" style="background-color: #C4B1D3;">
+                    <span class="black">免費使用 3 個月</span>
+                </div>
+                <div class="plan">
+                    <div class="plan-left inline-block">
+                        <h3>Premium </h3>
+                        <h3>Individual</h3>
+                    </div><div class="plan-right inline-block">
+                        <span class="free text-align-right block">免費</span>
+                        <span class="small text-align-right block">可享 3 個月服務</span>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>1 個 Premium 帳戶</li>
+                        <li>可隨時取消</li>
+                    </ul>
+                </div>
+                <a href="" class="btn block" style="background-color: #C4B1D3;"><span class="black">試試 免費使用3個月</span></a>
+                <div>
+                    <span class="small text-align-center">僅適用於 Individual 方案。之後每月 NT$149.00。須遵守相關條款及細則。僅限尚未試用過 Premium 的使用者。優惠將於
+                        2023/12/31截止。</span>
+                </div>
+            </div><div class="box inline-block" style="border: 4px solid #FEC862;">
+                <div class="tag inline-block" style="background-color: #FEC862;">
+                    <span class="black">免費使用 3 個月</span>
+                </div>
+                <div class="plan">
+                    <div class="plan-left inline-block">
+                        <h3>Premium </h3>
+                        <h3>Individual</h3>
+                    </div><div class="plan-right inline-block">
+                        <span class="free text-align-right block">免費</span>
+                        <span class="small text-align-right block">可享 3 個月服務</span>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>1 個 Premium 帳戶</li>
+                        <li>可隨時取消</li>
+                    </ul>
+                </div>
+                <a href="" class="btn block" style="background-color: #FEC862;"><span class="black">試試 免費使用3個月</span></a>
+                <div>
+                    <span class="small text-align-center">僅適用於 Individual 方案。之後每月 NT$149.00。須遵守相關條款及細則。僅限尚未試用過 Premium 的使用者。優惠將於
+                        2023/12/31截止。</span>
+                </div>
+            </div>
+        </section>
+
+    </article>
+
+</body>
+
+</html>
