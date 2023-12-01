@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>輪播</title>
     <style>
         .swiper{
             height: 500px;
             width: 500px;
+            margin: 0;
         }
         .swiper .swiper-slide{
             height: 500px;
@@ -19,17 +19,15 @@
             background-size: cover;
             background-position: center;
         }
-        
-        .swiper-button-prev, .swiper-button-next{
+        .swiper .swiper-button-prev, .swiper .swiper-button-next{
             color: #fff ;
             transition: transform .3s;
         }
-        .swiper-button-prev:hover, .swiper-button-next:hover{
+        .swiper .swiper-button-prev:hover, .swiper .swiper-button-next:hover{
             transform: scale(1.1);
         }
-        .swiper-pagination-bullet-active{
+        .swiper .swiper-pagination-bullet-active{
             background-color: white;
-
         }
     </style>
 </head>
@@ -48,9 +46,6 @@
         <!-- navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-
-        <!-- scrollbar -->
-        <!-- <div class="swiper-scrollbar"></div> -->
     </div>
 </body>
 
@@ -63,7 +58,7 @@
         speed: 800,
 
         autoplay: {
-            delay: 50000,
+            delay: 5000,
         },
 
         pagination: {
@@ -75,9 +70,5 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
-        //scrollbar: {
-        //    el: '.swiper-scrollbar',
-        //},
     });
 </script>

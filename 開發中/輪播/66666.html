@@ -1,208 +1,312 @@
 <STYLE>
-FIGURE{FLOAT:RIGHT;FONT-WIDTH:200PX;BORDER-COLOR:SILVER;BORDER-STYLE:solid;BORDER-WIDTH:thick;}
-FIGCAPTION{TEXT-ALIGN:CENTER;COLOR:black;BACKGROUND-COLOR:LightGoldenrodYellow;WIDTH:150PX}
-<style>
-th:empty{background-color:grey}
-table {
- table-layout: fixed;
- 
-}
+  FIGURE {
+    FLOAT: RIGHT;
+    FONT-WIDTH: 200PX;
+    BORDER-COLOR: SILVER;
+    BORDER-STYLE: solid;
+    BORDER-WIDTH: thick;
+  }
+
+  FIGCAPTION {
+    TEXT-ALIGN: CENTER;
+    COLOR: black;
+    BACKGROUND-COLOR: LightGoldenrodYellow;
+    WIDTH: 150PX
+  }
+
+  <style>th:empty {
+    background-color: grey
+  }
+
+  table {
+    table-layout: fixed;
+
+  }
 </style>
 <html>
 <div>
-  <header><strong><h1>HAMSTERS' WORLD</h1></strong>
-<h3 align="right">
-<a href="連結網址" target="_self">首頁</a>
-<a href="連結網址" target="_self">關於我們</a>
-<a href="連結網址" target="_self">聯絡我們</a>
-</h3></header>
-<head>
+  <header><strong>
+      <h1>HAMSTERS' WORLD</h1>
+    </strong>
+    <h3 align="right">
+      <a href="連結網址" target="_self">首頁</a>
+      <a href="連結網址" target="_self">關於我們</a>
+      <a href="連結網址" target="_self">聯絡我們</a>
+    </h3>
+  </header>
+
+  <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>左欄固定寬度，右欄填滿</title>
     <style>
-        html, body {
-            height:2000; margin: 0; font-size: 10pt;
-            font-family: 標楷體, Arial, Helvetica, sans-serif;
-        }
-        .content { 
-            display: flex; 
-            height: 100%; padding: 0; 
-        }
-        div { padding: 6px; }
-        .side-menu { 
-            /* 設固定寬度，flex-grow 預設 0，flex-shrink 預設 1 */
-            width: 150px; background-color: #eee; 
-        }
-        .main-win { 
-            /* 因 side-menu flex-grow=0，main-win flex-grow=0 吃掉 100% 多餘寬度 */
-            flex-grow: 1; background-color: lightgray; 
-        }
-    </style>
-</head>
+      html,
+      body {
+        height: 2000;
+        margin: 0;
+        font-size: 10pt;
+        font-family: 標楷體, Arial, Helvetica, sans-serif;
+      }
 
-<body>
+      .content {
+        display: flex;
+        height: 100%;
+        padding: 0;
+      }
+
+      div {
+        padding: 6px;
+      }
+
+      .side-menu {
+        /* 設固定寬度，flex-grow 預設 0，flex-shrink 預設 1 */
+        width: 150px;
+        background-color: #eee;
+      }
+
+      .main-win {
+        /* 因 side-menu flex-grow=0，main-win flex-grow=0 吃掉 100% 多餘寬度 */
+        flex-grow: 1;
+        background-color: lightgray;
+      }
+
+      .swiper {
+        height: 450px;
+        width: 450px;
+        margin: 0;
+        float: right;
+        transform: translateX(-10px) translateY(-10px);
+      }
+
+      .swiper .swiper-slide {
+        height: 500px;
+        width: 500px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .swiper .swiper-button-prev,
+      .swiper .swiper-button-next {
+        color: #fff;
+        transition: transform .3s;
+      }
+
+      .swiper .swiper-button-prev:hover,
+      .swiper .swiper-button-next:hover {
+        transform: scale(1.1);
+      }
+
+      .swiper .swiper-pagination-bullet-active {
+        background-color: white;
+      }
+    </style>
+  </head>
+
+  <body>
 
     <div class="content">
-        <div class="side-menu">
-           <strong>MENU</strong>
-        <UL>    
+      <div class="side-menu">
+        <strong>MENU</strong>
+        <UL>
+          <li>
+            <a href="#1" onclick="display('LemonChiffon')">倉鼠飼養環境</a>
+          </li>
+          <li>
+            <a href="#2" onclick="display('LemonChiffon')">禁食清單</a>
+          </li>
+          <li>
+            <a href="#3" onclick="display('LightGoldenrodYellow')">養鼠注意事項</a>
+          </li>
+          <li>
+            <a href="#4" onclick="display('PapayaWhip')">我家可愛倉鼠</a>
+          </li>
+          <li>
+            <a href="#5" onclick="display('Moccasin')">製作過程甘苦談</a>
+          </li>
+        </UL>
+      </div>
+      <div class="main-win">
+        
+        <setion>
+          <a name="1">
+            <h1>倉鼠飼養環境</h1>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide" style="background-image: url(image/405589389_250906201072602_519516203099364694_n.jpg);"></div>
+                  <div class="swiper-slide" style="background-image: url(image/405919476_1357306518482269_6465670962092343928_n.jpg);"></div>
+                  <div class="swiper-slide" style="background-image: url(image/406069899_841249300827771_7354872079409672688_n.jpg);"></div>
+                  <div class="swiper-slide" style="background-image: url(image/403416163_1147492036213289_7255632517248059892_n.jpg);"></div>
+              </div>
+              <!-- pagination -->
+              <div class="swiper-pagination"></div>
+      
+              <!-- navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+          </div>
+            <p>
+              <font size="4">
+
+                
+                <ol>
+                  <li>
+                    <header>〔籠舍〕必備,且越平坦寬敞越好。</header>
+                    <br>侏儒倉鼠至少需要30*40=1200平方公分，40*60=2400平方公分以上佳。
+                    <br>黃金鼠至少需要40*60=2400平方公分，60*80=4800平方公分以上佳。
+                  </li>
+                  <br>
+                  <li>
+                    <header>〔滾輪〕必備</header>
+                    <br>請挑選平坦無縫隙之滾輪，24小時不限制時段供鼠使用。倉鼠原生環境遼闊，有長途奔跑習性，依據動物實驗倉鼠熱愛跑滾輪且可緩解籠養緊迫。
+                    <br>侏儒倉鼠至少需要直徑16公分滾輪。
+                    <br>黃金鼠至少需要直徑21公分滾輪。
+                  </li>
+                  <br>
+                  <li>
+                    <header>〔墊材〕必備</header>
+                    <br>倉鼠是地底穴居動物，牠們需要厚厚的墊材滿足挖掘、築巢、穴居、躲藏的天性。請挑選低粉塵、無化學添加之墊材。鋪設厚度建議達到4公分以上
+                    <br>，10公分以上佳。
+                  </li>
+                  <br>
+                  <li>
+                    <header>〔水瓶〕必備</header>
+                    <br>請24小時提供動物乾淨飲水。
+                  </li>
+                </ol>
+
+        </setion>
+        <hr>
+
+        <setion>
+          <a name="2">
+            <h2>禁食清單</h2>
+            <p>
+              <font size="4">
+
+
                 <li>
-        <a href="#1" onclick="display('LemonChiffon')">倉鼠飼養環境</a>
+                  五辛（洋蔥、蔥、大蒜、韭菜等，硫化物將造成中毒需急診）
                 </li>
                 <li>
-        <a href="#2" onclick="display('LemonChiffon')">禁食清單</a>
+                  辣椒（易引起腸胃過敏）
                 </li>
                 <li>
-        <a href="#3" onclick="display('LightGoldenrodYellow')">養鼠注意事項</a>
+                  番茄葉（含天然毒素）
                 </li>
                 <li>
-        <a href="#4" onclick="display('PapayaWhip')">我家可愛倉鼠</a>
+                  巧克力、咖啡、茶、酒等（可能引起心悸、休克）
                 </li>
                 <li>
-        <a href="#5" onclick="display('Moccasin')">製作過程甘苦談</a>
+                  酪梨（PERSIN含量較高具毒性）
                 </li>
-          </UL>  
-        </div>
-        <div class="main-win">
-            
-<setion>
- <a name="1">
-   <h1>倉鼠飼養環境</h1>
-     <p><font size="4">
+                <li>
+                  各種果核（如蘋果籽、龍眼籽等，含天然毒素）
+                </li>
+                <li>
+                  人工食品（化學添加劑將造成動物身體負擔，引起提早老化、皮膚及各種免疫力下降之疾病）
+                </li>
+                <li>
+                  不新鮮食材，毒素及細菌易孳生。例如：茄子、花生、水分含量高之蔬菜水果。
+                </li>
+                <hr>
 
-<IMG src="C:\Users\user\Desktop\IMG\ham-home.jpg"
-style="WIDTH:600PX;height:450px;FLOAT:RIGHT">
-<ol>
- <li>
-   <header>〔籠舍〕必備,且越平坦寬敞越好。</header>
-   <br>侏儒倉鼠至少需要30*40=1200平方公分，40*60=2400平方公分以上佳。
-   <br>黃金鼠至少需要40*60=2400平方公分，60*80=4800平方公分以上佳。
- </li>
-<br>
- <li>
-   <header>〔滾輪〕必備</header>
-   <br>請挑選平坦無縫隙之滾輪，24小時不限制時段供鼠使用。倉鼠原生環境遼闊，有長途奔跑習性，依據動物實驗倉鼠熱愛跑滾輪且可緩解籠養緊迫。
-      <br>侏儒倉鼠至少需要直徑16公分滾輪。
-      <br>黃金鼠至少需要直徑21公分滾輪。
- </li>
-<br>
- <li><header>〔墊材〕必備</header>
-  <br>倉鼠是地底穴居動物，牠們需要厚厚的墊材滿足挖掘、築巢、穴居、躲藏的天性。請挑選低粉塵、無化學添加之墊材。鋪設厚度建議達到4公分以上
-<br>，10公分以上佳。
- </li>
-<br>
- <li>
- <header>〔水瓶〕必備</header>
-       <br>請24小時提供動物乾淨飲水。
-</li>
-</ol>
-    
-</setion>
-<hr>
+                <setion>
+                  <a name="3">
+                    <font color="red">
+                      <h2>注意事項</h2>
+                    </font>
+                    <p>
+                      <font size="4" FONT COLOR="RED">
+                        <IMG src="C:\Users\user\Desktop\IMG\驚嘆號.gif" style="WIDTH:250PX;height:130px;FLOAT:RIGHT">
 
-<setion>
- <a name="2">
-   <h2>禁食清單</h2>
-     <p><font size="4">
+                        <ol>
+                          <li>倉鼠請一籠一鼠飼養</li>
+                          <li>同性互殘、異性大量繁殖及互殘</li>
+                          <li>不可無黑暗期，鼠每天都需要黑暗夜晚與白晝交替</li>
+                          <li>籠具不可讓鼠逃家</li>
+                          <li>鼠不可用水洗澡</li>
+                          <li>不可接觸化學藥劑及其他禁食品，例如：蟑螂藥、老鼠藥、乾燥劑、保冷劑、盆栽(很多植物有毒)、咖啡、巧克力等</li>
+                          <li>鼠有異狀應盡速看醫生</li>
+                        </ol>
+                      </FONT>
+                      <hr>
 
+                      <setion>
+                        <a name="4">
+                          <font>
+                            <h2>我家可愛倉鼠</h2>
+                          </font>
+                          <table border=3 height=400 width=600px align=left>
+                            <FIGURE
+                              STYLE="FLOAT:RIGHT;FONT-WIDTH:170PX;BORDER-COLOR:SILVER;BORDER-STYLE:SOLID;BORDER-WIDTH:THIN;">
+                              <IMG src="C:\Users\user\Desktop\IMG\1.jpg" style="WIDTH:150PX;FLOAT:RIGHT">
+                              <FIGCAPTION>糖糖</FIGCAPTION>
+                            </FIGURE>
 
-<li>
-五辛（洋蔥、蔥、大蒜、韭菜等，硫化物將造成中毒需急診）
-</li>
-<li>
-辣椒（易引起腸胃過敏）
-</li>
-<li>
-番茄葉（含天然毒素）
-</li>
-<li>
-巧克力、咖啡、茶、酒等（可能引起心悸、休克）
-</li>
-<li>
-酪梨（PERSIN含量較高具毒性）
-</li>
-<li>
-各種果核（如蘋果籽、龍眼籽等，含天然毒素）
-</li>
-<li>
-人工食品（化學添加劑將造成動物身體負擔，引起提早老化、皮膚及各種免疫力下降之疾病）
-</li>
-<li>
-不新鮮食材，毒素及細菌易孳生。例如：茄子、花生、水分含量高之蔬菜水果。
-</li>
-<hr>
+                            <FIGURE
+                              STYLE="FLOAT:RIGHT;FONT-WIDTH:170PX;BORDER-COLOR:SILVER;BORDER-STYLE:SOLID;BORDER-WIDTH:THIN;">
+                              <IMG src="C:\Users\user\Desktop\IMG\2.jpg" style="WIDTH:150PX;FLOAT:RIGHT">
+                              <FIGCAPTION>果果</FIGCAPTION>
+                            </FIGURE>
 
-<setion>
- <a name="3"><font color="red">
-   <h2>注意事項</h2></font>
-     <p><font size="4" FONT COLOR="RED">
-<IMG src="C:\Users\user\Desktop\IMG\驚嘆號.gif"
-style="WIDTH:250PX;height:130px;FLOAT:RIGHT">
-
-<ol>
-<li>倉鼠請一籠一鼠飼養</li>
-<li>同性互殘、異性大量繁殖及互殘</li>
-<li>不可無黑暗期，鼠每天都需要黑暗夜晚與白晝交替</li>
-<li>籠具不可讓鼠逃家</li>
-<li>鼠不可用水洗澡</li>
-<li>不可接觸化學藥劑及其他禁食品，例如：蟑螂藥、老鼠藥、乾燥劑、保冷劑、盆栽(很多植物有毒)、咖啡、巧克力等</li>
-<li>鼠有異狀應盡速看醫生</li>
-</ol>
-</FONT>
-<hr>
-
-<setion>
-<a name="4"><font >
-   <h2>我家可愛倉鼠</h2></font>
-<table border=3 height=400 width=600px align=left >
-<FIGURE
-STYLE="FLOAT:RIGHT;FONT-WIDTH:170PX;BORDER-COLOR:SILVER;BORDER-STYLE:SOLID;BORDER-WIDTH:THIN;">
-<IMG src="C:\Users\user\Desktop\IMG\1.jpg"
-style="WIDTH:150PX;FLOAT:RIGHT">
-<FIGCAPTION>糖糖</FIGCAPTION>
-</FIGURE>
-
-<FIGURE
-STYLE="FLOAT:RIGHT;FONT-WIDTH:170PX;BORDER-COLOR:SILVER;BORDER-STYLE:SOLID;BORDER-WIDTH:THIN;">
-<IMG src="C:\Users\user\Desktop\IMG\2.jpg"
-style="WIDTH:150PX;FLOAT:RIGHT">
-<FIGCAPTION>果果</FIGCAPTION>
-</FIGURE>
-
-<FIGURE
-STYLE="FLOAT:RIGHT;FONT-WIDTH:170PX;BORDER-COLOR:SILVER;BORDER-STYLE:SOLID;BORDER-WIDTH:THIN;">
-<IMG src="C:\Users\user\Desktop\IMG\7.jpg"
-style="WIDTH:150PX;FLOAT:RIGHT">
-<FIGCAPTION>Humy</FIGCAPTION>
-</FIGURE>
+                            <FIGURE
+                              STYLE="FLOAT:RIGHT;FONT-WIDTH:170PX;BORDER-COLOR:SILVER;BORDER-STYLE:SOLID;BORDER-WIDTH:THIN;">
+                              <IMG src="C:\Users\user\Desktop\IMG\7.jpg" style="WIDTH:150PX;FLOAT:RIGHT">
+                              <FIGCAPTION>Humy</FIGCAPTION>
+                            </FIGURE>
 
 
-<P><STRONG>倉鼠的個人檔案</STRONG></P>
-<tr >
-<tr ><th style="background-color: white">名字
-<th style="background-color: white">性別
-<th style="background-color: white">個性
-<th style="background-color: white">喜愛食物
-<th style="background-color: white">特色</tr>
-<tr><th>Humy<td>母<td>敏感、不喜讓人觸碰<td>餅乾、莓果<td>缺了一隻手</tr>
-<tr><th>糖糖<td>公<td>親人、貪吃<td>各種蟲蟲、青菜<td>聽到人喚會跑出來</tr>
-<tr><th>果果<td>母<td>不親人(會發出叫聲警示)<td>蘋果、磨牙棒<td>滾輪大師</tr>
-</table>
+                            <P><STRONG>倉鼠的個人檔案</STRONG></P>
+                            <tr>
+                            <tr>
+                              <th style="background-color: white">名字
+                              <th style="background-color: white">性別
+                              <th style="background-color: white">個性
+                              <th style="background-color: white">喜愛食物
+                              <th style="background-color: white">特色
+                            </tr>
+                            <tr>
+                              <th>Humy
+                              <td>母
+                              <td>敏感、不喜讓人觸碰
+                              <td>餅乾、莓果
+                              <td>缺了一隻手
+                            </tr>
+                            <tr>
+                              <th>糖糖
+                              <td>公
+                              <td>親人、貪吃
+                              <td>各種蟲蟲、青菜
+                              <td>聽到人喚會跑出來
+                            </tr>
+                            <tr>
+                              <th>果果
+                              <td>母
+                              <td>不親人(會發出叫聲警示)
+                              <td>蘋果、磨牙棒
+                              <td>滾輪大師
+                            </tr>
+                          </table>
 
-</setion>
+                      </setion>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-<hr>
-<setion>
- <a name="5"><h2>製作歷程甘苦談</h2></font><p><font size="4">
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br><br>
+                      <br><br><br><br><br><br><br><br><br><br><br>
+                      <hr>
+                      <setion>
+                        <a name="5">
+                          <h2>製作歷程甘苦談</h2>
+              </font>
+              <p>
+                <font size="4">
 
 
 
@@ -216,18 +320,43 @@ style="WIDTH:150PX;FLOAT:RIGHT">
 
 
 
-  
-</div>
+
+      </div>
 
     </div>
     <script>
-        function display(color) {
-            document.getElementById("display").style.backgroundColor = color;
-        }
+      function display(color) {
+        document.getElementById("display").style.backgroundColor = color;
+      }
+      
     </script>
- 
-</body>
-<footer>
-    <p>Designed by: b1141052丁宇柔 <a href="mailto:vivian81719@gmail.com" >電子郵件連結</a>
+
+  </body>
+  <footer>
+    <p>Designed by: b1141052丁宇柔 <a href="mailto:vivian81719@gmail.com">電子郵件連結</a>
+      <br>
+      <a href="https://swiperjs.com/">輪播效果參考之網址</a>
   </footer>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      effect: "fade",
+      speed: 800,
+
+      autoplay: {
+        delay: 5000,
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </html>
