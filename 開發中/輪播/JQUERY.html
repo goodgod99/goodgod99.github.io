@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>輪播</title>
+    <style>
+        .swiper{
+            height: 500px;
+            width: 500px;
+        }
+        .swiper .swiper-slide{
+            height: 500px;
+            width: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .swiper-button-prev, .swiper-button-next{
+            color: #fff ;
+            transition: transform .3s;
+        }
+        .swiper-button-prev:hover, .swiper-button-next:hover{
+            transform: scale(1.1);
+        }
+        .swiper-pagination-bullet-active{
+            background-color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(image/405589389_250906201072602_519516203099364694_n.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(image/405919476_1357306518482269_6465670962092343928_n.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(image/406069899_841249300827771_7354872079409672688_n.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(image/403416163_1147492036213289_7255632517248059892_n.jpg);"></div>
+        </div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+</body>
+
+</html>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        effect: "fade",
+        speed: 800,
+
+        autoplay: {
+            delay: 50000,
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        //scrollbar: {
+        //    el: '.swiper-scrollbar',
+        //},
+    });
+</script>
