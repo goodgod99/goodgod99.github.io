@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD Menu</title>
+    <style>
+        /* 隱藏 checkbox */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* 初始狀態下隱藏菜單 */
+        .menu {
+            display: none;
+        }
+
+        /* 當 checkbox 被勾選時，顯示菜單 */
+        input:checked + .menu {
+            display: block;
+        }
+
+        /* 菜單樣式，這只是一個簡單的範例 */
+        .menu {
+            background-color: #333;
+            padding: 10px;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .menu a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 使用 label 和 checkbox 來觸發菜單顯示/隱藏 -->
+    <label for="toggle-menu">☰ Menu</label>
+    <input type="checkbox" id="toggle-menu">
+
+    <!-- 菜單內容 -->
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- 其他網頁內容 -->
+    <div>
+        <h1>Your Web Page Content</h1>
+        <p>This is the main content of your web page.</p>
+    </div>
+</body>
+
+</html>
+
