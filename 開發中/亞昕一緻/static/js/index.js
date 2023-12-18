@@ -5,10 +5,10 @@ window.addEventListener('resize', adaptation);
 window.addEventListener('scroll', handleScroll)
 
 function adaptation() {
-  let deviceWidth = document.documentElement.clientWidth;
-  let scale = deviceWidth / 1920;
+  const deviceWidth = document.documentElement.clientWidth
+  const scale = deviceWidth / 1920
 
-  // document.documentElement.style.zoom = scale;
+  document.documentElement.style.zoom = scale
 }
 
 function handleScroll() {
@@ -28,7 +28,7 @@ function animationHeading1() {
     const elTop = item.getBoundingClientRect().top;
     const elVisible = 50
 
-    if(elTop < window.innerHeight - elVisible) {
+    if(elTop < height - elVisible) {
       item.style.opacity = 1
       item.style.transform = 'scaleX(1)'
     } else {
@@ -45,7 +45,7 @@ function animationHeading2() {
     const elTop = item.getBoundingClientRect().top;
     const elVisible = 50
 
-    if(elTop < window.innerHeight - elVisible) {
+    if(elTop < height - elVisible) {
       item.style.opacity = 1
       item.style.transform = 'scaleX(1)'
     } else {
@@ -63,26 +63,26 @@ function animationHeader() {
     const elTop = item.getBoundingClientRect().top;
     const elVisible = 50
 
-    // if(elTop < window.innerHeight - elVisible) {
-    //   item.style.opacity = 1
-    //   item.style.transform = 'translateX(0%)'
-    // } else {
-    //   item.style.opacity = 0;
-    //   item.style.transform = "translateX(-2rem)";
-    // }
+    if(elTop < height - elVisible) {
+      item.style.opacity = 1
+      item.style.transform = 'translateX(0%)'
+    } else {
+      item.style.opacity = 0;
+      item.style.transform = "translateX(-2rem)";
+    }
   })
 
   headerRight.forEach(item => {
     const elTop = item.getBoundingClientRect().top;
     const elVisible = 50
 
-    // if(elTop < window.innerHeight - elVisible) {
-    //   item.style.opacity = 1
-    //   item.style.transform = 'translateX(0%)'
-    // } else {
-    //   item.style.opacity = 0;
-    //   item.style.transform = "translateX(2rem)";
-    // }
+    if(elTop < height - elVisible) {
+      item.style.opacity = 1
+      item.style.transform = 'translateX(0%)'
+    } else {
+      item.style.opacity = 0;
+      item.style.transform = "translateX(2rem)";
+    }
   })
 }
 
@@ -93,7 +93,7 @@ function animationTitle() {
     const elTop = item.getBoundingClientRect().top;
     const elVisible = 50
 
-    if(elTop < window.innerHeight - elVisible) {
+    if(elTop < height - elVisible) {
       item.style.opacity = 1
       item.style.transform = 'translateY(0%)'
     } else {
@@ -114,7 +114,7 @@ function animationLine1() {
     const elTop = item.getBoundingClientRect().top;
     const elVisible = 50
 
-    if(elTop < window.innerHeight - elVisible) {
+    if(elTop < height - elVisible) {
       item.style.opacity = 1
       item.style.transform = 'translateY(0%)'
     } else {
@@ -131,7 +131,7 @@ function animationLine2() {
     const elTop = item.getBoundingClientRect().top;
     const elVisible = 50
 
-    if(elTop < window.innerHeight - elVisible) {
+    if(elTop < height - elVisible) {
       item.style.opacity = 1
       item.style.transform = 'translateY(0%)'
     } else {
