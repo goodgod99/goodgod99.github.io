@@ -14,6 +14,10 @@
   <script src="static/js/index.js" type="text/javascript" charset="utf-8"></script>
   <link rel="stylesheet" href="static/index.4se6qoGb.css" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
 </head>
 <style>
   @font-face {
@@ -43,9 +47,16 @@
     font-weight: 700;
   }
 
+
   body {
     background-image: url('static/img/repeat.jpg');
     background-repeat: repeat;
+    font-family: 'Noto Serif TC', serif !important;
+  }
+
+  .font-din, .font-perpetua, .font-koz, .font-didot, .font-noto , .font-noto2 {
+    font-family: 'Noto Serif TC', serif !important;
+
   }
 
   .p-title {
@@ -61,33 +72,36 @@
   }
 
   .box7 .top-\[243px\] {
-      top: 50px;
-      width: 70%;
-    }
+    top: 50px;
+    width: 70%;
+  }
 
-    .box7 .left-\[75px\] {
-      left: 10px;
-    }
+  .box7 .left-\[75px\] {
+    left: 10px;
+  }
 
-    .box7 .top-\[544px\] {
-      top: auto;
-      bottom: 50px;
-      width: 50%;
-    }
+  .box7 .top-\[544px\] {
+    top: auto;
+    bottom: 50px;
+    width: 50%;
+  }
 
-    .box2 .lg\:text-\[125px\] {
+  .box2 .lg\:text-\[125px\] {
     font-size: 70px;
     text-wrap: nowrap;
-}
-.h-96 {
+  }
+
+  .h-96 {
     height: auto;
-}
+  }
+
 
 
   @media screen and (max-width: 1024px) {
     .h-96 {
-    height: 24rem;
-}
+      height: 24rem;
+    }
+
     .box1 .top-\[357px\].right-\[167px\] {
       top: 100px;
       right: 20px;
@@ -140,7 +154,7 @@
       width: 30%;
     }
   }
-  
+
   @media screen and (max-width: 768px) {
     body {
       width: 100vw !important;
@@ -160,7 +174,7 @@
       margin: 0 20px;
       font-size: 26px;
       line-height: 1.5;
-      font-weight: 900;
+      font-weight: 600;
       text-align: center;
       text-wrap: nowrap;
       margin-bottom: 6px;
@@ -168,9 +182,9 @@
     }
 
     .text-lg {
-    font-size: .8rem;
-    line-height: 1.75rem;
-}
+      font-size: .8rem;
+      line-height: 1.75rem;
+    }
 
     .pd-lr {
       padding: 0 40px !important;
@@ -352,7 +366,7 @@
 
     .box8 .text-right {
       text-align: left;
-      font-size: 19px;
+      font-size: 12px;
       letter-spacing: -0.5px;
     }
 
@@ -405,6 +419,7 @@
       font-size: 20px;
       padding: 0 !important;
     }
+
   }
 </style>
 
@@ -429,9 +444,10 @@
             class="heading1 font-didot text-6xl lg:text-[125px] absolute top-[46px] uppercase text-white">Taichung
             skyline</span> <span
             class="heading2 font-didot text-[40px] absolute top-32 lg:top-[162px] uppercase text-white">The most
-            beautiful Taichung</span> 
+            beautiful Taichung</span>
           <span class="d3">建築3D外觀合成示意圖
-          </span></div>
+          </span>
+        </div>
         <div class="flex justify-center mt-20 title"> <img src="static/img/fragment2/title.png" class="img-title">
           <p class="p-title">全能軸心 經驗跨越<br>最美仁平段 眼光有緻一同</p>
         </div>
@@ -546,7 +562,7 @@
             class="text-[28px] font-koz font-bold tracking-widest">帶世界 回台中 </span> <span
             class=" text-[26px] font-koz">國際級飯店體系｜三十年跨國集團</span> </div>
       </div> -->
-      <swiper-container pagination="true" class="px-[90px] mx-auto"> <swiper-slide> <img
+      <swiper-container pagination="true" navigation="true" class="px-[90px] mx-auto"> <swiper-slide> <img
             src="static/img/fragment6/img1.jpg" class="w-full object-cover object-top">
           <div class="grid grid-cols-3 py-24">
             <div class="col-span-2 flex flex-col justify-center items-center pd-lr">
@@ -563,7 +579,7 @@
         </swiper-slide> <swiper-slide> <img src="static/img/fragment6/img2.jpg" class="w-full object-cover object-top">
           <div class="grid grid-cols-3 py-24">
             <div class="col-span-2 flex flex-col justify-center items-center pd-lr">
-              <div class="flex justify-center mb-10"> <img src="static/img/fragment6/s_img2.png" width="650"><br>  </div>
+              <div class="flex justify-center mb-10"> <img src="static/img/fragment6/s_img2.png" width="650"><br> </div>
               <div class="flex justify-center"> <img src="static/img/fragment6/title2.png" width="800"
                   class="img-title">
                 <p class="p-title">全國室設 德國紅點金獎第一人<br>天坊設計 | 張清平</p>
@@ -571,7 +587,7 @@
               <p class="text-lg mt-6 px-32 text-center">
                 臺灣唯一連續12次進入「英國，安德馬丁室內設計年度獎」，以深度提煉的設計思考，忠實反應空間與使用者的內涵，將人與空間的價值形於外，賦予不一樣的體驗與感動。</p>
             </div>
-            <div class="flex justify-center"> <img src="static/img/fragment6/子網團隊p2.jpg" class="h-96" loading="lazy">
+            <div class="flex justify-center"> <img src="static/img/fragment6/子網團隊p3.jpg" class="h-96" loading="lazy">
             </div>
           </div>
         </swiper-slide> <swiper-slide> <img src="static/img/fragment6/img3.jpg" class="w-full object-cover object-top"
@@ -586,7 +602,7 @@
               <p class="text-lg mt-6 px-32 text-center">德國紅點獎、美國MUSE白金獎、Good Design Award、IFLA APPME Awards、義大利A’
                 Design金獎…大師精髓，世界榮譽肯定。</p><br>
             </div>
-            <div class="flex justify-center"> <img src="static/img/fragment6/子網團隊p3.jpg" class="h-96" loading="lazy">
+            <div class="flex justify-center"> <img src="static/img/fragment6/子網團隊p4.jpg" class="h-96" loading="lazy">
             </div>
           </div>
         </swiper-slide> <swiper-slide> <img src="static/img/fragment6/img4.jpg" class="w-full object-cover object-top"
@@ -600,10 +616,11 @@
               </div>
               <p class="text-lg mt-6 px-32 text-center">多座都市空間設計大獎、中華建築金石獎的榮耀得主，為「亞昕一緻」創劃更多精彩不同的築景之藝。</p><br>
             </div>
-            <div class="flex justify-center"> <img src="static/img/fragment6/子網團隊p4.jpg" class="h-96" loading="lazy">
+            <div class="flex justify-center"> <img src="static/img/fragment6/子網團隊p2.jpg" class="h-96" loading="lazy">
             </div>
           </div>
-        </swiper-slide> </swiper-container>
+        </swiper-slide>
+      </swiper-container>
     </section> <!-- 英式管家 -->
     <section class="w-full pb-20 box7">
       <!-- <div class="w-full flex flex-row justify-between items-center p-10 space-y-8"> <img src="static/img/logo.png"
