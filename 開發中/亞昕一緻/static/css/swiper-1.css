@@ -1,0 +1,270 @@
+.swiper-new * {
+    transition: .5s;
+}
+
+.swiper-new h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 80px;
+    color: black;
+}
+
+.swiper-new p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    color: gray;
+}
+
+.box {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-new{
+    width: 200%;
+    height: 650px;
+    /* swiper置中 */
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: transparent;
+    position: relative;
+
+}
+
+.swiper-new .swiper-slide {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+
+}
+
+.swiper-new .swiper-slide .img {
+    /* 圖片比例2:3 */
+    width: 600px;
+    height: 400px;
+
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .5s ease .1s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    cursor: pointer;
+
+    filter: brightness(.4);
+
+}
+
+.swiper-new .swiper-slide .text {
+    opacity: 0;
+    transition: .1s;
+    width: 450px;
+}
+
+.swiper-new .swiper-slide.swiper-slide-next .img {
+    filter: brightness(1);
+}
+
+.swiper-new .swiper-slide.swiper-slide-next .text {
+    opacity: 1 !important;
+}
+
+
+.swiper-new .swiper-slide .img:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5), 20px 20px 15px rgba(0, 0, 0, .2);
+
+}
+
+.swiper-new .swiper-slide .img:hover~.text p {
+    color: red;
+
+}
+
+/* prev */
+.swiper-new .swiper-button-prev {
+    /* 加padding-top */
+    top: calc(180px + 20px);
+
+    /* 減半張圖片寬 */
+    left: calc(100vw - 300px);
+    transform: translateX(-100%);
+    /* 底線長度 .swiper-button-prev::after也要修改 */
+    width: 200px;
+    flex-direction: column;
+}
+
+.swiper-new .swiper-button-prev::before {
+    content: "上一則";
+    transition: .5s;
+    color: black;
+
+    transform: translateX(-150%);
+}
+
+
+
+.swiper-new .swiper-button-prev::after {
+    /* 底線長度 .swiper-button-prev也要修改 */
+    width: 200px;
+    height: 10px;
+    content: "";
+    transition: .5s;
+    border-bottom: 1.5px solid #d3d3d3;
+
+}
+
+.swiper-new .swiper-button-prev:hover::after {
+    width: 250px;
+    transform: translateX(25px);
+    border-bottom: 1.5px solid red;
+}
+
+/* next */
+.swiper-new .swiper-button-next {
+    /* 加padding-top */
+    top: calc(180px + 20px);
+    right: calc(100vw - 300px);
+    transform: translateX(100%);
+    width: 200px;
+    flex-direction: column;
+}
+
+.swiper-new .swiper-button-next::before {
+    content: "下一則";
+    transition: .5s;
+    color: black;
+    transform: translateX(150%);
+}
+
+
+
+.swiper-new .swiper-button-next::after {
+    width: 200px;
+    height: 10px;
+    content: "";
+    transition: .5s;
+    border-bottom: 1.5px solid #d3d3d3;
+
+}
+
+.swiper-new .swiper-button-next:hover::after {
+    width: 250px;
+    transform: translateX(-25px);
+    border-bottom: 1.5px solid red;
+}
+
+
+
+.swiper-new .swiper-pagination-bullet {
+    width: 20px;
+    height: 10px;
+    display: inline-flex;
+    opacity: 1;
+    background-color: transparent;
+}
+
+
+.swiper-new .swiper-pagination-bullet::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: .2;
+}
+
+.swiper-new .swiper-pagination-bullet-active::after {
+    content: '';
+    background-color: red !important;
+    opacity: 1 !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .swiper-new .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-new .swiper-button-prev {
+        display: none;
+    }
+
+    .swiper-new {
+        width: 100%;
+        height: 650px;
+        background-color: transparent;
+        position: relative;
+
+    }
+
+    .swiper-new .swiper-slide .img {
+        filter: brightness(.4);
+
+    }
+
+    .swiper-new .swiper-slide .text {
+        opacity: 0;
+        transition: .8s ease .4s;
+    }
+
+    .swiper-new .swiper-slide.swiper-slide-active .img {
+        filter: brightness(1);
+    }
+
+    .swiper-new .swiper-slide.swiper-slide-next .img {
+        filter: brightness(.4);
+    }
+
+    .swiper-new .swiper-slide.swiper-slide-active .text {
+        opacity: 1 !important;
+    }
+
+    .swiper-new .swiper-slide.swiper-slide-next .text {
+        opacity: 0 !important;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .swiper-new {
+        width: 100%;
+        margin: auto;
+        height: auto;
+
+    }
+
+    .swiper-new .swiper-slide .img {
+        /* 圖片比例2:3 */
+        width: 90vw;
+        height: 60vw;
+    }
+
+    .swiper-new .swiper-slide .text {
+        width: 75%;
+    }
+
+    .swiper-new .swiper-slide .img {
+        box-shadow: none;
+
+    }
+
+    .swiper-new .swiper-slide .img:hover {
+        box-shadow: none;
+
+    }
+
+    .swiper-new .swiper-pagination {
+        display: none;
+    }
+
+    .box {
+        height: auto;
+    }
+}
