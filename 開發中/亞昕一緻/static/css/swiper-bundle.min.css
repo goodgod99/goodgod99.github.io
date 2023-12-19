@@ -280,6 +280,7 @@
 .swiper-button-prev {
     position: absolute;
     top: var(--swiper-navigation-top-offset, 50%);
+    /* bottom: 100px !important; */
     width: calc(var(--swiper-navigation-size)/ 44 * 27);
     height: var(--swiper-navigation-size);
     margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
@@ -332,7 +333,7 @@
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
     right: var(--swiper-navigation-sides-offset, 10px);
-    left: auto
+    left: auto;
 }
 
 .swiper-button-lock {
