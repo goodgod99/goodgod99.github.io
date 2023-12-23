@@ -1,0 +1,869 @@
+@import"https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Cinzel&display=swap";
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width:100%;
+    height:auto;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.allcontainer{
+    width:100%;
+    height:auto;
+    overflow-x: hidden;
+}
+
+.text{
+    font-size: 1.2rem;
+    font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+    font-weight: 400;
+    line-height: 2.2rem;
+    text-align: justify;
+}
+
+.text span{
+    display: inline-block;
+}
+
+.desktop{
+    display: block;
+}
+
+.mobile{
+    display: none;
+}
+
+.titleanimation{
+    opacity: 0;
+    transition: .7s ease-out;
+}
+
+.textanimation{
+    opacity: 0;
+    transition: .7s ease-out;
+}
+
+/* navigationbar */
+
+.navbar{
+    width:100%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #c4c4c4;
+    transition: all .5s;
+    opacity: 0;
+    transform: translateY(-10px);
+    top:0;
+}
+
+.navbar .btn{
+    min-width:150px;
+    height:100%;
+    border-left: 1px solid #c4c4c4;
+    cursor: pointer;
+    padding:20px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color:#ff4214;
+    font-family:'Noto Sans JP', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar .btn .number{
+    font-size: 1rem;
+    display: block;
+}
+
+.navbar .btn .icon{
+    width:15%;
+    margin-bottom: .2rem;
+    display: none;
+}
+
+@media screen and (max-width: 960px){
+    .navbar{
+        top:auto;
+        bottom:0;
+        z-index: 100;
+        justify-content: flex-end;
+        border-bottom: none;
+        transform: translateY(10px);
+    }
+
+    .navbar .btn{
+        min-width: auto;
+        width:25%;
+        padding:15px 0;
+    }
+
+    .navbar .btn:nth-child(1){
+        border-left:none;
+    }
+
+    .navbar .btn .number{
+        display: none;
+    }
+    
+    .navbar .btn .icon{
+        display: block;
+    }
+}
+
+.Sticky{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .5s;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+/* index */
+
+#index{
+    width:100%;
+    height:100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#index .logobox{
+    width:27%;
+    z-index: 30;
+    position: absolute;
+    z-index: 30;
+    opacity: 0;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+#index .logobackground{
+    position: absolute;
+    z-index: -5;
+    width:65%;
+    transform: translate(20%,0%);
+    opacity: 0;
+}
+
+#index .logobackground img{
+    width:100%;
+    height:auto;
+}
+
+#index .background{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: -10;
+}
+
+#index .background img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* section1 */
+#section1{
+    width:100%;
+    padding-top: 10rem;
+    background-color: rgba(185, 189, 193, 0.40)
+}
+
+#section1 .container{
+    width:80%;
+    max-width: 1480px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#section1 .textbox{
+    width:30%;
+}
+
+#section1 .textbox .maintitle{
+    width:80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+#section1 .mbmaintitle{
+    width:40%;
+    margin-bottom: 3rem;
+}
+
+/* section2 */
+
+#section2{
+    width:100%;
+    padding-top: 10rem;
+    background-color: rgba(185, 189, 193, 0.40)
+}
+
+#section2 .container{
+    width:80%;
+    max-width: 1480px;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#section2 .textbox{
+    width:30%;
+}
+
+#section2 .textbox .maintitle{
+    width:80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+#section2 .textbox .text{
+    text-align: center;
+}
+
+#section2 .mbmaintitle{
+    width:40%;
+}
+
+#section2 .mbmaintitle img{
+    display: block;
+}
+
+/* section3 */
+
+#section3{
+    width:100%;
+    padding-top: 10rem;
+    background-color: rgba(185, 189, 193, 0.40);
+    padding-bottom: 10rem;
+}
+
+#section3 .container{
+    width:80%;
+    max-width: 1480px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#section3 .textbox{
+    width:30%;
+}
+
+#section3 .textbox .maintitle{
+    width:80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+#section3 .textbox .text{
+    text-align: center;
+}
+
+#section3 .mbmaintitle{
+    width:35%;
+}
+
+#section3 .mbmaintitle img{
+    display: block;
+}
+
+/* section4 */
+
+#section4{
+    width:100%;
+    height:auto;
+    background-color: white;
+    padding-bottom: 10rem;
+}
+
+#section4 .container{
+    width:80%;
+    max-width: 1480px;
+    margin: auto;
+}
+
+#section4 .maintitle{
+    width:70%;
+    margin: auto;
+}
+
+#section4 .text{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* section5 */
+
+#section5{
+    width:100%;
+    padding-top: 10rem;
+    background-color: #ff4214;
+}
+
+#section5 .container{
+    width:80%;
+    max-width: 1480px;
+    margin: auto;
+}
+
+#section5 .maintitle{
+    width:30%;
+    margin: auto;
+}
+
+#section5 .text{
+    text-align: center;
+    color:white;
+    padding-bottom: 10rem;
+}
+
+#section5 .droneshotcontainer{
+    width:100%;
+    height:auto;
+    position: relative;
+}
+
+#section5 .droneshot{
+    width:100%;
+    height:auto;
+    position: relative;
+}
+
+#section5 .droneshot img{
+    width:100%;
+    height:auto;
+    display: block;
+}
+
+.touchhide{
+    position: absolute;
+    width:25%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    background-color:rgba(0, 0, 0, 0.531);
+    padding: 20px; 
+    display: none;
+    opacity: 0;  
+    z-index: -10;
+    border-radius:20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.touchhide.active{
+    opacity: 1;
+    z-index: 10;
+}
+
+/* section6 */
+
+#section6{
+    width:100%;
+    padding-top: 10rem;
+    background-color: #ff4214;
+}
+
+#section6 .container{
+    width:80%;
+    max-width: 1480px;
+    margin: auto;
+}
+
+#section6 .maintitle{
+    width:30%;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+#section6 .text{
+    text-align: center;
+    color:white;
+    margin-top: 3rem;
+}
+
+/* section7 */
+
+#section7{
+    width:100%;
+    padding-top: 10rem;
+    background-color: #ff4214;
+}
+
+#section7 .container{
+    width:80%;
+    max-width: 1480px;
+    margin: auto;
+}
+
+#section7 .textbox{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#section7 .maintitle{
+    width:30%;
+    margin: auto;
+}
+
+#section7 .text{
+    text-align: center;
+    color:white;
+}
+
+/* contactform */
+
+#contact{
+    width:100%;
+    background-color: #ff4214;
+    height:auto;
+    padding-bottom: 10rem;
+}
+
+#contact .container{
+    width:80%;
+    max-width: 1480px;
+    margin: auto;
+}
+
+#contact .maintitle{
+    width:20%;
+    margin: auto;
+}
+
+#contact .googlemap{
+    margin-top: 3rem;
+    width:100%;
+    height:30rem;
+    box-sizing: border-box;
+}
+
+#contact .formcontainer{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact .formcontainer .infor{
+    color:white;
+    width:35%;
+}
+
+#contact .formcontainer .infor .title{
+    font-size: 1.5rem;
+    font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+    font-weight: 600;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+#contact .formcontainer .form{
+    width:65%;
+    color:white;
+}
+
+#contact .formcontainer .form .title{
+    font-size: 1.5rem;
+    font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+    font-weight: 600;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#contact .formcontainer .form .inputbox{
+    display: flex;
+    gap: 10px;
+}
+
+#contact .formcontainer .form .inputbox .row{
+    width:50%;
+}
+
+input, select{
+    width:100%;
+    height:4rem;
+    text-indent: 12px;
+    background-color: white;
+    margin-bottom: 10px;
+    color:#1f1f1f;
+    box-sizing: border-box;
+    border: none;
+    border-radius:1px;
+    font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+input[type="checkbox"i] {
+    background-color: initial;
+    height:auto;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    padding: initial;
+    border: initial;
+    width: 1rem;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+::placeholder {
+    color: #1f1f1f;
+}
+
+.policy a{
+    color: white;
+    text-decoration: none;
+}
+
+.smsbutton{
+    width:100%;
+    height:4rem;
+    background-color: #3e3a39;
+    font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color:white;
+    cursor: pointer;
+    border: none;
+}
+
+.submitbutton{
+    width:50%;
+    height:4rem;
+    margin: auto;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top: 3rem;
+    background-color: #ff4214;
+    border: 1.5px solid white;
+    color: white;
+    font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.submitbutton:hover{
+    background-color: white;
+    color:#ff4214;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1580px){
+    html{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    #section1 .container,#section2 .container,#section3 .container,#section4 .container,
+    #section5 .container,#section6 .container,#section7 .container,#container .container{
+        width:90%;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    html{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    html{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 960px){
+    #section1 .container,#section2 .container,#section3 .container,#section4 .container,
+    #section5 .container,#section6 .container,#section7 .container,#container .container{
+        width:80%;
+    }
+    
+    #section1 .container,#section2 .container,#section3 .container{
+        flex-direction: column;
+    }
+
+    #section1 .container .textbox,#section2 .container .textbox,#section3 .container .textbox{
+        width:100%;
+        margin-top: 5rem;
+    }
+
+    #section1 .textbox .maintitle {
+        width:45%;
+    }
+
+    #section2 .textbox .maintitle {
+        width:35%;
+    }
+
+    #section3 .textbox .maintitle {
+        width:45%;
+    }
+
+    #section4 .maintitle {
+        width:50%
+    }
+
+    #section5 .maintitle{
+        width:45%;
+    }
+
+    #section6 .maintitle{
+        width:45%;
+    }
+
+    #section7 .maintitle{
+        width:50%;
+    }
+
+    #contact .maintitle {
+        width:25%;
+    }
+    
+    #contact .formcontainer {
+        flex-direction: column;
+    }
+
+    #contact .formcontainer .infor {
+        width:100%;
+    }
+
+    #contact .formcontainer .infor .title {
+        text-align: center;
+    }
+
+    #contact .formcontainer .infor .text {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #contact .formcontainer .form {
+        width:100%;
+    }
+
+    .desktop{
+        display: none;
+    }
+    
+    .mobile{
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    html{
+        font-size: 10px;
+    }
+
+    #index{
+        height:180vw;
+    }
+
+    #index .logobox {
+        width:50%;
+    }
+
+    #index .logobackground {
+        width:85%;
+        transform: translate(0%,-55%);
+    }
+
+    #section1 .container,#section2 .container,#section3 .container,#section4 .container,
+    #section5 .container,#section7 .container,#contact .container{
+        width:90%;
+    }
+
+    #section1 .mbmaintitle{
+        width:55%;
+    }    
+
+    #section1 .textbox .maintitle {
+        width:65%;
+    }
+
+    #section2 .mbmaintitle{
+        width:60%;
+    }    
+
+    #section2 .textbox .maintitle {
+        width:50%;
+    }
+
+    #section3 .mbmaintitle{
+        width:50%;
+    }
+    
+    #section3 .textbox .maintitle {
+        width:65%;
+    }
+
+    #section4 .maintitle {
+        width:70%
+    }
+
+    #section5 .maintitle{
+        width:65%;
+    }
+
+    #section6 .maintitle{
+        width:65%;
+        padding-bottom: 7rem;
+    }
+
+    #section6 .text {
+        width:90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #section7{
+        padding-top: 6rem;
+    }
+
+    #section7 .maintitle{
+        width:70%;
+    }
+
+    #contact .maintitle {
+        width:40%;
+    }
+
+    #section6 .container{
+        width:100%;
+    }
+
+    #section5{
+        background-color: #1a8ec8;
+    }
+
+    #section5 .droneshot{
+        height:150vw;
+        overflow-x: scroll;
+    }
+
+    #section5 .droneshot img{
+        height:100%;
+        width:auto;
+    }
+
+    .touchhide{
+        display: block;
+    }
+
+    #contact .formcontainer .form .inputbox{
+        flex-direction: column;
+        gap: 0px;
+    }
+    
+    #contact .formcontainer .form .inputbox .row{
+        width:100%;
+    }
+}
+
+/* active animation */
+.active1{
+    animation: active1 1s ease forwards;
+}
+
+@keyframes active1{
+    from{
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.active2{
+    animation: active2 1s ease forwards;
+}
+
+@keyframes active2{
+    from{
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(20%);
+    }
+}
+
+@keyframes active2{
+    from{
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(20%);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .active2{
+        animation: active3 1s ease forwards;
+    }
+}
+
+@keyframes active3{
+    from{
+        opacity: 0;
+        transform: translate(-20%,-55%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0%,-55%);
+    }
+}
+
+

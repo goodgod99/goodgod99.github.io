@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.7 8.81">
+  <defs>
+    <style>
+      .d {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="圖層 1">
+    <polygon class="d" points="42.7 8.81 0 8.81 0 7.51 39.57 7.51 32.97 .92 33.89 0 42.7 8.81"/>
+  </g>
+</svg>
