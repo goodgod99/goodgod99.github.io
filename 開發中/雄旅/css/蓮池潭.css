@@ -49,6 +49,21 @@ main article iframe {
   height: 450px;
 }
 
+.back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 99;
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-shadow: 1px 1px 10px #000;
+  transition: color 0.3s ease-in-out;
+}
+.back:hover {
+  color: red;
+}
+
 @media screen and (max-width: 768px) {
   header .swiper .title .after-title {
     font-size: 1rem;
