@@ -20,6 +20,7 @@ header .swiper .swiper-pagination-bullet {
   background-color: #fff;
 }
 header .swiper .title {
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
