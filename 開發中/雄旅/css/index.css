@@ -38,14 +38,14 @@ main hr {
   align-self: center;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   main .item .swiper {
-    height: 200px;
-  }
-  main .item .read-more {
-    bottom: 0px;
+    height: 100px;
   }
   main .item .time {
     font-size: 0.8rem;
+  }
+  main .item .content {
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */

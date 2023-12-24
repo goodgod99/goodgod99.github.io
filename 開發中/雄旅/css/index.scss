@@ -48,26 +48,19 @@ main {
 
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
     main {
         .item {
 
             .swiper {
-                height: 200px;
-            }
-            .read-more {
-                bottom: 0px;
+                height: 100px;
             }
             .time {
                 font-size: 0.8rem;
             }
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    main {
-        .item {
+            .content {
+                display: none;
+            }
         }
     }
 }
