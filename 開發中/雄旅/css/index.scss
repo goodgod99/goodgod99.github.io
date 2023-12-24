@@ -1,0 +1,73 @@
+main {
+    .item {
+        background-color: #fff;
+        position: relative;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 10px;
+
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: darken(#fff, 10%); // 使用 darken 函數來變暗背景顏色
+        }
+
+        .swiper {
+            height: 300px;
+            margin: 0;
+
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .time {
+            color: #A76310;
+            font-size: 1rem;
+        }
+
+        .read-more {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: gray;
+        }
+    }
+
+    hr {
+        align-self: center;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    main {
+        .item {
+
+            .swiper {
+                height: 200px;
+            }
+            .read-more {
+                bottom: 0px;
+            }
+            .time {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        .item {
+        }
+    }
+}
