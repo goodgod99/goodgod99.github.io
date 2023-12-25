@@ -41,6 +41,10 @@ main hr {
 @media screen and (max-width: 768px) {
   main .item .swiper {
     height: 100px;
+    transform: translateX(10px);
+  }
+  main .item article {
+    padding-left: 30px;
   }
   main .item .time {
     font-size: 0.8rem;

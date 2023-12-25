@@ -54,6 +54,11 @@ main {
 
             .swiper {
                 height: 100px;
+                transform: translateX(10px);
+                
+            }
+            article{
+                padding-left: 30px;
             }
             .time {
                 font-size: 0.8rem;

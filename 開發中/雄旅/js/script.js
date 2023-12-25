@@ -17,3 +17,18 @@ const swiper = new Swiper('.swiper', {
     },
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    var aside = document.querySelector("ul");
+    var offset = aside.offsetTop;
+
+    function fixAside() {
+        if (window.scrollY >= offset) {
+            aside.classList.add("fixed");
+        } else {
+            aside.classList.remove("fixed");
+        }
+    }
+
+    window.addEventListener("scroll", fixAside);
+});
