@@ -1,0 +1,106 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Ftm designs</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="author" content="fatma.hassan@gmail.com" />
+    <meta name="description" content="FTM" />
+    <link rel="stylesheet" href="touching.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+    .swiper{
+            height: 350px;
+            width: calc(100% - 60px);
+            margin: 0 30px;
+        }
+        .swiper .swiper-slide{
+            height: 100%;
+            width: 100% ;
+            background-size: cover;
+            background-position: top;
+        }
+        .swiper .swiper-button-prev, .swiper .swiper-button-next{
+            color: #fff ;
+            transition: transform .3s;
+        }
+        .swiper .swiper-button-prev:hover, .swiper .swiper-button-next:hover{
+            transform: scale(1.1);
+        }
+        .swiper .swiper-pagination-bullet-active{
+            background-color: white;
+        }
+</style>
+</head>
+
+<body style="background:transparent;">
+
+    <h2>禁食清單</h2>
+    <ul>
+        <li>
+            五辛（洋蔥、蔥、大蒜、韭菜等，硫化物將造成中毒需急診）
+        </li>
+        <li>
+            辣椒（易引起腸胃過敏）
+        </li>
+        <li>
+            番茄葉（含天然毒素）
+        </li>
+        <li>
+            巧克力、咖啡、茶、酒等（可能引起心悸、休克）
+        </li>
+        <li>
+            酪梨（PERSIN含量較高具毒性）
+        </li>
+        <li>
+            各種果核（如蘋果籽、龍眼籽等，含天然毒素）
+        </li>
+        <li>
+            人工食品（化學添加劑將造成動物身體負擔，引起提早老化、皮膚及各種免疫力下降之疾病）
+        </li>
+        <li>
+            不新鮮食材，毒素及細菌易孳生。例如：茄子、花生、水分含量高之蔬菜水果。
+        </li>
+    </ul>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(img/405589389_250906201072602_519516203099364694_n.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/405919476_1357306518482269_6465670962092343928_n.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/406069899_841249300827771_7354872079409672688_n.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/403416163_1147492036213289_7255632517248059892_n.jpg);"></div>
+        </div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+        loop: true,
+        effect: "fade",
+        speed: 800,
+
+        autoplay: {
+            delay: 5000,
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    </script>
+</body>
+
+</html>
