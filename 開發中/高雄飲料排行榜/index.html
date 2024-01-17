@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>首頁</title>
+    <style>
+        .header {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            margin-top: 56px;
+        }
+
+        .header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(.4);
+        }
+
+        .header h1 {
+            position: absolute;
+            text-wrap: nowrap;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 6rem;
+            font-weight: 900;
+
+        }
+
+        .content {
+            margin: 10px 0;
+            justify-content: center;
+        }
+
+        .content .img {
+            padding: 20px;
+
+            width: 100%;
+            aspect-ratio: 1/1;
+            align-items: center;
+        }
+
+        .content h5{
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 1.5;
+
+        }
+
+        .content p{
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.4;
+            padding-bottom: 50px;
+        }
+        .content .card{
+            position: relative;
+        }
+
+        .content .card .no{
+            position: absolute;
+            top: -5px;
+            left: -5px;
+
+            padding: 5px 10px;
+
+            background-color: gray;
+            color: white;
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .header {
+            height: 250px;
+        }
+            .header h1 {
+                font-size: 3rem;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- nav-bar -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container-fluid" style="justify-content: flex-start;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">高雄飲料排行榜</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recommend.html">推薦飲料</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">關於我們</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a class="navbar-brand" href="#" style="padding-left: 10px;">首頁</a>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <div class="container-fluid">
+        <div class="header d-flex">
+            <img src="img/header.png" alt="">
+            <h1>高雄飲料排行榜!</h1>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 content">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="no">1</div>
+                    <div class="img d-flex">
+                        <img src="img/茶魔 LOGO.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">用府城人的腳步，走台灣的足跡。</h5>
+                        <p class="card-text">
+                            由台南發跡、創立於1993年的《茶の魔手》有別於一般茶飲多以繁華熱鬧的市中心作為經營首選，《茶の魔手》為能服務更多鄉親朋友，因此門市據點又以中南部各地鄉鎮市為居多。時至今日搖身為全台擁有近600間門市的連鎖茶飲企業。
+                            </p>
+                            <a href="https://www.teamagichand.com.tw/about/ins.php?index_id=31" type="button" class="btn btn-outline-secondary" style="width: 100px; position: absolute; right: 10px; bottom: 10px;">瞭解更多</a>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="no">2</div>
+
+                    <div class="img d-flex">
+                        <img src="img/吳家紅茶冰 LOGO.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">吳家紅茶冰的傳承與堅持</h5>
+                        <p class="card-text">
+                            第一家店從台灣中部的路邊小攤子起家，四十多年來不變的手工傳統滋味，也因為舉家遷往高雄，而在台灣南部由第二代發揚光大，如今的吳家紅茶已是擁有百餘家連鎖的飲品企業，更是南部地區紅茶等飲品的一線手搖品牌
+                            </p>
+                            <a href="https://www.wujiatea.com.tw/#_3" type="button" class="btn btn-outline-secondary" style="width: 100px; position: absolute; right: 10px; bottom: 10px;">瞭解更多</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="no">3</div>
+
+                    <div class="img d-flex">
+                        <img src="img/麻古  LOGO.png" class="card-img-top" alt="...">
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">#麻古初心 #品牌堅持、過程</h5>
+                        <p class="card-text">麻古茶坊創立於2008年，以南台灣為基石，打造果粒茶飲創始品牌。嚴選當季鮮果農產，以最高標準把關食材安全。</p>
+                        <a href="https://macutea.com.tw/about.php" type="button" class="btn btn-outline-secondary" style="width: 100px; position: absolute; right: 10px; bottom: 10px;">瞭解更多</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="no">4</div>
+
+                    <div class="img d-flex">
+
+                        <img src="img/50嵐  LOGO.png" class="card-img-top" alt="...">
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">關於50嵐</h5>
+                        <p class="card-text">50嵐商標屬於五十嵐企業股份有限公司，自1994年始於台南德興路路邊的一個小攤子，三年後，我們有了第一間標準店新孝店這些年來我們只致力在台灣耕耘，並堅持只賣茶飲，用精選茶葉，搭配好的原料，新鮮現調每一杯茶飲。</p>
+                        <a href="https://www.xn--50-wg2du59ik3f.tw/" type="button" class="btn btn-outline-secondary" style="width: 100px; position: absolute; right: 10px; bottom: 10px;">瞭解更多</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="no">5</div>
+
+                    <div class="img d-flex">
+
+                        <img src="img/清心 LOGO.png" class="card-img-top" alt="...">
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">創立台灣飲料店品牌「清心冷飲站」</h5>
+                        <p class="card-text">1987年3月8日，趙福全夫妻於台南市南區金華路二段巷弄內，創立「清心冷飲站」，設置一座簡易的吧檯，陳列茶桶、冰櫥、糖罐、杯子等器具，對外販售冷飲、冰品。其中「茶飲」最受消費者的青睞，在當時稱這種新興時尚飲品為「泡沫綠茶」、「泡沫紅茶」，帶動日後台灣手搖茶飲的盛行風潮。</p>
+                        <a href="https://www.chingshin.tw/about.php?Key=2" type="button" class="btn btn-outline-secondary" style="width: 100px; position: absolute; right: 10px; bottom: 10px;">瞭解更多</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
