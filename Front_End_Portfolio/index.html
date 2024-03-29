@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="description" content="yo-chen 作品集">
-    <meta property="og:title" content="yo-chen 作品集" />
-    <meta property="og:image" content="img/logo.png" />
-    <meta property="og:description" content="作品集" />
+    <meta property="description" content="yochen 前端網頁作品集，網頁切版、UI/UX設計、練習">
+    <meta property="og:title" content="yochen 前端網頁作品集" />
+    <meta property="og:image" content="img/logo-no-text.png" />
+    <meta property="og:description" content="yochen 前端網頁作品集，網頁切版、UI/UX設計、練習" />
 
     <!-- bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -26,12 +26,14 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row g-5" id="site-container" style="padding-top: 50px;">
-            <aside class="col-12 col-sm-3">
+    <div class="container-md">
+        <div class="row" id="site-container">
+            <aside class="col-sm-3">
                 <header>
                     <img src="img/logo.png" alt="logo">
                 </header>
+                <label for="menu-control">?</label>
+                <input type="checkbox" name="" id="menu-control">
                 <nav>
                     <ul>
                         <li><a href="index.html">作品集 / Portfolio</a></li>
@@ -41,34 +43,59 @@
                         <li><a href="contact.html">聯絡 / Contact</a></li>
                     </ul>
                 </nav>
+                
             </aside>
-            <main class="col-12 col-sm-9">
+            <main class="col-12 col-md-9">
                 <section class="project-covers">
                     <div class="row g-2">
-                        <figure class="col-12 col-md-6 col-lg-4">
-                            <img src="" class="" alt="">
-                            <figcaption>
-                                <h5 class="card-title">Card title</h5>
+                        <a class="col-12 col-sm-6 col-xl-4" href="">
+                            <div class="img-box">
+                                <img src="https://fakeimg.pl/300x400/" class="" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3 class="card-title">Card title</h3>
                                 <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                            </figcaption>
-                        </figure>
-                        <figure class="col-12 col-md-6 col-lg-4">
-                            <img src="" class="" alt="">
-                            <figcaption>
-                                <h5 class="card-title">Card title</h5>
+                                    lead-in to additional content. This content is a little bit longer.</p>    
+                            </div>
+                        </a>
+                        <a class="col-12 col-sm-6 col-xl-4" href="">
+                            <div class="img-box">
+                                <img src="https://fakeimg.pl/300x400/" class="" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3 class="card-title">Card title</h3>
                                 <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                            </figcaption>
-                        </figure>
-                        <figure class="col-12 col-md-6 col-lg-4">
-                            <img src="" class="" alt="">
-                            <figcaption>
-                                <h5 class="card-title">Card title</h5>
+                                    lead-in to additional content. This content is a little bit longer.</p>    
+                            </div>
+                        </a>
+                        <a class="col-12 col-sm-6 col-xl-4" href="">
+                            <div class="img-box">
+                                <img src="https://fakeimg.pl/300x400/" class="" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3 class="card-title">Card title</h3>
                                 <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                            </figcaption>
-                        </figure>
+                                    lead-in to additional content. This content is a little bit longer.</p>    
+                            </div>
+                        </a>
+                        <a class="col-12 col-sm-6 col-xl-4" href="">
+                            <div class="img-box">
+                                <img src="https://fakeimg.pl/300x400/" class="" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>    
+                            </div>                        </a>
+                        <a class="col-12 col-sm-6 col-xl-4" href="">
+                            <div class="img-box">
+                                <img src="https://fakeimg.pl/300x400/" class="" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>    
+                            </div>                        </a>
                     </div>
                 </section>
                 <a href="#site-container" class="arrow-up">

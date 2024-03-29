@@ -1,9 +1,14 @@
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#site-container {
+  padding-top: 50px;
+}
+
 aside header img {
   width: 70%;
-}
-aside nav ul {
-  padding: 0;
-  margin: 0;
 }
 aside nav ul li a {
   display: block;
@@ -13,9 +18,42 @@ aside nav ul li a {
   transition: color 0.3s;
 }
 aside nav ul li a:hover {
-  color: #878787;
+  color: #a3a3a3;
+}
+aside label {
+  display: none;
+}
+aside input {
+  display: none;
 }
 
+main .project-covers a {
+  display: block;
+  text-decoration: none;
+}
+main .project-covers a:hover .img-box img {
+  filter: brightness(1.1);
+}
+main .project-covers a .img-box {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+main .project-covers a .img-box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: filter 0.3s;
+}
+main .project-covers a .text-box {
+  padding: 10px 10px 20px 0;
+}
+main .project-covers a .text-box h3 {
+  color: #000;
+}
+main .project-covers a .text-box p {
+  color: #a3a3a3;
+}
 main .arrow-up {
   display: flex;
   position: fixed;
@@ -35,6 +73,57 @@ main .arrow-up:hover .bi-arrow-up {
 main .arrow-up .bi-arrow-up {
   height: 25px;
   width: 25px;
-  color: #878787;
+  color: #a3a3a3;
   transition: color 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  #site-container {
+    padding-top: 80px;
+  }
+  aside header {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    z-index: 99;
+  }
+  aside header img {
+    width: 70px;
+  }
+  aside nav {
+    z-index: 97;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    transition: right 0.3s;
+  }
+  aside nav ul {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  aside nav ul li a {
+    text-align: center;
+  }
+  aside label {
+    z-index: 98;
+    position: fixed;
+    display: block;
+    top: 15px;
+    right: 30px;
+    font-size: 50px;
+    color: #000;
+    cursor: pointer;
+  }
+  aside input {
+    display: none;
+  }
+  aside input:checked + nav {
+    right: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
