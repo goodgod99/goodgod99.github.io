@@ -44,11 +44,7 @@ const menuControl = document.getElementById('menu-control');
 const menuLabel = document.getElementById('menu-label');
 
 menuControl.addEventListener('change', () => {
-    if (menuControl.checked) {
-        menuLabel.innerText = '✖';
-    } else {
-        menuLabel.innerText = '☰';
-    }
+    menuLabel.innerText = menuControl.checked ? '✖' : '☰';
 });
 
 buttons.forEach(button => {
@@ -59,6 +55,7 @@ buttons.forEach(button => {
 
         //關閉menu
         menuControl.checked = false;
+        menuLabel.innerText = menuControl.checked ? '✖' : '☰';
         window.scrollTo({
             top: 0,
             behavior: 'smooth' // 使用平滑滚动效果
