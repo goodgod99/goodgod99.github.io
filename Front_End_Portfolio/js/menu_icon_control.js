@@ -1,4 +1,4 @@
-const menuControl = document.getElementById('menu-control');
+
 const menuLabel = document.getElementById('menu-label');
 
 menuControl.addEventListener('change', () => {
