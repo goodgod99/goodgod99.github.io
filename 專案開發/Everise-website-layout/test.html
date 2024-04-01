@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 200px;
+            border-top: 3px solid black;
+            /* 初始时上方border透明 */
+            background-color: lightgray;
+            /* 为了演示，设置一个背景色 */
+            position: relative;
+        }
+
+        #myDiv::before {
+            content: "";
+            position: absolute;
+            top: -3px;
+            /* 负值等于border的宽度 */
+            left: 50%;
+            width: 20px;
+            /* 变透明的部分宽度 */
+            height: 3px;
+            /* border的宽度 */
+            background: transparent;
+            /* 这里设定透明的效果 */
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+</body>
+
+</html>
