@@ -50,6 +50,10 @@ buttons.forEach(button => {
 
         //關閉menu
         menuControl.checked = false;
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // 使用平滑滚动效果
+        });
 
         //顯示對應的project
         const btnClass = button.id;
