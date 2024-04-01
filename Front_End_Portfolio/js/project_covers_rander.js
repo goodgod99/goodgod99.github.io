@@ -41,6 +41,15 @@ function filterProjectsByCategory(category) {
 const buttons = document.querySelectorAll('nav ul li button');
 const projects = document.querySelectorAll('#project a');
 const menuControl = document.getElementById('menu-control');
+const menuLabel = document.getElementById('menu-label');
+
+menuControl.addEventListener('change', () => {
+    if (menuControl.checked) {
+        menuLabel.innerText = '✖';
+    } else {
+        menuLabel.innerText = '☰';
+    }
+});
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
