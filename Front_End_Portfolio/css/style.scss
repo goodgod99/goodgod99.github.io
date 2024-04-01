@@ -28,16 +28,26 @@ aside {
         ul {
             padding-left: 20px;
             li {
-                a {
+                button,a{
                     display: block;
                     text-decoration: none;
-                    padding-top: 30px;
+                    border: none;
+                    background: none;
+                    padding: 30px 0 0 0;
                     color: #000;
                     transition: color 0.3s;
                     font-weight: 400;
                     font-size: 1rem;
+                    text-align: start;
                     &:hover {
                         color: $primary-color;
+                    }
+                    &.active {
+                        font-weight: 700;
+                        text-transform:uppercase
+                    }
+                    &.active:hover {
+                        color: #000;
                     }
                 }
             }
@@ -72,15 +82,17 @@ main {
                 }
             }
             .text-box {
-                padding: 10px 10px 30px 0;
+                padding: 10px 10px 25px 0;
+                // height: 65px;
                 h3 {
                     font-size: 1rem;
-                    line-height: 1.4;
+                    line-height: 1;
                     color: #000;
                 }
                 p {
                     font-size: .9rem;
                     font-weight: 200;
+                    line-height: 1.4;
                     color: $primary-color;
                 }
             }
@@ -161,8 +173,9 @@ main {
             top: 15px;
             right: 30px;
             font-size: 30px;
-            font-weight: 400;
+            font-weight: 100;
             color: #000;
+            
             cursor: pointer;
             
         }

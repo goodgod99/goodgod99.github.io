@@ -1,10 +1,10 @@
-const menu_control = document.getElementById('menu-control');
-const menu_label = document.getElementById('menu-label');
+const menuControl = document.getElementById('menu-control');
+const menuLabel = document.getElementById('menu-label');
 
-menu_control.addEventListener('change', () => {
-    if (menu_control.checked) {
-        menu_label.innerText = '✖';
+menuControl.addEventListener('change', () => {
+    if (menuControl.checked) {
+        menuLabel.innerText = '✖';
     } else {
-        menu_label.innerText = '☰';
+        menuLabel.innerText = '☰';
     }
 });

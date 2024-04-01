@@ -1,0 +1,122 @@
+[
+    {
+        "title": "亞昕一緻 | 亞昕集團建案宣傳",
+        "class": "Slicing",
+        "description": "一頁式網站，優化原網頁，及新增手機、平板 RWD",
+        "url": "https://goodgod99.github.io/%E9%96%8B%E7%99%BC%E4%B8%AD/%E4%BA%9E%E6%98%95%E4%B8%80%E7%B7%BB/",
+        "image": "https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.15752-9/434263054_432700362772004_6475954615581419370_n.png?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=uN3raz66tC0AX_tLfOY&_nc_ht=scontent.ftpe7-4.fna&oh=03_AdTEeptbZC4tq_gxK1vJmKPhJn3NvGHBzvKdqC0-Lj7reQ&oe=6632695C"
+    },
+    {
+        "title": "Everise | 立昇恆數位創新",
+        "class": "Slicing",
+        "description": "一頁式網站切版，送餐機器人介紹網頁",
+        "url": "https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/Everise-website-layout/",
+        "image": "https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.15752-9/434395752_318133097603124_3197737888607461047_n.png?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=XJUqosCdtkcAX940vq4&_nc_ht=scontent.ftpe7-2.fna&oh=03_AdQMCcRctSeoRj9_YabCYdveH6rmYuJXvKZLWnp6Qg9NDg&oe=66324EE1"
+    },
+    {
+        "title": "餐廳網站 | 高度客製化網頁",
+        "class": "Slicing",
+        "description": "Home page 模板製作，使用 swiper.js 製作高客製化輪播，以及設計 Layout 、動畫視覺",
+        "url": "https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/%E7%B6%B2%E9%A0%81%E6%A8%A1%E7%89%88%E8%A3%BD%E4%BD%9C/",
+        "image": "https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.15752-9/434327391_782682036742536_4671830041961434023_n.png?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=RoFYn5rEXKYAX_ubipj&_nc_ht=scontent.ftpe7-4.fna&oh=03_AdRDHbwLPmLAEItZ8AP8tic7EgBsWMZBOT2WcpASidbBpA&oe=66324524"
+    },
+    {
+        "title": "當代藝術館",
+        "class": "Figma",
+        "description": "Figma 設計手機板頁面 Layout",
+        "url": "https://www.figma.com/proto/oBshd3DyRWrAgQsJfYCTN4/%E7%95%B6%E4%BB%A3%E8%97%9D%E8%A1%93%E9%A4%A8?type=design&t=U475e0JlKrtTOu1L-1&scaling=scale-down&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2&mode=design",
+        "image": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.15752-9/432519013_748399953751520_7868913982734725686_n.png?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=TcvBdOEhzPwAX-59IKJ&_nc_ht=scontent.ftpe7-3.fna&oh=03_AdTWQKsd9l2hO4A0zn9haIPX5sWPtYKyvqjvLid8DL9nKw&oe=66324E1A"
+    },
+    {
+        "title": "Mouse test | 滑鼠連點測試網站",
+        "class": "Practice",
+        "description": "jQuery 練習，測試滑鼠左、右、中鍵是否連點的網站",
+        "url": "https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/Mouse%20test/",
+        "image": "https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.15752-9/434287658_1724431114753867_8845062708742109306_n.png?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=pLyEMaYRt-gAX-otm9L&_nc_ht=scontent.ftpe7-4.fna&oh=03_AdRH5dY-IneKleNf8RrpekZ44WzkWrO6J7Pmo8nFH4zFBg&oe=66325FCF"
+    },
+    {
+        "title": "Gate N Fences | 門窗製造、零售商",
+        "class": "Slicing",
+        "description": "Home page 製作，美國加州的門窗製造商和零售商",
+        "url": "https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/Gate%20N%20Fences/",
+        "image": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.15752-9/434454789_751066457161114_7275088379974240848_n.png?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YhYGq8opfScAX8WAb0g&_nc_ht=scontent.ftpe7-3.fna&oh=03_AdS6ioGmKQO18DIEDXCrr_HdVZOsCA-uu0u2QCfwbBxlVw&oe=66327078"
+    },
+    {
+        "title": "Todo list | 代辦事項清單",
+        "class": "Practice",
+        "description": "jQuery 練習，可多功能查看、編輯、刪除代辦事項",
+        "url": "https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/Todo%20list/",
+        "image": "https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.15752-9/432716302_308953768641320_9185876915253277286_n.png?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=b8RYAUu-QKkAX_X6amN&_nc_ht=scontent.ftpe7-2.fna&oh=03_AdSVy4aTO2efRmtDtag_VwZnZjYhsvv2qXktBog1RoOjrw&oe=66325A09"
+    },
+    {
+        "title": "臺灣兒童教育發展協會 | 非營利教保服務機構",
+        "class": "Slicing",
+        "description": "設計整體網站 Layout 及視覺，以及切版製作",
+        "url": "https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/%E8%87%BA%E7%81%A3%E5%85%92%E7%AB%A5%E6%95%99%E8%82%B2%E7%99%BC%E5%B1%95%E5%8D%94%E6%9C%83/",
+        "image": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.15752-9/432533387_817612303726662_826867862274753870_n.png?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=8ZinFRUY6PkAX8zbNLl&_nc_ht=scontent.ftpe7-3.fna&oh=03_AdTXFFa7rb2skE97sUP0ll4Nm2t6FiL_KVP59LLjWyRLxg&oe=6632432B"
+    },
+    {
+        "title": "天儷醫用 | 醫藥用品販售",
+        "class": "Slicing",
+        "description": "製作醫藥用品及商品介紹頁面，依需求優化 SEO",
+        "url": "https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/%E5%A4%A9%E5%84%B7%E9%86%AB%E7%94%A8/",
+        "image": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.15752-9/434302603_730307505840074_1674645244912124748_n.png?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=J4L6lK24xRMAX_ezaZy&_nc_ht=scontent.ftpe7-3.fna&oh=03_AdSeNRDQB93wKJTziZcDjmLJi_CXhRV7VyUIO-11GZWRlw&oe=6632421A"
+    },
+    {
+        "title": "台灣貓舍 | 品種貓貓舍",
+        "class": "Figma",
+        "description": "Figma 設計整體網站 Layout 及視覺",
+        "url": "https://www.figma.com/proto/dVXCb70ZenwrpxI0P0yfoS/%E8%B2%93%E8%88%8D?type=design&t=uad036YujpDhMaF3-1&scaling=min-zoom&page-id=0%3A1&node-id=13-19&starting-point-node-id=1%3A4&mode=design",
+        "image": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.15752-9/432705899_388459554000541_1786643629946114059_n.png?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_aid=0&_nc_ohc=umAocw2b5a8AX9y0Kb_&_nc_ht=scontent.ftpe7-1.fna&oh=03_AdRAnZeoQteXa_pZRpTJi7ZBt-ZURIFuJLzAyXTQfdjVzQ&oe=663247E8"
+    },
+    
+    {
+        "title": "LIKUANZHEN | 設計師網站",
+        "class": "Practice",
+        "description": "練習 Drag & Drop API 處理及其他滑鼠監聽事件",
+        "url": "https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/likuanzhen/",
+        "image": "https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.15752-9/434259547_1567210780518897_2707969849103324954_n.png?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=w69u4Ri497wAX-pnK1g&_nc_ht=scontent.ftpe7-4.fna&oh=03_AdQMZorE0DFPHi9aTpnXpe4xXFhDFH4uopwFrg8UAeSF7g&oe=6632716C"
+    },
+    {
+        "title": "高雄旅遊手冊",
+        "class": "Slicing",
+        "description": "高雄旅遊手冊模板，需求為作業用",
+        "url": "https://goodgod99.github.io/%E9%96%8B%E7%99%BC%E4%B8%AD/%E9%9B%84%E6%97%85/",
+        "image": "https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.15752-9/434317524_947224373309114_2556687496187451810_n.png?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=N5wzPWdBfwYAX-A_Mwa&_nc_ht=scontent.ftpe7-2.fna&oh=03_AdSdN2fiZpsvyFh4OzXNMXYKyt8rpuxkY-bgCfiX_7jzPQ&oe=6632720B"
+    },
+    {
+        "title": "高雄飲品介紹",
+        "class": "Slicing",
+        "description": "使用 bootstrap 框架製作，需求為作業用",
+        "url": "https://goodgod99.github.io/%E9%96%8B%E7%99%BC%E4%B8%AD/%E9%AB%98%E9%9B%84%E9%A3%B2%E6%96%99%E6%8E%92%E8%A1%8C%E6%A6%9C/",
+        "image": "https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.15752-9/434253835_942825234028720_9130284428625921148_n.png?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=drHmJaSkFJUAX_J3ddO&_nc_ht=scontent.ftpe7-4.fna&oh=03_AdT-4HU0YOg7mVL3kNI_9uAehCH_j70E9NFFbNuOFU4tnQ&oe=66327400"
+    },
+    {
+        "title": "Netflix | Netflix 產品介紹頁",
+        "class": "Practice",
+        "description": "切版練習，無 RWD",
+        "url": "https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/Netf1ix/",
+        "image": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.15752-9/434314565_1619550305477536_7316816935427164710_n.png?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=6hjS3wV2LwEAX-7q7OW&_nc_ht=scontent.ftpe7-3.fna&oh=03_AdTD_2aIBNyMdfvR6TyaHbdN_BcJeoMconm8300iuyY4cQ&oe=66324D42"
+    },
+    {
+        "title": "Spotify | Spotify premium 購買頁面",
+        "class": "Practice",
+        "description": "切版練習，無 RWD",
+        "url": "https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/Spotify%20premium/",
+        "image": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.15752-9/434338289_837937578143203_3069732610389886220_n.png?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=w6zABGtuWz4AX-KxSRj&_nc_ht=scontent.ftpe7-1.fna&oh=03_AdTwTYra49qoWHkQcdEbV_tYDAuM9bKBlU2SlFuLrPuASg&oe=66325A00"
+    },
+    {
+        "title": "倉鼠飼養指南",
+        "class": "Slicing",
+        "description": "使用模板網頁改寫，需求為作業用",
+        "url": "https://goodgod99.github.io/%E9%96%8B%E7%99%BC%E4%B8%AD/HAMSTERS'%20WORLD/",
+        "image": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.15752-9/432453314_252168331222745_6262599394777095336_n.png?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=rvoYnPd3gjMAX9j1qYZ&_nc_ht=scontent.ftpe7-1.fna&oh=03_AdQ4qiBTChscfTBgeyIvZHlHD4RuR3W4Gx3kSHWhaLJaiw&oe=66325762"
+    },
+    {
+        "title": "Postcrossing 介紹 | 國際明信片交換平台",
+        "class": "Slicing",
+        "description": "使用模板網頁改寫，需求為作業用",
+        "url": "https://goodgod99.github.io/%E9%96%8B%E7%99%BC%E4%B8%AD/Tidy_Blog/",
+        "image": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.15752-9/432540025_788225899508731_3160591664976984591_n.png?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=v09tmwMPca4AX_GDhvQ&_nc_ht=scontent.ftpe7-3.fna&oh=03_AdSsC3bCqS-cSO22j3Kba-AhHjxLa-5XkC57DIeZYMUVmQ&oe=66326B5A"
+    }
+]

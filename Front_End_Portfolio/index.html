@@ -43,63 +43,45 @@
                 <input type="checkbox" name="" id="menu-control">
                 <nav>
                     <ul>
-                        <li><a href="index.html">作品集 / Portfolio</a></li>
-                        <li><a href="about.html">UI/UX 設計 / UI/UX Design</a></li>
-                        <li><a href="portfolio.html">網頁切版 / Web Slicing</a></li>
-                        <li><a href="portfolio.html">練習 / Practice</a></li>
-                        <li><a href="contact.html">聯絡 / Contact</a></li>
+                        <li><button class="active" id="All">全部作品 / All</button></li>
+                        <li><button id="Slicing">網頁切版 / Web Slicing</button></li>
+                        <li><button id="Figma">Figma 設計 / Figma Design</button></li>
+                        <li><button id="Practice">練習 / Practice</button></li>
+                        <li><a href="https://line.me/ti/p/~7788_yaya" target="_blank">聯絡 / Contact</a></li>
                     </ul>
                 </nav>
 
             </aside>
             <main class="col-12 col-md-9 col-xl-10">
                 <section class="project-covers">
-                    <div class="row g-2">
-                        <a class="col-12 col-sm-6 col-xl-4" href="">
+                    <div class="row g-2" id="project">
+                        <!-- <a class="col-12 col-sm-6 col-xl-4 Slicing" target="_blank" href="https://goodgod99.github.io/%E9%96%8B%E7%99%BC%E4%B8%AD/%E4%BA%9E%E6%98%95%E4%B8%80%E7%B7%BB/">
                             <div class="img-box">
-                                <img src="https://fakeimg.pl/300x400/" class="" alt="">
+                                <img src="https://fakeimg.pl/300x400/" class="" alt="亞昕一緻 | 亞昕集團建案宣傳">
                             </div>
                             <div class="text-box">
-                                <h3 class="card-title">Gate N Fences | 門窗製造、零售商</h3>
-                                <p class="card-text">為美國加州的門窗製造商和零售商，製作 Landing page</p>
+                                <h3 class="card-title">亞昕一緻 | 亞昕集團建案宣傳</h3>
+                                <p class="card-text">一頁式網站，優化原網頁，及新增手機、平板 RWD</p>
                             </div>
                         </a>
-                        <a class="col-12 col-sm-6 col-xl-4" href="">
+                        <a class="col-12 col-sm-6 col-xl-4 Figma" target="_blank" href="https://www.figma.com/proto/oBshd3DyRWrAgQsJfYCTN4/%E7%95%B6%E4%BB%A3%E8%97%9D%E8%A1%93%E9%A4%A8?type=design&amp;t=U475e0JlKrtTOu1L-1&amp;scaling=scale-down&amp;page-id=0%3A1&amp;node-id=1-2&amp;starting-point-node-id=1%3A2&amp;mode=design">
                             <div class="img-box">
-                                <img src="https://fakeimg.pl/300x400/" class="" alt="">
+                                <img src="https://fakeimg.pl/300x400/" class="" alt="當代藝術館">
+                            </div>
+                            <div class="text-box">
+                                <h3 class="card-title">當代藝術館</h3>
+                                <p class="card-text">Figma 設計手機板頁面 Layout</p>
+                            </div>
+                        </a>
+                        <a class="col-12 col-sm-6 col-xl-4 Practice" target="_blank" href="https://goodgod99.github.io/%E5%B0%88%E6%A1%88%E9%96%8B%E7%99%BC/Mouse%20test/">
+                            <div class="img-box">
+                                <img src="https://fakeimg.pl/300x400/" class="" alt="Mouse test | 滑鼠連點測試網站">
                             </div>
                             <div class="text-box">
                                 <h3 class="card-title">Mouse test | 滑鼠連點測試網站</h3>
                                 <p class="card-text">jQuery 練習，測試滑鼠左、右、中鍵是否連點的網站</p>
                             </div>
-                        </a>
-                        <a class="col-12 col-sm-6 col-xl-4" href="">
-                            <div class="img-box">
-                                <img src="https://fakeimg.pl/300x400/" class="" alt="">
-                            </div>
-                            <div class="text-box">
-                                <h3 class="card-title">Netflix | Netflix 首頁 介紹頁</h3>
-                                <p class="card-text">切版練習，無 RWD</p>
-                            </div>
-                        </a>
-                        <a class="col-12 col-sm-6 col-xl-4" href="">
-                            <div class="img-box">
-                                <img src="https://fakeimg.pl/300x400/" class="" alt="">
-                            </div>
-                            <div class="text-box">
-                                <h3 class="card-title">Spotify | Spotify premium 購買頁面</h3>
-                                <p class="card-text">切版練習，無 RWD</p>
-                            </div>
-                        </a>
-                        <a class="col-12 col-sm-6 col-xl-4" href="">
-                            <div class="img-box">
-                                <img src="https://fakeimg.pl/300x400/" class="" alt="">
-                            </div>
-                            <div class="text-box">
-                                <h3 class="card-title">Todo list | 代辦事項清單</h3>
-                                <p class="card-text">jQuery 練習，可多功能查看、編輯、刪除代辦事項</p>
-                            </div>
-                        </a>
+                        </a> -->
                     </div>
                 </section>
                 <a href="#site-container" class="arrow-up">
@@ -114,7 +96,8 @@
 
     </div>
 </body>
-
-<script src="./js/menu_icon_control.js"></script>
+<script src="js/project_covers_rander.js"></script>
+<script src="js/menu_icon_control.js"></script>
+<!-- <script src="js/nav_control.js"></script> -->
 
 </html>
