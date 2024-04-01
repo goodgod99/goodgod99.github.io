@@ -1,4 +1,4 @@
-fetch('../data/projects.json')
+fetch('data/projects.json')
     .then(response => response.json())
     .then(data => {
         const projectContainer = document.getElementById('project');
