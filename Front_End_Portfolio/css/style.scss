@@ -7,6 +7,11 @@ html{
     font-family: "Noto Sans TC", "Roboto", sans-serif !important;
 }
 
+//隱藏滾動條
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .row {
     margin-left: 0 !important;
     margin-right: 0 !important;

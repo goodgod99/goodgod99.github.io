@@ -3,6 +3,10 @@ html {
   font-family: "Noto Sans TC", "Roboto", sans-serif !important;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .row {
   margin-left: 0 !important;
   margin-right: 0 !important;
