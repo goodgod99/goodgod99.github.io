@@ -22,19 +22,32 @@ fetch('data/projects.json')
     .catch(error => console.error('Error fetching projects:', error));
 
 
+
+
+
 // 根據點擊的按鈕來過濾專案
 function filterProjectsByCategory(category) {
     const projectContainer = document.querySelectorAll('#project a');
     projectContainer.forEach(project => {
-        if (category === 'All') {
-            project.style.display = 'block'; 
-        } else {
-            if (project.classList.contains(category)) {
+        project.style.opacity = '0';
+        setTimeout(() => {
+            if (category === 'All') {
                 project.style.display = 'block';
+                setTimeout(() => {
+                    project.style.opacity = '1';
+                }, 100);
             } else {
-                project.style.display = 'none';
+                if (project.classList.contains(category)) {
+                    project.style.display = 'block';
+                    setTimeout(() => {
+                        project.style.opacity = '1';
+                    }, 100);
+                } else {
+                    project.style.display = 'none';
+                }
             }
-        }
+        }, 500);
+
     });
 }
 
@@ -78,6 +91,6 @@ buttons.forEach(button => {
         //     });
         // }
         filterProjectsByCategory(btnClass);
-        
+
     });
 });

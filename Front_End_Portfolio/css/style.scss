@@ -1,8 +1,8 @@
 $primary-color: #a3a3a3;
 $side-color: #e7e6e6;
-$side-color-dark: #0A232E;
+$side-color-dark: #0a232e;
 
-html{
+html {
     font-size: 14px;
     font-family: "Noto Sans TC", "Roboto", sans-serif !important;
 }
@@ -17,9 +17,18 @@ body::-webkit-scrollbar {
     margin-right: 0 !important;
 }
 
+#intro{
+    z-index: 98;
+    background-color: #fff;
+    justify-content: center;
+    transition: opacity .5s ;
+    #lottie{
+        width: 50%;
+    }
+}
+
 #site-container {
     padding-top: 20px;
-    
 }
 
 aside {
@@ -33,7 +42,8 @@ aside {
         ul {
             padding-left: 20px;
             li {
-                button,a{
+                button,
+                a {
                     display: block;
                     text-decoration: none;
                     border: none;
@@ -49,7 +59,7 @@ aside {
                     }
                     &.active {
                         font-weight: 700;
-                        text-transform:uppercase
+                        text-transform: uppercase;
                     }
                     &.active:hover {
                         color: #000;
@@ -71,9 +81,10 @@ main {
         a {
             display: block;
             text-decoration: none;
+            transition: opacity 0.5s;
             &:hover {
                 .img-box img {
-                    opacity: .6;
+                    opacity: 0.6;
                 }
             }
             .img-box {
@@ -95,7 +106,7 @@ main {
                     color: #000;
                 }
                 p {
-                    font-size: .9rem;
+                    font-size: 0.9rem;
                     font-weight: 200;
                     line-height: 1.4;
                     color: $primary-color;
@@ -138,7 +149,7 @@ main {
         position: fixed;
         top: 0;
         left: 0;
-        height:80px;
+        height: 80px;
         background: linear-gradient(to bottom, rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0));
         z-index: 95;
         header {
@@ -159,7 +170,7 @@ main {
             right: -100vw;
             transition: right 0.3s;
             ul {
-            padding-left: 0px;
+                padding-left: 0px;
                 width: 100vw;
                 height: 100vh;
                 background-color: #fff;
@@ -186,9 +197,8 @@ main {
             font-size: 30px;
             font-weight: 100;
             color: $side-color-dark;
-            
+
             cursor: pointer;
-            
         }
         input {
             display: none;

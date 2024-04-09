@@ -12,6 +12,16 @@ body::-webkit-scrollbar {
   margin-right: 0 !important;
 }
 
+#intro {
+  z-index: 98;
+  background-color: #fff;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+#intro #lottie {
+  width: 50%;
+}
+
 #site-container {
   padding-top: 20px;
 }
@@ -23,7 +33,8 @@ aside header img {
 aside nav ul {
   padding-left: 20px;
 }
-aside nav ul li button, aside nav ul li a {
+aside nav ul li button,
+aside nav ul li a {
   display: block;
   text-decoration: none;
   border: none;
@@ -35,14 +46,17 @@ aside nav ul li button, aside nav ul li a {
   font-size: 1rem;
   text-align: start;
 }
-aside nav ul li button:hover, aside nav ul li a:hover {
+aside nav ul li button:hover,
+aside nav ul li a:hover {
   color: #a3a3a3;
 }
-aside nav ul li button.active, aside nav ul li a.active {
+aside nav ul li button.active,
+aside nav ul li a.active {
   font-weight: 700;
   text-transform: uppercase;
 }
-aside nav ul li button.active:hover, aside nav ul li a.active:hover {
+aside nav ul li button.active:hover,
+aside nav ul li a.active:hover {
   color: #000;
 }
 aside label {
@@ -55,6 +69,7 @@ aside input {
 main .project-covers a {
   display: block;
   text-decoration: none;
+  transition: opacity 0.5s;
 }
 main .project-covers a:hover .img-box img {
   opacity: 0.6;
@@ -159,7 +174,7 @@ main .arrow-up .bi-arrow-up {
     right: 30px;
     font-size: 30px;
     font-weight: 100;
-    color: #0A232E;
+    color: #0a232e;
     cursor: pointer;
   }
   aside input {
