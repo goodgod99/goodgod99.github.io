@@ -7,22 +7,54 @@ let animation_wave = bodymovin.loadAnimation({
     name: "wave animate"
 });
 
+//縱向
 window.addEventListener('scroll', function () {
     let offset = window.pageYOffset;
     let wave = document.getElementById('wave-backgroung');
-
     let speedMultiplier;
-    if (window.innerWidth < 576) { 
-        speedMultiplier = -0.1; 
-    }
-    else if (576 <= window.innerWidth && window.innerWidth < 1200) {
-        speedMultiplier = -0.3; 
-    }
-    else{
-        speedMultiplier = -0.6;
-    }
 
+    if (window.innerWidth < 576) {
+        speedMultiplier = -0.1;
+        wave.style.top = '400px';
+    }
+    else if (576 <= window.innerWidth && window.innerWidth < 768) {
+        speedMultiplier = -0.3;
+        wave.style.top = '400px';
+    }
+    else if (768 <= window.innerWidth && window.innerWidth < 1200) {
+        speedMultiplier = -0.4;
+        wave.style.top = '200px';
+    }
+    else {
+        speedMultiplier = -0.5;
+        wave.style.top = '-200px';
+    }
     wave.style.transform = 'translateY(' + offset * speedMultiplier + 'px)';
 });
+
+
+//橫向
+document.addEventListener('mousemove', handleMouseMove);
+
+window.addEventListener('resize', function () {
+    if (window.innerWidth < 768) {
+        animation_wave.play();
+        document.removeEventListener('mousemove', handleMouseMove);
+    } 
+    else {
+        animation_wave.pause();
+        document.addEventListener('mousemove', handleMouseMove);
+    }
+});
+
+window.addEventListener('blur', function () {
+    animation_wave.play();
+});
+
+function handleMouseMove(event) {
+    let mouseX = event.clientX;
+    let progress = mouseX / window.innerWidth * 0.4;
+    animation_wave.goToAndStop(animation_wave.totalFrames * progress, true);
+}
 
 
