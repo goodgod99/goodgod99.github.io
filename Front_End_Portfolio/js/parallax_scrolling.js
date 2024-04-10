@@ -34,15 +34,20 @@ window.addEventListener('scroll', function () {
 
 
 //橫向
-document.addEventListener('mousemove', handleMouseMove);
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth > 768) {
+        document.addEventListener('mousemove', handleMouseMove);
+
+    }
+});
+
 
 window.addEventListener('resize', function () {
     if (window.innerWidth < 768) {
-        animation_wave.play();
         document.removeEventListener('mousemove', handleMouseMove);
-    } 
+        animation_wave.play();
+    }
     else {
-        animation_wave.pause();
         document.addEventListener('mousemove', handleMouseMove);
     }
 });
@@ -52,6 +57,7 @@ window.addEventListener('blur', function () {
 });
 
 function handleMouseMove(event) {
+    animation_wave.pause();
     let mouseX = event.clientX;
     let progress = mouseX / window.innerWidth * 0.4;
     animation_wave.goToAndStop(animation_wave.totalFrames * progress, true);
