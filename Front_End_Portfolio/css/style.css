@@ -27,6 +27,7 @@ body::-webkit-scrollbar {
   z-index: -1;
   width: 100vw;
   top: 0;
+  transition: transform 0.5s;
 }
 #wave-backgroung #wave-lottie {
   width: 100%;
