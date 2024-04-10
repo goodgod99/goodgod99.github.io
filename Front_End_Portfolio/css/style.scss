@@ -32,6 +32,7 @@ body::-webkit-scrollbar {
     position: fixed;
     z-index: -1;
     width: 100vw;
+    top: -200px;
     transition: transform .2s;
 
     #wave-lottie{
@@ -162,7 +163,11 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-
+    #wave-backgroung {
+        top: 400px;
+        transition: transform 0;
+    }
+    
 
     #site-container {
         padding-top: 80px;
