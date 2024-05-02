@@ -31,7 +31,7 @@ window.addEventListener('scroll', function () {
             wave.style.top = '-200px';
         }
         wave.style.transform = 'translateY(' + offset * speedMultiplier + 'px)';
-    }, 100);
+    }, 500);
 });
 
 
