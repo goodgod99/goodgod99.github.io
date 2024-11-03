@@ -8,30 +8,30 @@ let animation_wave = bodymovin.loadAnimation({
 });
 
 //縱向
-window.addEventListener('scroll', function () {
-    setTimeout(function () {
-        let offset = window.pageYOffset;
-        let wave = document.getElementById('wave-backgroung');
-        let speedMultiplier;
+let isScrolling = false;
 
-        if (window.innerWidth < 576) {
-            speedMultiplier = -0.1;
-            wave.style.top = '400px';
-        }
-        else if (576 <= window.innerWidth && window.innerWidth < 768) {
-            speedMultiplier = -0.3;
-            wave.style.top = '400px';
-        }
-        else if (768 <= window.innerWidth && window.innerWidth < 1200) {
-            speedMultiplier = -0.4;
-            wave.style.top = '200px';
-        }
-        else {
-            speedMultiplier = -0.5;
-            wave.style.top = '-200px';
-        }
-        wave.style.transform = 'translateY(' + offset * speedMultiplier + 'px)';
-    }, 500);
+window.addEventListener('scroll', function () {
+    if (!isScrolling) {
+        window.requestAnimationFrame(function () {
+            let offset = window.pageYOffset;
+            let wave = document.getElementById('wave-backgroung');
+            let speedMultiplier;
+
+            if (window.innerWidth < 576) {
+                speedMultiplier = -0.1;
+            } else if (window.innerWidth < 768) {
+                speedMultiplier = -0.3;
+            } else if (window.innerWidth < 1200) {
+                speedMultiplier = -0.4;
+            } else {
+                speedMultiplier = -0.5;
+            }
+
+            wave.style.transform = 'translateY(' + offset * speedMultiplier + 'px)';
+            isScrolling = false;
+        });
+    }
+    isScrolling = true;
 });
 
 
