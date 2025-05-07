@@ -9,7 +9,7 @@ fetch('data/projects.json')
             projectElement.href = e.url;
             projectElement.innerHTML = `
                 <div class="img-box">
-                    <img src="${e.image}" class="" alt="${e.title}">
+                    <img src="${e.image}" loading="lazy" class="" alt="${e.title}">
                 </div>
                 <div class="text-box">
                     <h3 class="card-title">${e.title}</h3>
